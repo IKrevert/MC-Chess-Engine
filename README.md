@@ -1,5 +1,6 @@
 # ESP32 Microncontroller Chess Engine
 
-<img width="1024" height="1024" alt="ChatGPT Image Jul 29, 2025, 05_29_12 PM" src="https://github.com/user-attachments/assets/ed814772-209a-4e93-b8ab-5a82de4713ee" />
+<img width="1024" height="500" alt="ChatGPT Image Jul 29, 2025, 05_29_12 PM" src="https://github.com/user-attachments/assets/ed814772-209a-4e93-b8ab-5a82de4713ee" />
 
-Chess Engine for ESP32 Microcontroller utilizing physical board as move inputs. 
+#DESCRIPTION
+The purpose of this engine is to recieve move inpouts from and 8x8 matrix of hall effect sensors to play generate possible moves based on user selection on a board. While the primary purpose of this engine is to supposrt hardware interface, the engine can be esisly adapted to support otehr UI frameworks. 

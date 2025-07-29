@@ -17,12 +17,12 @@ ____________________________________________
 
 The engine features full functionality of a chess engine. Features include:
 
-    -> Available Move Generation
+   ->   Available Move Generation
   
-    -> Check / Checkmate / Stalemate Validation
+   ->   Check / Checkmate / Stalemate Validation
   
-    -> Fully Functional Castling Mechanics
+   ->   Fully Functional Castling Mechanics
   
-    -> En Passant Support
+   ->   En Passant Support
 
 

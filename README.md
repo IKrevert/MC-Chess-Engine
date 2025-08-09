@@ -1,7 +1,7 @@
 # MC-Chess-Engine
 
 ## Overview
-MC-Chess-Engine is a C++ chess engine designed to interface directly with hardware-based inputs. In its primary use case, the engine runs alongside a microcontroller connected to an **8×8 matrix of Hall effect sensors**, allowing for a physical chessboard to serve as the user interface.
+MC-Chess-Engine is a C++ chess engine designed to interface directly with hardware-based inputs. In its primary use case, the engine runs alongside a microcontroller (ESP32) connected to an **8×8 matrix of Hall effect sensors**, allowing for a physical chessboard to serve as the user interface.
 
 The microcontroller’s job is to scan the sensor matrix, detect changes in piece positions, and send those moves to the engine for processing. The engine then validates, applies, and tracks the moves according to the rules of chess.
 

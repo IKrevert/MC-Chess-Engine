@@ -1,0 +1,12 @@
+<map id="takeNullMove" name="takeNullMove">
+<area shape="rect" id="Node000001" title="Undo the last null move." alt="" coords="5,31,107,57"/>
+<area shape="rect" id="Node000002" href="$board_8cpp.html#a27f071824f45c724e8ddd02c72b39871" title="Performs a full internal consistency check of the board state." alt="" coords="155,31,279,57"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="107,41,139,41,139,47,107,47"/>
+<area shape="rect" id="Node000003" href="$hash__keys_8cpp.html#a8c1832e1dfd853cce944ddd2df57dd53" title="Generates a Zobrist hash key for the given board position." alt="" coords="327,5,475,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="279,33,311,28,312,34,280,38"/>
+<area shape="rect" id="Node000005" href="$board_8cpp.html#addbaf4fbab51f8032e0e7aabbffeab96" title="Validate that piece list array is consistent with board state." alt="" coords="344,56,458,83"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="280,50,330,57,329,62,279,55"/>
+<area shape="rect" id="Node000004" href="$validate_8cpp.html#ad5a569564ef016ed02a4fef23d89d9c4" title="Checks if a given square index refers to a valid on&#45;board square." alt="" coords="523,31,612,57"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="476,27,509,32,508,38,475,33"/>
+<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="458,58,508,50,508,56,459,63"/>
+</map>

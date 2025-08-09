@@ -1,0 +1,17 @@
+<map id="board.h" name="board.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="254,5,318,32"/>
+<area shape="rect" id="Node000002" href="$board_8cpp.html" title=" " alt="" coords="5,80,84,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="240,37,85,83,83,78,238,31"/>
+<area shape="rect" id="Node000003" href="$interactive__helpers_8h.html" title=" " alt="" coords="107,80,248,107"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="256,43,198,82,195,77,253,39"/>
+<area shape="rect" id="Node000005" href="$main_8cpp.html" title=" " alt="" coords="263,155,338,181"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="291,47,302,154,297,154,286,48"/>
+<area shape="rect" id="Node000006" href="$perft_8cpp.html" title=" " alt="" coords="323,80,395,107"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="311,41,348,78,345,82,308,45"/>
+<area shape="rect" id="Node000007" href="$perft_8h.html" title=" " alt="" coords="419,80,478,107"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="329,36,421,77,419,82,327,41"/>
+<area shape="rect" id="Node000004" href="$interactive__helpers_8cpp.html" title=" " alt="" coords="84,155,240,181"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="174,123,167,155,162,154,169,122"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="214,113,280,152,278,156,211,117"/>
+<area shape="poly" id="edge8_Node000007_Node000005" title=" " alt="" coords="410,116,328,156,325,152,408,111"/>
+</map>

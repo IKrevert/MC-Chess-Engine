@@ -1,0 +1,5 @@
+<map id="initSquareIndexMaps" name="initSquareIndexMaps">
+<area shape="rect" id="Node000001" title="Initialize lookup tables for 120&#45;&gt;64 square indexing." alt="" coords="5,5,149,32"/>
+<area shape="rect" id="Node000002" href="$validate_8cpp.html#ad5a569564ef016ed02a4fef23d89d9c4" title="Checks if a given square index refers to a valid on&#45;board square." alt="" coords="197,5,285,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="149,16,181,16,181,21,149,21"/>
+</map>

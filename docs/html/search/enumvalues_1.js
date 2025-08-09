@@ -1,0 +1,21 @@
+var searchData=
+[
+  ['b1_0',['B1',['../defs_8h.html#adda332c73209392ebc9828148fff0d0cad90c5e7444630b8d170b08d0853aae21',1,'defs.h']]],
+  ['b2_1',['B2',['../defs_8h.html#adda332c73209392ebc9828148fff0d0ca9bfbe74b27169e5bd5bd5dc020fdd00b',1,'defs.h']]],
+  ['b3_2',['B3',['../defs_8h.html#adda332c73209392ebc9828148fff0d0ca008e5845e069ecd71e49f3d18ec21130',1,'defs.h']]],
+  ['b4_3',['B4',['../defs_8h.html#adda332c73209392ebc9828148fff0d0ca6e242c85f0b91e8879200ec3004a4cab',1,'defs.h']]],
+  ['b5_4',['B5',['../defs_8h.html#adda332c73209392ebc9828148fff0d0caf238f32976f4a2c27a517bd1ad47be36',1,'defs.h']]],
+  ['b6_5',['B6',['../defs_8h.html#adda332c73209392ebc9828148fff0d0ca0eb7e951c71ad8f7ea59d513e8d57747',1,'defs.h']]],
+  ['b7_6',['B7',['../defs_8h.html#adda332c73209392ebc9828148fff0d0ca561ae7a12dd8bf549f1b7e647354297e',1,'defs.h']]],
+  ['b8_7',['B8',['../defs_8h.html#adda332c73209392ebc9828148fff0d0ca36820f60b2f0bee85a682e3f0b6e0fea',1,'defs.h']]],
+  ['bb_8',['bB',['../defs_8h.html#a267d3f46496a12e12c986aa7796ca2e0ab0c70cf58d95ae054b33676333c16b41',1,'defs.h']]],
+  ['bk_9',['bK',['../defs_8h.html#a267d3f46496a12e12c986aa7796ca2e0ae563898f2eb35891b28311f1bdd6d74b',1,'defs.h']]],
+  ['bkca_10',['BKCA',['../defs_8h.html#a96e52d2a924e2ebe5f9e40dd8b2ffa31adca5d258ee038af989898b86acb9476d',1,'defs.h']]],
+  ['black_11',['BLACK',['../defs_8h.html#a3d042815b8c6c8d5d724d7d79506b5efaf77fb67151d0c18d397069ad8c271ba3',1,'defs.h']]],
+  ['bn_12',['bN',['../defs_8h.html#a267d3f46496a12e12c986aa7796ca2e0a3d5b44ec8710049da801e4f0ad74e8c2',1,'defs.h']]],
+  ['both_13',['BOTH',['../defs_8h.html#a3d042815b8c6c8d5d724d7d79506b5efa627abe5a430420baf29ebe1940a7f2fb',1,'defs.h']]],
+  ['bp_14',['bP',['../defs_8h.html#a267d3f46496a12e12c986aa7796ca2e0a79c461c3a23d04c94cc7718d38b938cb',1,'defs.h']]],
+  ['bq_15',['bQ',['../defs_8h.html#a267d3f46496a12e12c986aa7796ca2e0a0c7e8e5d9e9597075a4aec0af5c9033f',1,'defs.h']]],
+  ['bqca_16',['BQCA',['../defs_8h.html#a96e52d2a924e2ebe5f9e40dd8b2ffa31a910d51b4da7f402dc4416fe3237afb7b',1,'defs.h']]],
+  ['br_17',['bR',['../defs_8h.html#a267d3f46496a12e12c986aa7796ca2e0a8b6736d91dfcadd8e1dc5d72e729e370',1,'defs.h']]]
+];

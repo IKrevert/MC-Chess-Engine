@@ -1,0 +1,8 @@
+<map id="printBoardState" name="printBoardState">
+<area shape="rect" id="Node000001" title="Print the board to stdout in a human&#45;readable format." alt="" coords="225,5,336,32"/>
+<area shape="rect" id="Node000002" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,55,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="210,21,55,21,55,16,210,16"/>
+<area shape="rect" id="Node000003" href="$perft_8cpp.html#a1b6b13d186dab20a18cec1a6b041220b" title="Executes a perft test and prints move breakdown and timing." alt="" coords="103,31,177,57"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="210,34,178,40,177,35,209,29"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="87,35,55,27,56,22,88,29"/>
+</map>

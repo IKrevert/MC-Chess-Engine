@@ -1,0 +1,22 @@
+<map id="makeNullMove" name="makeNullMove">
+<area shape="rect" id="Node000001" title="Make a null move (side to move toggles, no pieces moved)." alt="" coords="5,107,114,133"/>
+<area shape="rect" id="Node000002" href="$board_8cpp.html#a27f071824f45c724e8ddd02c72b39871" title="Performs a full internal consistency check of the board state." alt="" coords="344,56,469,83"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="114,110,329,78,329,83,115,115"/>
+<area shape="rect" id="Node000006" href="$attack_8cpp.html#a36ea46ff61e0738a61f70dcf90b5178b" title="Determines if a given square is attacked by a given side." alt="" coords="162,132,286,159"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="115,126,147,131,146,136,114,131"/>
+<area shape="rect" id="Node000003" href="$hash__keys_8cpp.html#a8c1832e1dfd853cce944ddd2df57dd53" title="Generates a Zobrist hash key for the given board position." alt="" coords="527,5,676,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="460,53,532,34,533,39,462,58"/>
+<area shape="rect" id="Node000005" href="$board_8cpp.html#addbaf4fbab51f8032e0e7aabbffeab96" title="Validate that piece list array is consistent with board state." alt="" coords="545,56,658,83"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="469,67,530,67,530,72,469,72"/>
+<area shape="rect" id="Node000004" href="$validate_8cpp.html#ad5a569564ef016ed02a4fef23d89d9c4" title="Checks if a given square index refers to a valid on&#45;board square." alt="" coords="724,56,812,83"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="649,30,710,49,708,54,647,35"/>
+<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="659,67,708,67,708,72,659,72"/>
+<area shape="poly" id="edge7_Node000006_Node000002" title=" " alt="" coords="257,129,358,87,360,91,259,134"/>
+<area shape="poly" id="edge11_Node000006_Node000004" title=" " alt="" coords="286,139,462,123,569,110,675,92,708,84,709,89,676,97,569,115,462,129,287,144"/>
+<area shape="rect" id="Node000007" href="$validate_8cpp.html#aac5a1baab60b7b72d85de73be258f91b" title="Checks if the given piece code is empty, valid, or OFFBOARD." alt="" coords="334,157,479,184"/>
+<area shape="poly" id="edge8_Node000006_Node000007" title=" " alt="" coords="287,151,319,156,318,161,286,157"/>
+<area shape="rect" id="Node000008" href="$validate_8cpp.html#ad7a2e012bffa6db3df97e7742c9d731d" title="Checks if the given side identifier is valid." alt="" coords="369,208,444,235"/>
+<area shape="poly" id="edge9_Node000006_Node000008" title=" " alt="" coords="254,157,335,194,355,201,353,206,333,198,252,162"/>
+<area shape="rect" id="Node000009" href="$validate_8cpp.html#a48b5f0e20cf731ceeeb659fbc27b972c" title="Checks if a given square index is within the 120&#45;based range." alt="" coords="372,259,441,285"/>
+<area shape="poly" id="edge10_Node000006_Node000009" title=" " alt="" coords="238,157,279,200,306,223,335,244,358,256,356,260,333,249,303,228,275,204,235,161"/>
+</map>

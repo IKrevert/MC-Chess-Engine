@@ -1,0 +1,5 @@
+<map id="generatePositionKeys" name="generatePositionKeys">
+<area shape="rect" id="Node000001" title="Generates a Zobrist hash key for the given board position." alt="" coords="5,5,154,32"/>
+<area shape="rect" id="Node000002" href="$validate_8cpp.html#ad5a569564ef016ed02a4fef23d89d9c4" title="Checks if a given square index refers to a valid on&#45;board square." alt="" coords="202,5,290,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="154,16,186,16,186,21,154,21"/>
+</map>

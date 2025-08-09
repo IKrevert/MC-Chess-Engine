@@ -1,0 +1,19 @@
+<map id="perft.h" name="perft.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="200,5,258,32"/>
+<area shape="rect" id="Node000002" href="$defs_8h.html" title=" " alt="" coords="148,155,217,181"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="227,33,210,81,192,141,187,139,205,79,222,31"/>
+<area shape="rect" id="Node000007" href="$board_8h.html" title=" " alt="" coords="220,80,332,107"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="239,31,262,66,257,68,235,34"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,229,69,256"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="158,184,77,224,75,220,156,179"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="92,229,152,256"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="174,184,144,219,140,216,170,180"/>
+<area shape="rect" id="Node000005" href="$board__data_8h.html" title=" " alt="" coords="176,229,308,256"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="188,180,217,217,213,220,184,184"/>
+<area shape="poly" id="edge6_Node000005_Node000002" title=" " alt="" coords="237,231,208,194,212,191,241,227"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="217,304,268,331"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="245,257,245,288,240,288,240,257"/>
+<area shape="poly" id="edge8_Node000007_Node000002" title=" " alt="" coords="261,109,212,147,209,143,258,105"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="241,155,361,181"/>
+<area shape="poly" id="edge9_Node000007_Node000008" title=" " alt="" coords="283,106,294,139,289,141,278,108"/>
+</map>

@@ -1,0 +1,15 @@
+<map id="loadFEN" name="loadFEN">
+<area shape="rect" id="Node000001" title="Parse a FEN string into the given board state." alt="" coords="5,56,78,83"/>
+<area shape="rect" id="Node000002" href="$hash__keys_8cpp.html#a8c1832e1dfd853cce944ddd2df57dd53" title="Generates a Zobrist hash key for the given board position." alt="" coords="126,5,274,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="77,55,141,35,142,40,79,60"/>
+<area shape="rect" id="Node000004" href="$board_8cpp.html#a450b9988728615700e2d0677aa92d871" title="Reset board to empty state." alt="" coords="142,56,258,83"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="78,67,127,67,127,72,78,72"/>
+<area shape="rect" id="Node000005" href="$board_8cpp.html#ac392f2ff8c0f063425f09403c43d4cc5" title="Update piece lists, material counts, and pawn bitboards from scratch." alt="" coords="133,107,267,133"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="79,78,142,99,141,104,77,83"/>
+<area shape="rect" id="Node000003" href="$validate_8cpp.html#ad5a569564ef016ed02a4fef23d89d9c4" title="Checks if a given square index refers to a valid on&#45;board square." alt="" coords="350,5,439,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="274,16,336,16,336,21,274,21"/>
+<area shape="rect" id="Node000006" href="$validate_8cpp.html#aac5a1baab60b7b72d85de73be258f91b" title="Checks if the given piece code is empty, valid, or OFFBOARD." alt="" coords="322,81,467,108"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="267,109,307,103,307,109,268,114"/>
+<area shape="rect" id="Node000007" href="$validate_8cpp.html#ad7a2e012bffa6db3df97e7742c9d731d" title="Checks if the given side identifier is valid." alt="" coords="357,132,432,159"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="268,126,342,136,341,141,267,131"/>
+</map>

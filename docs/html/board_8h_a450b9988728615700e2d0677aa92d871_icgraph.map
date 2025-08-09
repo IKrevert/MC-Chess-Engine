@@ -1,0 +1,9 @@
+<map id="resetBoardState" name="resetBoardState">
+<area shape="rect" id="Node000001" title="Reset board to empty state." alt="" coords="286,31,401,57"/>
+<area shape="rect" id="Node000002" href="$board_8cpp.html#aad9cde553dadb6876eb29b43c8f66b08" title="Parse a FEN string into the given board state." alt="" coords="134,5,206,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="270,36,206,27,207,21,271,31"/>
+<area shape="rect" id="Node000004" href="$board_8cpp.html#aa79d9c29f4add58463f9a03d17085132" title="Flip the board vertically, swapping colors and positions." alt="" coords="103,56,238,83"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="271,57,239,62,238,57,270,52"/>
+<area shape="rect" id="Node000003" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,55,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="118,21,55,21,55,16,118,16"/>
+</map>

@@ -1,0 +1,296 @@
+\doxysection{board\+\_\+data.\+cpp File Reference}
+\hypertarget{board__data_8cpp}{}\label{board__data_8cpp}\index{board\_data.cpp@{board\_data.cpp}}
+{\ttfamily \#include "{}board\+\_\+data.\+h"{}}\newline
+Include dependency graph for board\+\_\+data.\+cpp\+:
+% FIG 0
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+char \mbox{\hyperlink{board__data_8cpp_a5e8a2680cc0c3bf89793d4495db11872}{piece\+To\+Character}} \mbox{[}$\,$\mbox{]} = "{}.PNBRQKpnbrqk"{}
+\begin{DoxyCompactList}\small\item\em Maps piece, side-\/to-\/move, rank and file to their character symbol. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{board__data_8cpp_afa209fbc704ec05409f581d71fde8fd1}{Side\+Char}} \mbox{[}$\,$\mbox{]} = "{}wb-\/"{}
+\item 
+char \mbox{\hyperlink{board__data_8cpp_a522db7bd0173e77bf538a2690115877d}{rank\+To\+Character}} \mbox{[}$\,$\mbox{]} = "{}12345678"{}
+\item 
+char \mbox{\hyperlink{board__data_8cpp_a65b06f8831ffdfba4ed645ff8107ef4e}{file\+To\+Character}} \mbox{[}$\,$\mbox{]} = "{}abcdefgh"{}
+\item 
+bool \mbox{\hyperlink{board__data_8cpp_a5ac343cdcd92a98fb3befc7089fcf1f6}{is\+Big\+Piece}} \mbox{[}13\mbox{]} = \{ \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa82764c3079aea4e60c80e45befbb839}{TRUE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa82764c3079aea4e60c80e45befbb839}{TRUE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa82764c3079aea4e60c80e45befbb839}{TRUE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa82764c3079aea4e60c80e45befbb839}{TRUE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa82764c3079aea4e60c80e45befbb839}{TRUE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa82764c3079aea4e60c80e45befbb839}{TRUE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa82764c3079aea4e60c80e45befbb839}{TRUE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa82764c3079aea4e60c80e45befbb839}{TRUE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa82764c3079aea4e60c80e45befbb839}{TRUE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa82764c3079aea4e60c80e45befbb839}{TRUE}} \}
+\begin{DoxyCompactList}\small\item\em Lookup tables for piece attributes. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{board__data_8cpp_a1194daf5edd75b8c23e024927438c146}{is\+Major\+Piece}} \mbox{[}13\mbox{]} = \{ \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa82764c3079aea4e60c80e45befbb839}{TRUE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa82764c3079aea4e60c80e45befbb839}{TRUE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa82764c3079aea4e60c80e45befbb839}{TRUE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa82764c3079aea4e60c80e45befbb839}{TRUE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa82764c3079aea4e60c80e45befbb839}{TRUE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa82764c3079aea4e60c80e45befbb839}{TRUE}} \}
+\item 
+bool \mbox{\hyperlink{board__data_8cpp_a05f9530dfb538ac57604b84aba4ed80a}{is\+Minor\+Piece}} \mbox{[}13\mbox{]} = \{ \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa82764c3079aea4e60c80e45befbb839}{TRUE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa82764c3079aea4e60c80e45befbb839}{TRUE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa82764c3079aea4e60c80e45befbb839}{TRUE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa82764c3079aea4e60c80e45befbb839}{TRUE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}} \}
+\item 
+int \mbox{\hyperlink{board__data_8cpp_abfbf3382aa90b4fe4895726b33635284}{piece\+Value}} \mbox{[}13\mbox{]} = \{ 0, 100, 325, 325, 550, 1000, 50000, 100, 325, 325, 550, 1000, 50000 \}
+\begin{DoxyCompactList}\small\item\em Material value of each piece type. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{board__data_8cpp_a4f776144dd266862ec0d7a590715f180}{piece\+Color}} \mbox{[}13\mbox{]}
+\begin{DoxyCompactList}\small\item\em Color of each piece type. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{board__data_8cpp_aae892a3d915300328fc6b472826d46c8}{is\+Pawn}} \mbox{[}13\mbox{]} = \{ \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa82764c3079aea4e60c80e45befbb839}{TRUE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa82764c3079aea4e60c80e45befbb839}{TRUE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}} \}
+\item 
+bool \mbox{\hyperlink{board__data_8cpp_a0c4e1dbae54d451869129180ecec8914}{is\+Knight}} \mbox{[}13\mbox{]} = \{ \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa82764c3079aea4e60c80e45befbb839}{TRUE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa82764c3079aea4e60c80e45befbb839}{TRUE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}} \}
+\item 
+bool \mbox{\hyperlink{board__data_8cpp_a17968c1ab56e1b67ccad99b8da36da80}{is\+King}} \mbox{[}13\mbox{]} = \{ \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa82764c3079aea4e60c80e45befbb839}{TRUE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa82764c3079aea4e60c80e45befbb839}{TRUE}} \}
+\item 
+bool \mbox{\hyperlink{board__data_8cpp_abec2ad46517568973ad34b71c2f4ea03}{is\+Rook\+Queen}} \mbox{[}13\mbox{]} = \{ \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa82764c3079aea4e60c80e45befbb839}{TRUE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa82764c3079aea4e60c80e45befbb839}{TRUE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa82764c3079aea4e60c80e45befbb839}{TRUE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa82764c3079aea4e60c80e45befbb839}{TRUE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}} \}
+\item 
+bool \mbox{\hyperlink{board__data_8cpp_ad38dec45cd35bfa210ff02c35a43f093}{is\+Bishop\+Queen}} \mbox{[}13\mbox{]} = \{ \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa82764c3079aea4e60c80e45befbb839}{TRUE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa82764c3079aea4e60c80e45befbb839}{TRUE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa82764c3079aea4e60c80e45befbb839}{TRUE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa82764c3079aea4e60c80e45befbb839}{TRUE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}} \}
+\item 
+bool \mbox{\hyperlink{board__data_8cpp_abb14115977ded022beb69c78e0aefaf5}{is\+Sling\+Piece}} \mbox{[}13\mbox{]} = \{ \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa82764c3079aea4e60c80e45befbb839}{TRUE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa82764c3079aea4e60c80e45befbb839}{TRUE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa82764c3079aea4e60c80e45befbb839}{TRUE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa82764c3079aea4e60c80e45befbb839}{TRUE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa82764c3079aea4e60c80e45befbb839}{TRUE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa82764c3079aea4e60c80e45befbb839}{TRUE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}} \}
+\item 
+int \mbox{\hyperlink{board__data_8cpp_ad97c161274172b00c5281b2d2e2f2fa2}{Mirror64}} \mbox{[}64\mbox{]}
+\begin{DoxyCompactList}\small\item\em Square mirroring lookup from white\textquotesingle{}s perspective. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{doc-var-members}
+\Hypertarget{board__data_8cpp_doc-var-members}
+\doxysubsection{Variable Documentation}
+\Hypertarget{board__data_8cpp_a65b06f8831ffdfba4ed645ff8107ef4e}\index{board\_data.cpp@{board\_data.cpp}!fileToCharacter@{fileToCharacter}}
+\index{fileToCharacter@{fileToCharacter}!board\_data.cpp@{board\_data.cpp}}
+\doxysubsubsection{\texorpdfstring{fileToCharacter}{fileToCharacter}}
+{\footnotesize\ttfamily \label{board__data_8cpp_a65b06f8831ffdfba4ed645ff8107ef4e} 
+char file\+To\+Character\mbox{[}$\,$\mbox{]} = "{}abcdefgh"{}}
+
+
+
+Definition at line \mbox{\hyperlink{board__data_8cpp_source_l00006}{6}} of file \mbox{\hyperlink{board__data_8cpp_source}{board\+\_\+data.\+cpp}}.
+
+\Hypertarget{board__data_8cpp_a5ac343cdcd92a98fb3befc7089fcf1f6}\index{board\_data.cpp@{board\_data.cpp}!isBigPiece@{isBigPiece}}
+\index{isBigPiece@{isBigPiece}!board\_data.cpp@{board\_data.cpp}}
+\doxysubsubsection{\texorpdfstring{isBigPiece}{isBigPiece}}
+{\footnotesize\ttfamily \label{board__data_8cpp_a5ac343cdcd92a98fb3befc7089fcf1f6} 
+bool is\+Big\+Piece\mbox{[}13\mbox{]} = \{ \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa82764c3079aea4e60c80e45befbb839}{TRUE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa82764c3079aea4e60c80e45befbb839}{TRUE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa82764c3079aea4e60c80e45befbb839}{TRUE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa82764c3079aea4e60c80e45befbb839}{TRUE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa82764c3079aea4e60c80e45befbb839}{TRUE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa82764c3079aea4e60c80e45befbb839}{TRUE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa82764c3079aea4e60c80e45befbb839}{TRUE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa82764c3079aea4e60c80e45befbb839}{TRUE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa82764c3079aea4e60c80e45befbb839}{TRUE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa82764c3079aea4e60c80e45befbb839}{TRUE}} \}}
+
+
+
+Lookup tables for piece attributes. 
+
+Each array index corresponds to a piece constant (EMPTY, wP, wN, ..., bK). Boolean arrays return true if the piece matches the property\+:
+\begin{DoxyItemize}
+\item is\+Big\+Piece\+: true if piece is not a pawn
+\item is\+Major\+Piece\+: true if rook or queen
+\item is\+Minor\+Piece\+: true if bishop or knight
+\item is\+Pawn\+: true if pawn
+\item is\+Knight\+: true if knight
+\item is\+King\+: true if king
+\item is\+Rook\+Or\+Queen\+: true if rook or queen
+\item is\+Bishop\+Or\+Queen\+: true if bishop or queen
+\item is\+Sliding\+Piece\+: true if bishop, rook, or queen 
+\end{DoxyItemize}
+
+Definition at line \mbox{\hyperlink{board__data_8cpp_source_l00008}{8}} of file \mbox{\hyperlink{board__data_8cpp_source}{board\+\_\+data.\+cpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{make__move_8cpp_source_l00072}{Add\+Piece()}}, \mbox{\hyperlink{make__move_8cpp_source_l00030}{Clear\+Piece()}}, \mbox{\hyperlink{board_8cpp_source_l00028}{is\+Board\+State\+Valid()}}, \mbox{\hyperlink{make__move_8cpp_source_l00099}{Move\+Piece()}}, and \mbox{\hyperlink{board_8cpp_source_l00112}{update\+Lists\+Material()}}.
+
+\Hypertarget{board__data_8cpp_ad38dec45cd35bfa210ff02c35a43f093}\index{board\_data.cpp@{board\_data.cpp}!isBishopQueen@{isBishopQueen}}
+\index{isBishopQueen@{isBishopQueen}!board\_data.cpp@{board\_data.cpp}}
+\doxysubsubsection{\texorpdfstring{isBishopQueen}{isBishopQueen}}
+{\footnotesize\ttfamily \label{board__data_8cpp_ad38dec45cd35bfa210ff02c35a43f093} 
+bool is\+Bishop\+Queen\mbox{[}13\mbox{]} = \{ \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa82764c3079aea4e60c80e45befbb839}{TRUE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa82764c3079aea4e60c80e45befbb839}{TRUE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa82764c3079aea4e60c80e45befbb839}{TRUE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa82764c3079aea4e60c80e45befbb839}{TRUE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}} \}}
+
+
+
+Definition at line \mbox{\hyperlink{board__data_8cpp_source_l00020}{20}} of file \mbox{\hyperlink{board__data_8cpp_source}{board\+\_\+data.\+cpp}}.
+
+\Hypertarget{board__data_8cpp_a17968c1ab56e1b67ccad99b8da36da80}\index{board\_data.cpp@{board\_data.cpp}!isKing@{isKing}}
+\index{isKing@{isKing}!board\_data.cpp@{board\_data.cpp}}
+\doxysubsubsection{\texorpdfstring{isKing}{isKing}}
+{\footnotesize\ttfamily \label{board__data_8cpp_a17968c1ab56e1b67ccad99b8da36da80} 
+bool is\+King\mbox{[}13\mbox{]} = \{ \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa82764c3079aea4e60c80e45befbb839}{TRUE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa82764c3079aea4e60c80e45befbb839}{TRUE}} \}}
+
+
+
+Definition at line \mbox{\hyperlink{board__data_8cpp_source_l00018}{18}} of file \mbox{\hyperlink{board__data_8cpp_source}{board\+\_\+data.\+cpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{make__move_8cpp_source_l00142}{make\+Move()}}, and \mbox{\hyperlink{make__move_8cpp_source_l00240}{take\+Move()}}.
+
+\Hypertarget{board__data_8cpp_a0c4e1dbae54d451869129180ecec8914}\index{board\_data.cpp@{board\_data.cpp}!isKnight@{isKnight}}
+\index{isKnight@{isKnight}!board\_data.cpp@{board\_data.cpp}}
+\doxysubsubsection{\texorpdfstring{isKnight}{isKnight}}
+{\footnotesize\ttfamily \label{board__data_8cpp_a0c4e1dbae54d451869129180ecec8914} 
+bool is\+Knight\mbox{[}13\mbox{]} = \{ \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa82764c3079aea4e60c80e45befbb839}{TRUE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa82764c3079aea4e60c80e45befbb839}{TRUE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}} \}}
+
+
+
+Definition at line \mbox{\hyperlink{board__data_8cpp_source_l00017}{17}} of file \mbox{\hyperlink{board__data_8cpp_source}{board\+\_\+data.\+cpp}}.
+
+\Hypertarget{board__data_8cpp_a1194daf5edd75b8c23e024927438c146}\index{board\_data.cpp@{board\_data.cpp}!isMajorPiece@{isMajorPiece}}
+\index{isMajorPiece@{isMajorPiece}!board\_data.cpp@{board\_data.cpp}}
+\doxysubsubsection{\texorpdfstring{isMajorPiece}{isMajorPiece}}
+{\footnotesize\ttfamily \label{board__data_8cpp_a1194daf5edd75b8c23e024927438c146} 
+bool is\+Major\+Piece\mbox{[}13\mbox{]} = \{ \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa82764c3079aea4e60c80e45befbb839}{TRUE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa82764c3079aea4e60c80e45befbb839}{TRUE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa82764c3079aea4e60c80e45befbb839}{TRUE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa82764c3079aea4e60c80e45befbb839}{TRUE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa82764c3079aea4e60c80e45befbb839}{TRUE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa82764c3079aea4e60c80e45befbb839}{TRUE}} \}}
+
+
+
+Definition at line \mbox{\hyperlink{board__data_8cpp_source_l00009}{9}} of file \mbox{\hyperlink{board__data_8cpp_source}{board\+\_\+data.\+cpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{make__move_8cpp_source_l00072}{Add\+Piece()}}, \mbox{\hyperlink{make__move_8cpp_source_l00030}{Clear\+Piece()}}, \mbox{\hyperlink{board_8cpp_source_l00028}{is\+Board\+State\+Valid()}}, and \mbox{\hyperlink{board_8cpp_source_l00112}{update\+Lists\+Material()}}.
+
+\Hypertarget{board__data_8cpp_a05f9530dfb538ac57604b84aba4ed80a}\index{board\_data.cpp@{board\_data.cpp}!isMinorPiece@{isMinorPiece}}
+\index{isMinorPiece@{isMinorPiece}!board\_data.cpp@{board\_data.cpp}}
+\doxysubsubsection{\texorpdfstring{isMinorPiece}{isMinorPiece}}
+{\footnotesize\ttfamily \label{board__data_8cpp_a05f9530dfb538ac57604b84aba4ed80a} 
+bool is\+Minor\+Piece\mbox{[}13\mbox{]} = \{ \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa82764c3079aea4e60c80e45befbb839}{TRUE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa82764c3079aea4e60c80e45befbb839}{TRUE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa82764c3079aea4e60c80e45befbb839}{TRUE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa82764c3079aea4e60c80e45befbb839}{TRUE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}} \}}
+
+
+
+Definition at line \mbox{\hyperlink{board__data_8cpp_source_l00010}{10}} of file \mbox{\hyperlink{board__data_8cpp_source}{board\+\_\+data.\+cpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{board_8cpp_source_l00028}{is\+Board\+State\+Valid()}}, and \mbox{\hyperlink{board_8cpp_source_l00112}{update\+Lists\+Material()}}.
+
+\Hypertarget{board__data_8cpp_aae892a3d915300328fc6b472826d46c8}\index{board\_data.cpp@{board\_data.cpp}!isPawn@{isPawn}}
+\index{isPawn@{isPawn}!board\_data.cpp@{board\_data.cpp}}
+\doxysubsubsection{\texorpdfstring{isPawn}{isPawn}}
+{\footnotesize\ttfamily \label{board__data_8cpp_aae892a3d915300328fc6b472826d46c8} 
+bool is\+Pawn\mbox{[}13\mbox{]} = \{ \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa82764c3079aea4e60c80e45befbb839}{TRUE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa82764c3079aea4e60c80e45befbb839}{TRUE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}} \}}
+
+
+
+Definition at line \mbox{\hyperlink{board__data_8cpp_source_l00016}{16}} of file \mbox{\hyperlink{board__data_8cpp_source}{board\+\_\+data.\+cpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{make__move_8cpp_source_l00142}{make\+Move()}}, and \mbox{\hyperlink{make__move_8cpp_source_l00240}{take\+Move()}}.
+
+\Hypertarget{board__data_8cpp_abec2ad46517568973ad34b71c2f4ea03}\index{board\_data.cpp@{board\_data.cpp}!isRookQueen@{isRookQueen}}
+\index{isRookQueen@{isRookQueen}!board\_data.cpp@{board\_data.cpp}}
+\doxysubsubsection{\texorpdfstring{isRookQueen}{isRookQueen}}
+{\footnotesize\ttfamily \label{board__data_8cpp_abec2ad46517568973ad34b71c2f4ea03} 
+bool is\+Rook\+Queen\mbox{[}13\mbox{]} = \{ \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa82764c3079aea4e60c80e45befbb839}{TRUE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa82764c3079aea4e60c80e45befbb839}{TRUE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa82764c3079aea4e60c80e45befbb839}{TRUE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa82764c3079aea4e60c80e45befbb839}{TRUE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}} \}}
+
+
+
+Definition at line \mbox{\hyperlink{board__data_8cpp_source_l00019}{19}} of file \mbox{\hyperlink{board__data_8cpp_source}{board\+\_\+data.\+cpp}}.
+
+\Hypertarget{board__data_8cpp_abb14115977ded022beb69c78e0aefaf5}\index{board\_data.cpp@{board\_data.cpp}!isSlingPiece@{isSlingPiece}}
+\index{isSlingPiece@{isSlingPiece}!board\_data.cpp@{board\_data.cpp}}
+\doxysubsubsection{\texorpdfstring{isSlingPiece}{isSlingPiece}}
+{\footnotesize\ttfamily \label{board__data_8cpp_abb14115977ded022beb69c78e0aefaf5} 
+bool is\+Sling\+Piece\mbox{[}13\mbox{]} = \{ \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa82764c3079aea4e60c80e45befbb839}{TRUE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa82764c3079aea4e60c80e45befbb839}{TRUE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa82764c3079aea4e60c80e45befbb839}{TRUE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa82764c3079aea4e60c80e45befbb839}{TRUE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa82764c3079aea4e60c80e45befbb839}{TRUE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa82764c3079aea4e60c80e45befbb839}{TRUE}}, \mbox{\hyperlink{defs_8h_ae846b15bdc775d500624ffa20eb0b370aa1e095cc966dbecf6a0d8aad75348d1a}{FALSE}} \}}
+
+
+
+Definition at line \mbox{\hyperlink{board__data_8cpp_source_l00021}{21}} of file \mbox{\hyperlink{board__data_8cpp_source}{board\+\_\+data.\+cpp}}.
+
+\Hypertarget{board__data_8cpp_ad97c161274172b00c5281b2d2e2f2fa2}\index{board\_data.cpp@{board\_data.cpp}!Mirror64@{Mirror64}}
+\index{Mirror64@{Mirror64}!board\_data.cpp@{board\_data.cpp}}
+\doxysubsubsection{\texorpdfstring{Mirror64}{Mirror64}}
+{\footnotesize\ttfamily \label{board__data_8cpp_ad97c161274172b00c5281b2d2e2f2fa2} 
+int Mirror64\mbox{[}64\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{56\ \ ,\ \ \ 57\ \ ,\ \ \ 58\ \ ,\ \ \ 59\ \ ,\ \ \ 60\ \ ,\ \ \ 61\ \ ,\ \ \ 62\ \ ,\ \ \ 63\ \ ,}
+\DoxyCodeLine{48\ \ ,\ \ \ 49\ \ ,\ \ \ 50\ \ ,\ \ \ 51\ \ ,\ \ \ 52\ \ ,\ \ \ 53\ \ ,\ \ \ 54\ \ ,\ \ \ 55\ \ ,}
+\DoxyCodeLine{40\ \ ,\ \ \ 41\ \ ,\ \ \ 42\ \ ,\ \ \ 43\ \ ,\ \ \ 44\ \ ,\ \ \ 45\ \ ,\ \ \ 46\ \ ,\ \ \ 47\ \ ,}
+\DoxyCodeLine{32\ \ ,\ \ \ 33\ \ ,\ \ \ 34\ \ ,\ \ \ 35\ \ ,\ \ \ 36\ \ ,\ \ \ 37\ \ ,\ \ \ 38\ \ ,\ \ \ 39\ \ ,}
+\DoxyCodeLine{24\ \ ,\ \ \ 25\ \ ,\ \ \ 26\ \ ,\ \ \ 27\ \ ,\ \ \ 28\ \ ,\ \ \ 29\ \ ,\ \ \ 30\ \ ,\ \ \ 31\ \ ,}
+\DoxyCodeLine{16\ \ ,\ \ \ 17\ \ ,\ \ \ 18\ \ ,\ \ \ 19\ \ ,\ \ \ 20\ \ ,\ \ \ 21\ \ ,\ \ \ 22\ \ ,\ \ \ 23\ \ ,}
+\DoxyCodeLine{8\ \ \ ,\ \ \ 9\ \ \ ,\ \ \ 10\ \ ,\ \ \ 11\ \ ,\ \ \ 12\ \ ,\ \ \ 13\ \ ,\ \ \ 14\ \ ,\ \ \ 15\ \ ,}
+\DoxyCodeLine{0\ \ \ ,\ \ \ 1\ \ \ ,\ \ \ 2\ \ \ ,\ \ \ 3\ \ \ ,\ \ \ 4\ \ \ ,\ \ \ 5\ \ \ ,\ \ \ 6\ \ \ ,\ \ \ 7}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Square mirroring lookup from white\textquotesingle{}s perspective. 
+
+Indexed by 0–63 board square index. Returns the mirrored square index as if the board were flipped vertically. Useful for symmetrical evaluation and move generation. 
+
+Definition at line \mbox{\hyperlink{board__data_8cpp_source_l00023}{23}} of file \mbox{\hyperlink{board__data_8cpp_source}{board\+\_\+data.\+cpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{board_8cpp_source_l00301}{mirror\+Board\+Position()}}.
+
+\Hypertarget{board__data_8cpp_a4f776144dd266862ec0d7a590715f180}\index{board\_data.cpp@{board\_data.cpp}!pieceColor@{pieceColor}}
+\index{pieceColor@{pieceColor}!board\_data.cpp@{board\_data.cpp}}
+\doxysubsubsection{\texorpdfstring{pieceColor}{pieceColor}}
+{\footnotesize\ttfamily \label{board__data_8cpp_a4f776144dd266862ec0d7a590715f180} 
+int piece\+Color\mbox{[}13\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{\ \mbox{\hyperlink{defs_8h_a3d042815b8c6c8d5d724d7d79506b5efa627abe5a430420baf29ebe1940a7f2fb}{BOTH}},\ \mbox{\hyperlink{defs_8h_a3d042815b8c6c8d5d724d7d79506b5efa283fc479650da98250635b9c3c0e7e50}{WHITE}},\ \mbox{\hyperlink{defs_8h_a3d042815b8c6c8d5d724d7d79506b5efa283fc479650da98250635b9c3c0e7e50}{WHITE}},\ \mbox{\hyperlink{defs_8h_a3d042815b8c6c8d5d724d7d79506b5efa283fc479650da98250635b9c3c0e7e50}{WHITE}},\ \mbox{\hyperlink{defs_8h_a3d042815b8c6c8d5d724d7d79506b5efa283fc479650da98250635b9c3c0e7e50}{WHITE}},\ \mbox{\hyperlink{defs_8h_a3d042815b8c6c8d5d724d7d79506b5efa283fc479650da98250635b9c3c0e7e50}{WHITE}},\ \mbox{\hyperlink{defs_8h_a3d042815b8c6c8d5d724d7d79506b5efa283fc479650da98250635b9c3c0e7e50}{WHITE}},}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{defs_8h_a3d042815b8c6c8d5d724d7d79506b5efaf77fb67151d0c18d397069ad8c271ba3}{BLACK}},\ \mbox{\hyperlink{defs_8h_a3d042815b8c6c8d5d724d7d79506b5efaf77fb67151d0c18d397069ad8c271ba3}{BLACK}},\ \mbox{\hyperlink{defs_8h_a3d042815b8c6c8d5d724d7d79506b5efaf77fb67151d0c18d397069ad8c271ba3}{BLACK}},\ \mbox{\hyperlink{defs_8h_a3d042815b8c6c8d5d724d7d79506b5efaf77fb67151d0c18d397069ad8c271ba3}{BLACK}},\ \mbox{\hyperlink{defs_8h_a3d042815b8c6c8d5d724d7d79506b5efaf77fb67151d0c18d397069ad8c271ba3}{BLACK}},\ \mbox{\hyperlink{defs_8h_a3d042815b8c6c8d5d724d7d79506b5efaf77fb67151d0c18d397069ad8c271ba3}{BLACK}}\ \}}
+
+\end{DoxyCode}
+
+
+Color of each piece type. 
+
+Indexed by piece constant (EMPTY, wP, wN, ..., bK). Possible values\+: WHITE, BLACK, or BOTH (for EMPTY). 
+
+Definition at line \mbox{\hyperlink{board__data_8cpp_source_l00013}{13}} of file \mbox{\hyperlink{board__data_8cpp_source}{board\+\_\+data.\+cpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{make__move_8cpp_source_l00072}{Add\+Piece()}}, \mbox{\hyperlink{make__move_8cpp_source_l00030}{Clear\+Piece()}}, \mbox{\hyperlink{move__generator_8cpp_source_l00299}{generate\+All\+Captures()}}, \mbox{\hyperlink{move__generator_8cpp_source_l00165}{generate\+All\+Moves()}}, \mbox{\hyperlink{board_8cpp_source_l00028}{is\+Board\+State\+Valid()}}, \mbox{\hyperlink{attack_8cpp_source_l00009}{is\+Square\+Attacked()}}, \mbox{\hyperlink{make__move_8cpp_source_l00099}{Move\+Piece()}}, \mbox{\hyperlink{make__move_8cpp_source_l00240}{take\+Move()}}, and \mbox{\hyperlink{board_8cpp_source_l00112}{update\+Lists\+Material()}}.
+
+\Hypertarget{board__data_8cpp_a5e8a2680cc0c3bf89793d4495db11872}\index{board\_data.cpp@{board\_data.cpp}!pieceToCharacter@{pieceToCharacter}}
+\index{pieceToCharacter@{pieceToCharacter}!board\_data.cpp@{board\_data.cpp}}
+\doxysubsubsection{\texorpdfstring{pieceToCharacter}{pieceToCharacter}}
+{\footnotesize\ttfamily \label{board__data_8cpp_a5e8a2680cc0c3bf89793d4495db11872} 
+char piece\+To\+Character\mbox{[}$\,$\mbox{]} = "{}.PNBRQKpnbrqk"{}}
+
+
+
+Maps piece, side-\/to-\/move, rank and file to their character symbol. 
+
+For example\+: black king = \textquotesingle{}k\textquotesingle{}, white pawn = \textquotesingle{}P\textquotesingle{}, file 1 = \textquotesingle{}a\textquotesingle{} etc. 
+
+Definition at line \mbox{\hyperlink{board__data_8cpp_source_l00003}{3}} of file \mbox{\hyperlink{board__data_8cpp_source}{board\+\_\+data.\+cpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{board_8cpp_source_l00272}{print\+Board\+State()}}.
+
+\Hypertarget{board__data_8cpp_abfbf3382aa90b4fe4895726b33635284}\index{board\_data.cpp@{board\_data.cpp}!pieceValue@{pieceValue}}
+\index{pieceValue@{pieceValue}!board\_data.cpp@{board\_data.cpp}}
+\doxysubsubsection{\texorpdfstring{pieceValue}{pieceValue}}
+{\footnotesize\ttfamily \label{board__data_8cpp_abfbf3382aa90b4fe4895726b33635284} 
+int piece\+Value\mbox{[}13\mbox{]} = \{ 0, 100, 325, 325, 550, 1000, 50000, 100, 325, 325, 550, 1000, 50000 \}}
+
+
+
+Material value of each piece type. 
+
+Indexed by piece constant (EMPTY, wP, wN, ..., bK). Value is in centipawns, e.\+g., pawn = 100, queen = 1000, king = 50000. 
+
+Definition at line \mbox{\hyperlink{board__data_8cpp_source_l00012}{12}} of file \mbox{\hyperlink{board__data_8cpp_source}{board\+\_\+data.\+cpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{make__move_8cpp_source_l00072}{Add\+Piece()}}, \mbox{\hyperlink{make__move_8cpp_source_l00030}{Clear\+Piece()}}, \mbox{\hyperlink{board_8cpp_source_l00028}{is\+Board\+State\+Valid()}}, and \mbox{\hyperlink{board_8cpp_source_l00112}{update\+Lists\+Material()}}.
+
+\Hypertarget{board__data_8cpp_a522db7bd0173e77bf538a2690115877d}\index{board\_data.cpp@{board\_data.cpp}!rankToCharacter@{rankToCharacter}}
+\index{rankToCharacter@{rankToCharacter}!board\_data.cpp@{board\_data.cpp}}
+\doxysubsubsection{\texorpdfstring{rankToCharacter}{rankToCharacter}}
+{\footnotesize\ttfamily \label{board__data_8cpp_a522db7bd0173e77bf538a2690115877d} 
+char rank\+To\+Character\mbox{[}$\,$\mbox{]} = "{}12345678"{}}
+
+
+
+Definition at line \mbox{\hyperlink{board__data_8cpp_source_l00005}{5}} of file \mbox{\hyperlink{board__data_8cpp_source}{board\+\_\+data.\+cpp}}.
+
+\Hypertarget{board__data_8cpp_afa209fbc704ec05409f581d71fde8fd1}\index{board\_data.cpp@{board\_data.cpp}!SideChar@{SideChar}}
+\index{SideChar@{SideChar}!board\_data.cpp@{board\_data.cpp}}
+\doxysubsubsection{\texorpdfstring{SideChar}{SideChar}}
+{\footnotesize\ttfamily \label{board__data_8cpp_afa209fbc704ec05409f581d71fde8fd1} 
+char Side\+Char\mbox{[}$\,$\mbox{]} = "{}wb-\/"{}}
+
+
+
+Definition at line \mbox{\hyperlink{board__data_8cpp_source_l00004}{4}} of file \mbox{\hyperlink{board__data_8cpp_source}{board\+\_\+data.\+cpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{board_8cpp_source_l00272}{print\+Board\+State()}}.
+

@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\isaac\OneDrive\Desktop\MC-Chess-Engine\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\isaac\OneDrive\Desktop\MC-Chess-Engine\util\setup.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\isaac\OneDrive\Desktop\MC-Chess-Engine\util\bitboards.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\isaac\OneDrive\Desktop\MC-Chess-Engine\util\hash_keys.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\isaac\OneDrive\Desktop\MC-Chess-Engine\board\board.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\isaac\OneDrive\Desktop\MC-Chess-Engine\board\board_data.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\isaac\OneDrive\Desktop\MC-Chess-Engine\util\attack.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\isaac\OneDrive\Desktop\MC-Chess-Engine\util\notation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\isaac\OneDrive\Desktop\MC-Chess-Engine\move\move_generator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\isaac\OneDrive\Desktop\MC-Chess-Engine\test\validate.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\isaac\OneDrive\Desktop\MC-Chess-Engine\move\make_move.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\isaac\OneDrive\Desktop\MC-Chess-Engine\test\perft.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\isaac\OneDrive\Desktop\MC-Chess-Engine\util\misc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\isaac\OneDrive\Desktop\MC-Chess-Engine\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{7CF127DD-5782-35C1-9BF0-A01D9064D116}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

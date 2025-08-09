@@ -1,0 +1,142 @@
+\doxysection{attack.\+cpp File Reference}
+\hypertarget{attack_8cpp}{}\label{attack_8cpp}\index{attack.cpp@{attack.cpp}}
+{\ttfamily \#include $<$cstdio$>$}\newline
+{\ttfamily \#include "{}defs.\+h"{}}\newline
+Include dependency graph for attack.\+cpp\+:
+% FIG 0
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{attack_8cpp_a36ea46ff61e0738a61f70dcf90b5178b}{is\+Square\+Attacked}} (const int square, const int side, const \mbox{\hyperlink{struct_s___b_o_a_r_d}{S\+\_\+\+BOARD}} \texorpdfstring{$\ast$}{*}pos)
+\begin{DoxyCompactList}\small\item\em Determines if a given square is attacked by a given side. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const int \mbox{\hyperlink{attack_8cpp_a05f1089ec96d8534e671ce07181c6f86}{knight\+Direction}} \mbox{[}8\mbox{]} = \{ -\/8, -\/19, -\/21, -\/12, 8, 19, 21, 12 \}
+\begin{DoxyCompactList}\small\item\em Knight movement directions in 120-\/square board representation. \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{attack_8cpp_a63758569427276282b64f796be44064f}{rook\+Direction}} \mbox{[}4\mbox{]} = \{ -\/1, -\/10, 1, 10 \}
+\begin{DoxyCompactList}\small\item\em Rook movement directions in 120-\/square board representation. \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{attack_8cpp_a19003113e09295a55fe3fc6a61e8b5b9}{bishop\+Direction}} \mbox{[}4\mbox{]} = \{ -\/9, -\/11, 11, 9 \}
+\begin{DoxyCompactList}\small\item\em Bishop movement directions in 120-\/square board representation. \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{attack_8cpp_a8b18957f6f100c2d8ea4ffd4aa0f5c58}{king\+Direction}} \mbox{[}8\mbox{]} = \{ -\/1, -\/10, 1, 10, -\/9, -\/11, 11, 9 \}
+\begin{DoxyCompactList}\small\item\em King movement directions in 120-\/square board representation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{attack_8cpp_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{attack_8cpp_a36ea46ff61e0738a61f70dcf90b5178b}\index{attack.cpp@{attack.cpp}!isSquareAttacked@{isSquareAttacked}}
+\index{isSquareAttacked@{isSquareAttacked}!attack.cpp@{attack.cpp}}
+\doxysubsubsection{\texorpdfstring{isSquareAttacked()}{isSquareAttacked()}}
+{\footnotesize\ttfamily \label{attack_8cpp_a36ea46ff61e0738a61f70dcf90b5178b} 
+bool is\+Square\+Attacked (\begin{DoxyParamCaption}\item[{int}]{sq}{, }\item[{int}]{side}{, }\item[{const \mbox{\hyperlink{struct_s___b_o_a_r_d}{S\+\_\+\+BOARD}} \texorpdfstring{$\ast$}{*}}]{pos}{}\end{DoxyParamCaption})}
+
+
+
+Determines if a given square is attacked by a given side. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sq} & Square index (120-\/based representation). \\
+\hline
+{\em side} & Side to check for attacks (WHITE or BLACK). \\
+\hline
+{\em pos} & Pointer to the current board state. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the square is attacked by the given side, false otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{attack_8cpp_source_l00009}{9}} of file \mbox{\hyperlink{attack_8cpp_source}{attack.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{defs_8h_source_l00014}{ASSERT}}, \mbox{\hyperlink{attack_8cpp_source_l00006}{bishop\+Direction}}, \mbox{\hyperlink{defs_8h_source_l00040}{bP}}, \mbox{\hyperlink{defs_8h_source_l00040}{EMPTY}}, \mbox{\hyperlink{board_8cpp_source_l00028}{is\+Board\+State\+Valid()}}, \mbox{\hyperlink{defs_8h_source_l00187}{Is\+BQ}}, \mbox{\hyperlink{defs_8h_source_l00190}{Is\+Ki}}, \mbox{\hyperlink{defs_8h_source_l00189}{Is\+Kn}}, \mbox{\hyperlink{defs_8h_source_l00188}{Is\+RQ}}, \mbox{\hyperlink{attack_8cpp_source_l00007}{king\+Direction}}, \mbox{\hyperlink{attack_8cpp_source_l00004}{knight\+Direction}}, \mbox{\hyperlink{defs_8h_source_l00054}{OFFBOARD}}, \mbox{\hyperlink{validate_8cpp_source_l00025}{Pce\+Valid\+Empty\+Offbrd()}}, \mbox{\hyperlink{board__data_8cpp_source_l00013}{piece\+Color}}, \mbox{\hyperlink{defs_8h_source_l00102}{S\+\_\+\+BOARD\+::pieces}}, \mbox{\hyperlink{attack_8cpp_source_l00005}{rook\+Direction}}, \mbox{\hyperlink{validate_8cpp_source_l00034}{Side\+Valid()}}, \mbox{\hyperlink{validate_8cpp_source_l00021}{Sq\+Is120()}}, \mbox{\hyperlink{validate_8cpp_source_l00029}{Sq\+On\+Board()}}, \mbox{\hyperlink{defs_8h_source_l00044}{WHITE}}, and \mbox{\hyperlink{defs_8h_source_l00040}{wP}}.
+
+
+
+Referenced by \mbox{\hyperlink{move__generator_8cpp_source_l00165}{generate\+All\+Moves()}}, \mbox{\hyperlink{make__move_8cpp_source_l00142}{make\+Move()}}, and \mbox{\hyperlink{make__move_8cpp_source_l00303}{make\+Null\+Move()}}.
+
+Here is the call graph for this function\+:
+% FIG 1
+Here is the caller graph for this function\+:
+% FIG 2
+
+
+\label{doc-var-members}
+\Hypertarget{attack_8cpp_doc-var-members}
+\doxysubsection{Variable Documentation}
+\Hypertarget{attack_8cpp_a19003113e09295a55fe3fc6a61e8b5b9}\index{attack.cpp@{attack.cpp}!bishopDirection@{bishopDirection}}
+\index{bishopDirection@{bishopDirection}!attack.cpp@{attack.cpp}}
+\doxysubsubsection{\texorpdfstring{bishopDirection}{bishopDirection}}
+{\footnotesize\ttfamily \label{attack_8cpp_a19003113e09295a55fe3fc6a61e8b5b9} 
+const int bishop\+Direction\mbox{[}4\mbox{]} = \{ -\/9, -\/11, 11, 9 \}}
+
+
+
+Bishop movement directions in 120-\/square board representation. 
+
+
+
+Definition at line \mbox{\hyperlink{attack_8cpp_source_l00006}{6}} of file \mbox{\hyperlink{attack_8cpp_source}{attack.\+cpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{attack_8cpp_source_l00009}{is\+Square\+Attacked()}}.
+
+\Hypertarget{attack_8cpp_a8b18957f6f100c2d8ea4ffd4aa0f5c58}\index{attack.cpp@{attack.cpp}!kingDirection@{kingDirection}}
+\index{kingDirection@{kingDirection}!attack.cpp@{attack.cpp}}
+\doxysubsubsection{\texorpdfstring{kingDirection}{kingDirection}}
+{\footnotesize\ttfamily \label{attack_8cpp_a8b18957f6f100c2d8ea4ffd4aa0f5c58} 
+const int king\+Direction\mbox{[}8\mbox{]} = \{ -\/1, -\/10, 1, 10, -\/9, -\/11, 11, 9 \}}
+
+
+
+King movement directions in 120-\/square board representation. 
+
+
+
+Definition at line \mbox{\hyperlink{attack_8cpp_source_l00007}{7}} of file \mbox{\hyperlink{attack_8cpp_source}{attack.\+cpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{attack_8cpp_source_l00009}{is\+Square\+Attacked()}}.
+
+\Hypertarget{attack_8cpp_a05f1089ec96d8534e671ce07181c6f86}\index{attack.cpp@{attack.cpp}!knightDirection@{knightDirection}}
+\index{knightDirection@{knightDirection}!attack.cpp@{attack.cpp}}
+\doxysubsubsection{\texorpdfstring{knightDirection}{knightDirection}}
+{\footnotesize\ttfamily \label{attack_8cpp_a05f1089ec96d8534e671ce07181c6f86} 
+const int knight\+Direction\mbox{[}8\mbox{]} = \{ -\/8, -\/19, -\/21, -\/12, 8, 19, 21, 12 \}}
+
+
+
+Knight movement directions in 120-\/square board representation. 
+
+
+
+Definition at line \mbox{\hyperlink{attack_8cpp_source_l00004}{4}} of file \mbox{\hyperlink{attack_8cpp_source}{attack.\+cpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{attack_8cpp_source_l00009}{is\+Square\+Attacked()}}.
+
+\Hypertarget{attack_8cpp_a63758569427276282b64f796be44064f}\index{attack.cpp@{attack.cpp}!rookDirection@{rookDirection}}
+\index{rookDirection@{rookDirection}!attack.cpp@{attack.cpp}}
+\doxysubsubsection{\texorpdfstring{rookDirection}{rookDirection}}
+{\footnotesize\ttfamily \label{attack_8cpp_a63758569427276282b64f796be44064f} 
+const int rook\+Direction\mbox{[}4\mbox{]} = \{ -\/1, -\/10, 1, 10 \}}
+
+
+
+Rook movement directions in 120-\/square board representation. 
+
+
+
+Definition at line \mbox{\hyperlink{attack_8cpp_source_l00005}{5}} of file \mbox{\hyperlink{attack_8cpp_source}{attack.\+cpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{attack_8cpp_source_l00009}{is\+Square\+Attacked()}}.
+

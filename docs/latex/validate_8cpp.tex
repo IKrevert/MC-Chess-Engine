@@ -1,0 +1,282 @@
+\doxysection{validate.\+cpp File Reference}
+\hypertarget{validate_8cpp}{}\label{validate_8cpp}\index{validate.cpp@{validate.cpp}}
+{\ttfamily \#include $<$cstdio$>$}\newline
+{\ttfamily \#include "{}defs.\+h"{}}\newline
+{\ttfamily \#include "{}util/setup.\+h"{}}\newline
+{\ttfamily \#include "{}validate.\+h"{}}\newline
+Include dependency graph for validate.\+cpp\+:
+% FIG 0
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{validate_8cpp_a63d4de5e5c2a915fbce5d856620285d6}{Move\+List\+Ok}} (const \mbox{\hyperlink{struct_s___m_o_v_e_l_i_s_t}{S\+\_\+\+MOVELIST}} \texorpdfstring{$\ast$}{*}moves, const \mbox{\hyperlink{struct_s___b_o_a_r_d}{S\+\_\+\+BOARD}} \texorpdfstring{$\ast$}{*}board)
+\begin{DoxyCompactList}\small\item\em Validates that a move list is within bounds and references valid moves. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{validate_8cpp_a48b5f0e20cf731ceeeb659fbc27b972c}{Sq\+Is120}} (const int sq)
+\begin{DoxyCompactList}\small\item\em Checks if a given square index is within the 120-\/based range. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{validate_8cpp_aac5a1baab60b7b72d85de73be258f91b}{Pce\+Valid\+Empty\+Offbrd}} (const int pce)
+\begin{DoxyCompactList}\small\item\em Checks if the given piece code is empty, valid, or OFFBOARD. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{validate_8cpp_ad5a569564ef016ed02a4fef23d89d9c4}{Sq\+On\+Board}} (const int sq)
+\begin{DoxyCompactList}\small\item\em Checks if a given square index refers to a valid on-\/board square. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{validate_8cpp_ad7a2e012bffa6db3df97e7742c9d731d}{Side\+Valid}} (const int side)
+\begin{DoxyCompactList}\small\item\em Checks if the given side identifier is valid. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{validate_8cpp_ab07d4a10c99178b3ac54a5c42c01127f}{File\+Rank\+Valid}} (const int fr)
+\begin{DoxyCompactList}\small\item\em Checks if a file or rank index is valid (0–7). \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{validate_8cpp_ac8317193b0ce2ab0c3d8d0f212cdd2b6}{piece\+Valueid\+Empty}} (const int pce)
+\begin{DoxyCompactList}\small\item\em Checks if the given piece code is either empty or a valid piece. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{validate_8cpp_aca205110cd18879d0e0a965dee34b776}{piece\+Valueid}} (const int pce)
+\begin{DoxyCompactList}\small\item\em Checks if the given piece code is a valid piece (non-\/empty). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{validate_8cpp_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{validate_8cpp_ab07d4a10c99178b3ac54a5c42c01127f}\index{validate.cpp@{validate.cpp}!FileRankValid@{FileRankValid}}
+\index{FileRankValid@{FileRankValid}!validate.cpp@{validate.cpp}}
+\doxysubsubsection{\texorpdfstring{FileRankValid()}{FileRankValid()}}
+{\footnotesize\ttfamily \label{validate_8cpp_ab07d4a10c99178b3ac54a5c42c01127f} 
+int File\+Rank\+Valid (\begin{DoxyParamCaption}\item[{const int}]{fr}{}\end{DoxyParamCaption})}
+
+
+
+Checks if a file or rank index is valid (0–7). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fr} & The file or rank index. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Non-\/zero if valid, 0 otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{validate_8cpp_source_l00038}{38}} of file \mbox{\hyperlink{validate_8cpp_source}{validate.\+cpp}}.
+
+\Hypertarget{validate_8cpp_a63d4de5e5c2a915fbce5d856620285d6}\index{validate.cpp@{validate.cpp}!MoveListOk@{MoveListOk}}
+\index{MoveListOk@{MoveListOk}!validate.cpp@{validate.cpp}}
+\doxysubsubsection{\texorpdfstring{MoveListOk()}{MoveListOk()}}
+{\footnotesize\ttfamily \label{validate_8cpp_a63d4de5e5c2a915fbce5d856620285d6} 
+int Move\+List\+Ok (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_s___m_o_v_e_l_i_s_t}{S\+\_\+\+MOVELIST}} \texorpdfstring{$\ast$}{*}}]{list}{, }\item[{const \mbox{\hyperlink{struct_s___b_o_a_r_d}{S\+\_\+\+BOARD}} \texorpdfstring{$\ast$}{*}}]{pos}{}\end{DoxyParamCaption})}
+
+
+
+Validates that a move list is within bounds and references valid moves. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & Pointer to the move list. \\
+\hline
+{\em pos} & Pointer to the board state. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Non-\/zero if the move list is valid, 0 otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{validate_8cpp_source_l00007}{7}} of file \mbox{\hyperlink{validate_8cpp_source}{validate.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{defs_8h_source_l00068}{S\+\_\+\+MOVELIST\+::count}}, \mbox{\hyperlink{defs_8h_source_l00057}{FALSE}}, \mbox{\hyperlink{defs_8h_source_l00164}{FROMSQ}}, \mbox{\hyperlink{defs_8h_source_l00032}{MAXPOSITIONMOVES}}, \mbox{\hyperlink{defs_8h_source_l00062}{S\+\_\+\+MOVE\+::move}}, \mbox{\hyperlink{defs_8h_source_l00067}{S\+\_\+\+MOVELIST\+::moves}}, \mbox{\hyperlink{defs_8h_source_l00102}{S\+\_\+\+BOARD\+::pieces}}, \mbox{\hyperlink{validate_8cpp_source_l00042}{piece\+Valueid\+Empty()}}, \mbox{\hyperlink{validate_8cpp_source_l00029}{Sq\+On\+Board()}}, \mbox{\hyperlink{defs_8h_source_l00165}{TOSQ}}, and \mbox{\hyperlink{defs_8h_source_l00057}{TRUE}}.
+
+
+
+Referenced by \mbox{\hyperlink{move__generator_8cpp_source_l00299}{generate\+All\+Captures()}}, and \mbox{\hyperlink{move__generator_8cpp_source_l00165}{generate\+All\+Moves()}}.
+
+Here is the call graph for this function\+:
+% FIG 1
+Here is the caller graph for this function\+:
+% FIG 2
+\Hypertarget{validate_8cpp_aac5a1baab60b7b72d85de73be258f91b}\index{validate.cpp@{validate.cpp}!PceValidEmptyOffbrd@{PceValidEmptyOffbrd}}
+\index{PceValidEmptyOffbrd@{PceValidEmptyOffbrd}!validate.cpp@{validate.cpp}}
+\doxysubsubsection{\texorpdfstring{PceValidEmptyOffbrd()}{PceValidEmptyOffbrd()}}
+{\footnotesize\ttfamily \label{validate_8cpp_aac5a1baab60b7b72d85de73be258f91b} 
+int Pce\+Valid\+Empty\+Offbrd (\begin{DoxyParamCaption}\item[{const int}]{pce}{}\end{DoxyParamCaption})}
+
+
+
+Checks if the given piece code is empty, valid, or OFFBOARD. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pce} & Piece code to check. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Non-\/zero if valid, 0 otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{validate_8cpp_source_l00025}{25}} of file \mbox{\hyperlink{validate_8cpp_source}{validate.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{defs_8h_source_l00040}{bK}}, \mbox{\hyperlink{defs_8h_source_l00040}{EMPTY}}, and \mbox{\hyperlink{defs_8h_source_l00054}{OFFBOARD}}.
+
+
+
+Referenced by \mbox{\hyperlink{attack_8cpp_source_l00009}{is\+Square\+Attacked()}}, and \mbox{\hyperlink{board_8cpp_source_l00112}{update\+Lists\+Material()}}.
+
+Here is the caller graph for this function\+:
+% FIG 3
+\Hypertarget{validate_8cpp_aca205110cd18879d0e0a965dee34b776}\index{validate.cpp@{validate.cpp}!pieceValueid@{pieceValueid}}
+\index{pieceValueid@{pieceValueid}!validate.cpp@{validate.cpp}}
+\doxysubsubsection{\texorpdfstring{pieceValueid()}{pieceValueid()}}
+{\footnotesize\ttfamily \label{validate_8cpp_aca205110cd18879d0e0a965dee34b776} 
+int piece\+Valueid (\begin{DoxyParamCaption}\item[{const int}]{pce}{}\end{DoxyParamCaption})}
+
+
+
+Checks if the given piece code is a valid piece (non-\/empty). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pce} & Piece code to check. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Non-\/zero if valid, 0 otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{validate_8cpp_source_l00046}{46}} of file \mbox{\hyperlink{validate_8cpp_source}{validate.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{defs_8h_source_l00040}{bK}}, and \mbox{\hyperlink{defs_8h_source_l00040}{wP}}.
+
+
+
+Referenced by \mbox{\hyperlink{move__generator_8cpp_source_l00053}{Add\+Capture\+Move()}}, \mbox{\hyperlink{make__move_8cpp_source_l00072}{Add\+Piece()}}, \mbox{\hyperlink{make__move_8cpp_source_l00030}{Clear\+Piece()}}, \mbox{\hyperlink{move__generator_8cpp_source_l00299}{generate\+All\+Captures()}}, \mbox{\hyperlink{move__generator_8cpp_source_l00165}{generate\+All\+Moves()}}, \mbox{\hyperlink{make__move_8cpp_source_l00142}{make\+Move()}}, \mbox{\hyperlink{make__move_8cpp_source_l00099}{Move\+Piece()}}, and \mbox{\hyperlink{make__move_8cpp_source_l00240}{take\+Move()}}.
+
+Here is the caller graph for this function\+:
+% FIG 4
+\Hypertarget{validate_8cpp_ac8317193b0ce2ab0c3d8d0f212cdd2b6}\index{validate.cpp@{validate.cpp}!pieceValueidEmpty@{pieceValueidEmpty}}
+\index{pieceValueidEmpty@{pieceValueidEmpty}!validate.cpp@{validate.cpp}}
+\doxysubsubsection{\texorpdfstring{pieceValueidEmpty()}{pieceValueidEmpty()}}
+{\footnotesize\ttfamily \label{validate_8cpp_ac8317193b0ce2ab0c3d8d0f212cdd2b6} 
+int piece\+Valueid\+Empty (\begin{DoxyParamCaption}\item[{const int}]{pce}{}\end{DoxyParamCaption})}
+
+
+
+Checks if the given piece code is either empty or a valid piece. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pce} & Piece code to check. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Non-\/zero if valid, 0 otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{validate_8cpp_source_l00042}{42}} of file \mbox{\hyperlink{validate_8cpp_source}{validate.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{defs_8h_source_l00040}{bK}}, and \mbox{\hyperlink{defs_8h_source_l00040}{EMPTY}}.
+
+
+
+Referenced by \mbox{\hyperlink{move__generator_8cpp_source_l00109}{Add\+Black\+Pawn\+Cap\+Move()}}, \mbox{\hyperlink{move__generator_8cpp_source_l00078}{Add\+White\+Pawn\+Cap\+Move()}}, and \mbox{\hyperlink{validate_8cpp_source_l00007}{Move\+List\+Ok()}}.
+
+Here is the caller graph for this function\+:
+% FIG 5
+\Hypertarget{validate_8cpp_ad7a2e012bffa6db3df97e7742c9d731d}\index{validate.cpp@{validate.cpp}!SideValid@{SideValid}}
+\index{SideValid@{SideValid}!validate.cpp@{validate.cpp}}
+\doxysubsubsection{\texorpdfstring{SideValid()}{SideValid()}}
+{\footnotesize\ttfamily \label{validate_8cpp_ad7a2e012bffa6db3df97e7742c9d731d} 
+int Side\+Valid (\begin{DoxyParamCaption}\item[{const int}]{side}{}\end{DoxyParamCaption})}
+
+
+
+Checks if the given side identifier is valid. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em side} & Side value to check (WHITE or BLACK). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Non-\/zero if valid, 0 otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{validate_8cpp_source_l00034}{34}} of file \mbox{\hyperlink{validate_8cpp_source}{validate.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{defs_8h_source_l00044}{BLACK}}, and \mbox{\hyperlink{defs_8h_source_l00044}{WHITE}}.
+
+
+
+Referenced by \mbox{\hyperlink{make__move_8cpp_source_l00072}{Add\+Piece()}}, \mbox{\hyperlink{make__move_8cpp_source_l00030}{Clear\+Piece()}}, \mbox{\hyperlink{attack_8cpp_source_l00009}{is\+Square\+Attacked()}}, \mbox{\hyperlink{make__move_8cpp_source_l00142}{make\+Move()}}, \mbox{\hyperlink{make__move_8cpp_source_l00099}{Move\+Piece()}}, and \mbox{\hyperlink{board_8cpp_source_l00112}{update\+Lists\+Material()}}.
+
+Here is the caller graph for this function\+:
+% FIG 6
+\Hypertarget{validate_8cpp_a48b5f0e20cf731ceeeb659fbc27b972c}\index{validate.cpp@{validate.cpp}!SqIs120@{SqIs120}}
+\index{SqIs120@{SqIs120}!validate.cpp@{validate.cpp}}
+\doxysubsubsection{\texorpdfstring{SqIs120()}{SqIs120()}}
+{\footnotesize\ttfamily \label{validate_8cpp_a48b5f0e20cf731ceeeb659fbc27b972c} 
+int Sq\+Is120 (\begin{DoxyParamCaption}\item[{const int}]{sq}{}\end{DoxyParamCaption})}
+
+
+
+Checks if a given square index is within the 120-\/based range. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sq} & The square index to check. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Non-\/zero if valid, 0 otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{validate_8cpp_source_l00021}{21}} of file \mbox{\hyperlink{validate_8cpp_source}{validate.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{defs_8h_source_l00029}{BRD\+\_\+\+SQ\+\_\+\+NUM}}.
+
+
+
+Referenced by \mbox{\hyperlink{attack_8cpp_source_l00009}{is\+Square\+Attacked()}}.
+
+Here is the caller graph for this function\+:
+% FIG 7
+\Hypertarget{validate_8cpp_ad5a569564ef016ed02a4fef23d89d9c4}\index{validate.cpp@{validate.cpp}!SqOnBoard@{SqOnBoard}}
+\index{SqOnBoard@{SqOnBoard}!validate.cpp@{validate.cpp}}
+\doxysubsubsection{\texorpdfstring{SqOnBoard()}{SqOnBoard()}}
+{\footnotesize\ttfamily \label{validate_8cpp_ad5a569564ef016ed02a4fef23d89d9c4} 
+int Sq\+On\+Board (\begin{DoxyParamCaption}\item[{const int}]{sq}{}\end{DoxyParamCaption})}
+
+
+
+Checks if a given square index refers to a valid on-\/board square. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sq} & The 120-\/based square index. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Non-\/zero if valid, 0 otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{validate_8cpp_source_l00029}{29}} of file \mbox{\hyperlink{validate_8cpp_source}{validate.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{defs_8h_source_l00029}{BRD\+\_\+\+SQ\+\_\+\+NUM}}, \mbox{\hyperlink{setup_8cpp_source_l00026}{file\+Index120}}, and \mbox{\hyperlink{defs_8h_source_l00054}{OFFBOARD}}.
+
+
+
+Referenced by \mbox{\hyperlink{move__generator_8cpp_source_l00109}{Add\+Black\+Pawn\+Cap\+Move()}}, \mbox{\hyperlink{move__generator_8cpp_source_l00125}{Add\+Black\+Pawn\+Move()}}, \mbox{\hyperlink{move__generator_8cpp_source_l00053}{Add\+Capture\+Move()}}, \mbox{\hyperlink{move__generator_8cpp_source_l00065}{Add\+En\+Passant\+Move()}}, \mbox{\hyperlink{make__move_8cpp_source_l00072}{Add\+Piece()}}, \mbox{\hyperlink{move__generator_8cpp_source_l00034}{Add\+Quiet\+Move()}}, \mbox{\hyperlink{move__generator_8cpp_source_l00078}{Add\+White\+Pawn\+Cap\+Move()}}, \mbox{\hyperlink{move__generator_8cpp_source_l00094}{Add\+White\+Pawn\+Move()}}, \mbox{\hyperlink{make__move_8cpp_source_l00030}{Clear\+Piece()}}, \mbox{\hyperlink{move__generator_8cpp_source_l00299}{generate\+All\+Captures()}}, \mbox{\hyperlink{move__generator_8cpp_source_l00165}{generate\+All\+Moves()}}, \mbox{\hyperlink{hash__keys_8cpp_source_l00005}{generate\+Position\+Keys()}}, \mbox{\hyperlink{setup_8cpp_source_l00139}{init\+Square\+Index\+Maps()}}, \mbox{\hyperlink{board_8cpp_source_l00012}{is\+Piece\+List\+Valid()}}, \mbox{\hyperlink{attack_8cpp_source_l00009}{is\+Square\+Attacked()}}, \mbox{\hyperlink{make__move_8cpp_source_l00142}{make\+Move()}}, \mbox{\hyperlink{validate_8cpp_source_l00007}{Move\+List\+Ok()}}, \mbox{\hyperlink{make__move_8cpp_source_l00099}{Move\+Piece()}}, \mbox{\hyperlink{notation_8cpp_source_l00048}{parse\+Move\+String()}}, and \mbox{\hyperlink{make__move_8cpp_source_l00240}{take\+Move()}}.
+
+Here is the caller graph for this function\+:
+% FIG 8

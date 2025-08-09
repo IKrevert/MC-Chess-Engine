@@ -1,0 +1,22 @@
+digraph "loadFEN"
+{
+ // INTERACTIVE_SVG=YES
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [id="Node000001",label="loadFEN",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Parse a FEN string into the given board state."];
+  Node1 -> Node2 [id="edge7_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="generatePositionKeys",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$hash__keys_8cpp.html#a8c1832e1dfd853cce944ddd2df57dd53",tooltip="Generates a Zobrist hash key for the given board position."];
+  Node2 -> Node3 [id="edge8_Node000002_Node000003",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="SqOnBoard",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$validate_8cpp.html#ad5a569564ef016ed02a4fef23d89d9c4",tooltip="Checks if a given square index refers to a valid on-board square."];
+  Node1 -> Node4 [id="edge9_Node000001_Node000004",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="resetBoardState",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$board_8cpp.html#a450b9988728615700e2d0677aa92d871",tooltip="Reset board to empty state."];
+  Node1 -> Node5 [id="edge10_Node000001_Node000005",color="steelblue1",style="solid",tooltip=" "];
+  Node5 [id="Node000005",label="updateListsMaterial",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$board_8cpp.html#ac392f2ff8c0f063425f09403c43d4cc5",tooltip="Update piece lists, material counts, and pawn bitboards from scratch."];
+  Node5 -> Node6 [id="edge11_Node000005_Node000006",color="steelblue1",style="solid",tooltip=" "];
+  Node6 [id="Node000006",label="PceValidEmptyOffbrd",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$validate_8cpp.html#aac5a1baab60b7b72d85de73be258f91b",tooltip="Checks if the given piece code is empty, valid, or OFFBOARD."];
+  Node5 -> Node7 [id="edge12_Node000005_Node000007",color="steelblue1",style="solid",tooltip=" "];
+  Node7 [id="Node000007",label="SideValid",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$validate_8cpp.html#ad7a2e012bffa6db3df97e7742c9d731d",tooltip="Checks if the given side identifier is valid."];
+}

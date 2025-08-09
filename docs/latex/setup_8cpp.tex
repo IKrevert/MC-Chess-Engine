@@ -1,0 +1,493 @@
+\doxysection{setup.\+cpp File Reference}
+\hypertarget{setup_8cpp}{}\label{setup_8cpp}\index{setup.cpp@{setup.cpp}}
+{\ttfamily \#include "{}setup.\+h"{}}\newline
+{\ttfamily \#include $<$cstdio$>$}\newline
+{\ttfamily \#include $<$cstdlib$>$}\newline
+{\ttfamily \#include "{}../move/move\+\_\+generator.\+h"{}}\newline
+Include dependency graph for setup.\+cpp\+:
+% FIG 0
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{setup_8cpp_a68607fcb7d8921a98375fbe4075d8c38}{RAND\+\_\+64}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{setup_8cpp_a221d449ca334d6a6fffbd08d74389833}{init\+Evaluation\+Masks}} ()
+\begin{DoxyCompactList}\small\item\em Initialize evaluation-\/related bitboard masks. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{setup_8cpp_a11dd4ee90c67078f6229a04dcc639917}{Init\+Filesrank\+Index120}} ()
+\begin{DoxyCompactList}\small\item\em Initialize file and rank lookup arrays. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{setup_8cpp_aa63d26a85abebb4be1db5744d0d72c20}{init\+Zobrist\+Keys}} ()
+\begin{DoxyCompactList}\small\item\em Initialize Zobrist hash keys. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{setup_8cpp_a665ce2d60fbda5441fee37312b620cba}{init\+Bit\+Masks}} ()
+\begin{DoxyCompactList}\small\item\em Initialize bit masks for individual bitboard operations. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{setup_8cpp_ae88cd37dac0307b1e942b893e381b188}{init\+Square\+Index\+Maps}} ()
+\begin{DoxyCompactList}\small\item\em Initialize lookup tables for 120-\/\texorpdfstring{$>$}{>}64 square indexing. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{setup_8cpp_ac2112658da6a54ad7727593e3bdc947c}{initialize\+Engine}} ()
+\begin{DoxyCompactList}\small\item\em Run all initialization routines. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{setup_8cpp_a30fed945da5ef940c80bb13c42844aa3}{square120\+To64}} \mbox{[}\mbox{\hyperlink{defs_8h_a92bbcebd1f24130a0c0e62a08083aa61}{BRD\+\_\+\+SQ\+\_\+\+NUM}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em Lookup table to convert 120-\/based board index to 64-\/based. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{setup_8cpp_a673c1f27fd629e1b9c761bf23c7a1d96}{square64\+To120}} \mbox{[}64\mbox{]}
+\begin{DoxyCompactList}\small\item\em Lookup table to convert 64-\/based board index to 120-\/based. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{defs_8h_a24c386d3758eba951eb7532fdbb45804}{U64}} \mbox{\hyperlink{setup_8cpp_aa81d1c05ec2beb8011b9ba2eb76f0992}{set\+Bit\+Mask}} \mbox{[}64\mbox{]}
+\begin{DoxyCompactList}\small\item\em Bit masks for setting and clearing individual bits on a bitboard. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{defs_8h_a24c386d3758eba951eb7532fdbb45804}{U64}} \mbox{\hyperlink{setup_8cpp_a1382a8c5793c5ea0457240b525be1f2a}{clear\+Bit\+Mask}} \mbox{[}64\mbox{]}
+\item 
+\mbox{\hyperlink{defs_8h_a24c386d3758eba951eb7532fdbb45804}{U64}} \mbox{\hyperlink{setup_8cpp_af6f97ba5fc7d0981aceb622886d307d9}{zobrist\+Piece\+Keys}} \mbox{[}13\mbox{]}\mbox{[}120\mbox{]}
+\begin{DoxyCompactList}\small\item\em Zobrist hashing keys for each piece on each square. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{defs_8h_a24c386d3758eba951eb7532fdbb45804}{U64}} \mbox{\hyperlink{setup_8cpp_a142ee334dbad153d09463917182e801c}{zobrist\+Side\+Key}}
+\begin{DoxyCompactList}\small\item\em Zobrist hashing key for side to move. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{defs_8h_a24c386d3758eba951eb7532fdbb45804}{U64}} \mbox{\hyperlink{setup_8cpp_ab75e80e70548b92c8b5e8c85b7948216}{zobrist\+Castle\+Keys}} \mbox{[}16\mbox{]}
+\begin{DoxyCompactList}\small\item\em Zobrist hashing keys for castling rights. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{setup_8cpp_ad043741b560d653ab55526068e93fe34}{file\+Index120}} \mbox{[}\mbox{\hyperlink{defs_8h_a92bbcebd1f24130a0c0e62a08083aa61}{BRD\+\_\+\+SQ\+\_\+\+NUM}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em File and rank lookup tables for each square (120-\/based). \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{setup_8cpp_a351d5380db77147380f81f8ed430cfad}{rank\+Index120}} \mbox{[}\mbox{\hyperlink{defs_8h_a92bbcebd1f24130a0c0e62a08083aa61}{BRD\+\_\+\+SQ\+\_\+\+NUM}}\mbox{]}
+\item 
+\mbox{\hyperlink{defs_8h_a24c386d3758eba951eb7532fdbb45804}{U64}} \mbox{\hyperlink{setup_8cpp_a6b2a6b0fadbdaa8b8675d6c4c08a96be}{file\+Bit\+Mask}} \mbox{[}8\mbox{]}
+\begin{DoxyCompactList}\small\item\em Bitboard masks for each file and rank. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{defs_8h_a24c386d3758eba951eb7532fdbb45804}{U64}} \mbox{\hyperlink{setup_8cpp_a19f6935aa8b77a7bdd0b2073a057a2f4}{rank\+Bit\+Mask}} \mbox{[}8\mbox{]}
+\item 
+\mbox{\hyperlink{defs_8h_a24c386d3758eba951eb7532fdbb45804}{U64}} \mbox{\hyperlink{setup_8cpp_ab5dfb5bdf8715cef0570b94117b30bc4}{black\+Passed\+Pawn\+Mask}} \mbox{[}64\mbox{]}
+\begin{DoxyCompactList}\small\item\em Bitboard masks for pawn structure evaluation. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{defs_8h_a24c386d3758eba951eb7532fdbb45804}{U64}} \mbox{\hyperlink{setup_8cpp_afd51de4bf6fad81e35f803524edafa95}{white\+Passed\+Pawn\+Mask}} \mbox{[}64\mbox{]}
+\item 
+\mbox{\hyperlink{defs_8h_a24c386d3758eba951eb7532fdbb45804}{U64}} \mbox{\hyperlink{setup_8cpp_a5a8b6a8d2dab6247a33f6b1e65e5750d}{isolated\+Pawn\+Mask}} \mbox{[}64\mbox{]}
+\item 
+\mbox{\hyperlink{struct_s___o_p_t_i_o_n_s}{S\+\_\+\+OPTIONS}} \mbox{\hyperlink{setup_8cpp_a63b3d1297c748542dd910b5490d11844}{engine\+Options}} \mbox{[}1\mbox{]}
+\begin{DoxyCompactList}\small\item\em Engine options structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{doc-define-members}
+\Hypertarget{setup_8cpp_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{setup_8cpp_a68607fcb7d8921a98375fbe4075d8c38}\index{setup.cpp@{setup.cpp}!RAND\_64@{RAND\_64}}
+\index{RAND\_64@{RAND\_64}!setup.cpp@{setup.cpp}}
+\doxysubsubsection{\texorpdfstring{RAND\_64}{RAND\_64}}
+{\footnotesize\ttfamily \label{setup_8cpp_a68607fcb7d8921a98375fbe4075d8c38} 
+\#define RAND\+\_\+64}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (\ (\mbox{\hyperlink{defs_8h_a24c386d3758eba951eb7532fdbb45804}{U64}})std::rand()\ \ \ \ \ \ \ \ |\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (\mbox{\hyperlink{defs_8h_a24c386d3758eba951eb7532fdbb45804}{U64}})std::rand()\ <<\ 15\ \ \ |\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (\mbox{\hyperlink{defs_8h_a24c386d3758eba951eb7532fdbb45804}{U64}})std::rand()\ <<\ 30\ \ \ |\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (\mbox{\hyperlink{defs_8h_a24c386d3758eba951eb7532fdbb45804}{U64}})std::rand()\ <<\ 45\ \ \ |\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((\mbox{\hyperlink{defs_8h_a24c386d3758eba951eb7532fdbb45804}{U64}})std::rand()\ \&\ 0xF)\ <<\ 60\ )}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{setup_8cpp_source_l00009}{9}} of file \mbox{\hyperlink{setup_8cpp_source}{setup.\+cpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{setup_8cpp_source_l00115}{init\+Zobrist\+Keys()}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{setup_8cpp_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{setup_8cpp_a665ce2d60fbda5441fee37312b620cba}\index{setup.cpp@{setup.cpp}!initBitMasks@{initBitMasks}}
+\index{initBitMasks@{initBitMasks}!setup.cpp@{setup.cpp}}
+\doxysubsubsection{\texorpdfstring{initBitMasks()}{initBitMasks()}}
+{\footnotesize\ttfamily \label{setup_8cpp_a665ce2d60fbda5441fee37312b620cba} 
+void init\+Bit\+Masks (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Initialize bit masks for individual bitboard operations. 
+
+
+
+Definition at line \mbox{\hyperlink{setup_8cpp_source_l00128}{128}} of file \mbox{\hyperlink{setup_8cpp_source}{setup.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{setup_8cpp_source_l00020}{clear\+Bit\+Mask}}, and \mbox{\hyperlink{setup_8cpp_source_l00019}{set\+Bit\+Mask}}.
+
+
+
+Referenced by \mbox{\hyperlink{setup_8cpp_source_l00156}{initialize\+Engine()}}.
+
+Here is the caller graph for this function\+:
+% FIG 1
+\Hypertarget{setup_8cpp_a221d449ca334d6a6fffbd08d74389833}\index{setup.cpp@{setup.cpp}!initEvaluationMasks@{initEvaluationMasks}}
+\index{initEvaluationMasks@{initEvaluationMasks}!setup.cpp@{setup.cpp}}
+\doxysubsubsection{\texorpdfstring{initEvaluationMasks()}{initEvaluationMasks()}}
+{\footnotesize\ttfamily \label{setup_8cpp_a221d449ca334d6a6fffbd08d74389833} 
+void init\+Evaluation\+Masks (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Initialize evaluation-\/related bitboard masks. 
+
+
+
+Definition at line \mbox{\hyperlink{setup_8cpp_source_l00040}{40}} of file \mbox{\hyperlink{setup_8cpp_source}{setup.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{setup_8cpp_source_l00032}{black\+Passed\+Pawn\+Mask}}, \mbox{\hyperlink{defs_8h_source_l00041}{FILE\+\_\+A}}, \mbox{\hyperlink{defs_8h_source_l00041}{FILE\+\_\+H}}, \mbox{\hyperlink{setup_8cpp_source_l00029}{file\+Bit\+Mask}}, \mbox{\hyperlink{setup_8cpp_source_l00026}{file\+Index120}}, \mbox{\hyperlink{setup_8cpp_source_l00034}{isolated\+Pawn\+Mask}}, \mbox{\hyperlink{defs_8h_source_l00042}{RANK\+\_\+1}}, \mbox{\hyperlink{defs_8h_source_l00042}{RANK\+\_\+8}}, \mbox{\hyperlink{setup_8cpp_source_l00030}{rank\+Bit\+Mask}}, \mbox{\hyperlink{defs_8h_source_l00183}{SQ120}}, and \mbox{\hyperlink{setup_8cpp_source_l00033}{white\+Passed\+Pawn\+Mask}}.
+
+
+
+Referenced by \mbox{\hyperlink{setup_8cpp_source_l00156}{initialize\+Engine()}}.
+
+Here is the caller graph for this function\+:
+% FIG 2
+\Hypertarget{setup_8cpp_a11dd4ee90c67078f6229a04dcc639917}\index{setup.cpp@{setup.cpp}!InitFilesrankIndex120@{InitFilesrankIndex120}}
+\index{InitFilesrankIndex120@{InitFilesrankIndex120}!setup.cpp@{setup.cpp}}
+\doxysubsubsection{\texorpdfstring{InitFilesrankIndex120()}{InitFilesrankIndex120()}}
+{\footnotesize\ttfamily \label{setup_8cpp_a11dd4ee90c67078f6229a04dcc639917} 
+void Init\+Filesrank\+Index120 (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Initialize file and rank lookup arrays. 
+
+
+
+Definition at line \mbox{\hyperlink{setup_8cpp_source_l00098}{98}} of file \mbox{\hyperlink{setup_8cpp_source}{setup.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{defs_8h_source_l00029}{BRD\+\_\+\+SQ\+\_\+\+NUM}}, \mbox{\hyperlink{defs_8h_source_l00041}{FILE\+\_\+A}}, \mbox{\hyperlink{defs_8h_source_l00041}{FILE\+\_\+H}}, \mbox{\hyperlink{setup_8cpp_source_l00026}{file\+Index120}}, \mbox{\hyperlink{defs_8h_source_l00181}{FR2\+SQ}}, \mbox{\hyperlink{defs_8h_source_l00054}{OFFBOARD}}, \mbox{\hyperlink{defs_8h_source_l00042}{RANK\+\_\+1}}, \mbox{\hyperlink{defs_8h_source_l00042}{RANK\+\_\+8}}, and \mbox{\hyperlink{setup_8cpp_source_l00027}{rank\+Index120}}.
+
+
+
+Referenced by \mbox{\hyperlink{setup_8cpp_source_l00156}{initialize\+Engine()}}.
+
+Here is the caller graph for this function\+:
+% FIG 3
+\Hypertarget{setup_8cpp_ac2112658da6a54ad7727593e3bdc947c}\index{setup.cpp@{setup.cpp}!initializeEngine@{initializeEngine}}
+\index{initializeEngine@{initializeEngine}!setup.cpp@{setup.cpp}}
+\doxysubsubsection{\texorpdfstring{initializeEngine()}{initializeEngine()}}
+{\footnotesize\ttfamily \label{setup_8cpp_ac2112658da6a54ad7727593e3bdc947c} 
+void initialize\+Engine (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Run all initialization routines. 
+
+
+
+Definition at line \mbox{\hyperlink{setup_8cpp_source_l00156}{156}} of file \mbox{\hyperlink{setup_8cpp_source}{setup.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{setup_8cpp_source_l00128}{init\+Bit\+Masks()}}, \mbox{\hyperlink{setup_8cpp_source_l00040}{init\+Evaluation\+Masks()}}, \mbox{\hyperlink{setup_8cpp_source_l00098}{Init\+Filesrank\+Index120()}}, \mbox{\hyperlink{move__generator_8cpp_source_l00141}{Init\+Mvv\+Lva()}}, \mbox{\hyperlink{setup_8cpp_source_l00139}{init\+Square\+Index\+Maps()}}, and \mbox{\hyperlink{setup_8cpp_source_l00115}{init\+Zobrist\+Keys()}}.
+
+
+
+Referenced by \mbox{\hyperlink{main_8cpp_source_l00026}{main()}}.
+
+Here is the call graph for this function\+:
+% FIG 4
+Here is the caller graph for this function\+:
+% FIG 5
+\Hypertarget{setup_8cpp_ae88cd37dac0307b1e942b893e381b188}\index{setup.cpp@{setup.cpp}!initSquareIndexMaps@{initSquareIndexMaps}}
+\index{initSquareIndexMaps@{initSquareIndexMaps}!setup.cpp@{setup.cpp}}
+\doxysubsubsection{\texorpdfstring{initSquareIndexMaps()}{initSquareIndexMaps()}}
+{\footnotesize\ttfamily \label{setup_8cpp_ae88cd37dac0307b1e942b893e381b188} 
+void init\+Square\+Index\+Maps (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Initialize lookup tables for 120-\/\texorpdfstring{$>$}{>}64 square indexing. 
+
+
+
+Definition at line \mbox{\hyperlink{setup_8cpp_source_l00139}{139}} of file \mbox{\hyperlink{setup_8cpp_source}{setup.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{defs_8h_source_l00014}{ASSERT}}, \mbox{\hyperlink{defs_8h_source_l00029}{BRD\+\_\+\+SQ\+\_\+\+NUM}}, \mbox{\hyperlink{defs_8h_source_l00041}{FILE\+\_\+A}}, \mbox{\hyperlink{defs_8h_source_l00041}{FILE\+\_\+H}}, \mbox{\hyperlink{defs_8h_source_l00181}{FR2\+SQ}}, \mbox{\hyperlink{defs_8h_source_l00042}{RANK\+\_\+1}}, \mbox{\hyperlink{defs_8h_source_l00042}{RANK\+\_\+8}}, \mbox{\hyperlink{validate_8cpp_source_l00029}{Sq\+On\+Board()}}, \mbox{\hyperlink{setup_8cpp_source_l00016}{square120\+To64}}, and \mbox{\hyperlink{setup_8cpp_source_l00017}{square64\+To120}}.
+
+
+
+Referenced by \mbox{\hyperlink{setup_8cpp_source_l00156}{initialize\+Engine()}}.
+
+Here is the call graph for this function\+:
+% FIG 6
+Here is the caller graph for this function\+:
+% FIG 7
+\Hypertarget{setup_8cpp_aa63d26a85abebb4be1db5744d0d72c20}\index{setup.cpp@{setup.cpp}!initZobristKeys@{initZobristKeys}}
+\index{initZobristKeys@{initZobristKeys}!setup.cpp@{setup.cpp}}
+\doxysubsubsection{\texorpdfstring{initZobristKeys()}{initZobristKeys()}}
+{\footnotesize\ttfamily \label{setup_8cpp_aa63d26a85abebb4be1db5744d0d72c20} 
+void init\+Zobrist\+Keys (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Initialize Zobrist hash keys. 
+
+
+
+Definition at line \mbox{\hyperlink{setup_8cpp_source_l00115}{115}} of file \mbox{\hyperlink{setup_8cpp_source}{setup.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{setup_8cpp_source_l00009}{RAND\+\_\+64}}, \mbox{\hyperlink{setup_8cpp_source_l00024}{zobrist\+Castle\+Keys}}, \mbox{\hyperlink{setup_8cpp_source_l00022}{zobrist\+Piece\+Keys}}, and \mbox{\hyperlink{setup_8cpp_source_l00023}{zobrist\+Side\+Key}}.
+
+
+
+Referenced by \mbox{\hyperlink{setup_8cpp_source_l00156}{initialize\+Engine()}}.
+
+Here is the caller graph for this function\+:
+% FIG 8
+
+
+\label{doc-var-members}
+\Hypertarget{setup_8cpp_doc-var-members}
+\doxysubsection{Variable Documentation}
+\Hypertarget{setup_8cpp_ab5dfb5bdf8715cef0570b94117b30bc4}\index{setup.cpp@{setup.cpp}!blackPassedPawnMask@{blackPassedPawnMask}}
+\index{blackPassedPawnMask@{blackPassedPawnMask}!setup.cpp@{setup.cpp}}
+\doxysubsubsection{\texorpdfstring{blackPassedPawnMask}{blackPassedPawnMask}}
+{\footnotesize\ttfamily \label{setup_8cpp_ab5dfb5bdf8715cef0570b94117b30bc4} 
+\mbox{\hyperlink{defs_8h_a24c386d3758eba951eb7532fdbb45804}{U64}} black\+Passed\+Pawn\+Mask\mbox{[}64\mbox{]}}
+
+
+
+Bitboard masks for pawn structure evaluation. 
+
+
+
+Definition at line \mbox{\hyperlink{setup_8cpp_source_l00032}{32}} of file \mbox{\hyperlink{setup_8cpp_source}{setup.\+cpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{setup_8cpp_source_l00040}{init\+Evaluation\+Masks()}}.
+
+\Hypertarget{setup_8cpp_a1382a8c5793c5ea0457240b525be1f2a}\index{setup.cpp@{setup.cpp}!clearBitMask@{clearBitMask}}
+\index{clearBitMask@{clearBitMask}!setup.cpp@{setup.cpp}}
+\doxysubsubsection{\texorpdfstring{clearBitMask}{clearBitMask}}
+{\footnotesize\ttfamily \label{setup_8cpp_a1382a8c5793c5ea0457240b525be1f2a} 
+\mbox{\hyperlink{defs_8h_a24c386d3758eba951eb7532fdbb45804}{U64}} clear\+Bit\+Mask\mbox{[}64\mbox{]}}
+
+
+
+Definition at line \mbox{\hyperlink{setup_8cpp_source_l00020}{20}} of file \mbox{\hyperlink{setup_8cpp_source}{setup.\+cpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{setup_8cpp_source_l00128}{init\+Bit\+Masks()}}.
+
+\Hypertarget{setup_8cpp_a63b3d1297c748542dd910b5490d11844}\index{setup.cpp@{setup.cpp}!engineOptions@{engineOptions}}
+\index{engineOptions@{engineOptions}!setup.cpp@{setup.cpp}}
+\doxysubsubsection{\texorpdfstring{engineOptions}{engineOptions}}
+{\footnotesize\ttfamily \label{setup_8cpp_a63b3d1297c748542dd910b5490d11844} 
+\mbox{\hyperlink{struct_s___o_p_t_i_o_n_s}{S\+\_\+\+OPTIONS}} engine\+Options\mbox{[}1\mbox{]}}
+
+
+
+Engine options structure. 
+
+
+
+Definition at line \mbox{\hyperlink{setup_8cpp_source_l00036}{36}} of file \mbox{\hyperlink{setup_8cpp_source}{setup.\+cpp}}.
+
+\Hypertarget{setup_8cpp_a6b2a6b0fadbdaa8b8675d6c4c08a96be}\index{setup.cpp@{setup.cpp}!fileBitMask@{fileBitMask}}
+\index{fileBitMask@{fileBitMask}!setup.cpp@{setup.cpp}}
+\doxysubsubsection{\texorpdfstring{fileBitMask}{fileBitMask}}
+{\footnotesize\ttfamily \label{setup_8cpp_a6b2a6b0fadbdaa8b8675d6c4c08a96be} 
+\mbox{\hyperlink{defs_8h_a24c386d3758eba951eb7532fdbb45804}{U64}} file\+Bit\+Mask\mbox{[}8\mbox{]}}
+
+
+
+Bitboard masks for each file and rank. 
+
+
+
+Definition at line \mbox{\hyperlink{setup_8cpp_source_l00029}{29}} of file \mbox{\hyperlink{setup_8cpp_source}{setup.\+cpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{setup_8cpp_source_l00040}{init\+Evaluation\+Masks()}}.
+
+\Hypertarget{setup_8cpp_ad043741b560d653ab55526068e93fe34}\index{setup.cpp@{setup.cpp}!fileIndex120@{fileIndex120}}
+\index{fileIndex120@{fileIndex120}!setup.cpp@{setup.cpp}}
+\doxysubsubsection{\texorpdfstring{fileIndex120}{fileIndex120}}
+{\footnotesize\ttfamily \label{setup_8cpp_ad043741b560d653ab55526068e93fe34} 
+int file\+Index120\mbox{[}\mbox{\hyperlink{defs_8h_a92bbcebd1f24130a0c0e62a08083aa61}{BRD\+\_\+\+SQ\+\_\+\+NUM}}\mbox{]}}
+
+
+
+File and rank lookup tables for each square (120-\/based). 
+
+
+
+Definition at line \mbox{\hyperlink{setup_8cpp_source_l00026}{26}} of file \mbox{\hyperlink{setup_8cpp_source}{setup.\+cpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{setup_8cpp_source_l00040}{init\+Evaluation\+Masks()}}, \mbox{\hyperlink{setup_8cpp_source_l00098}{Init\+Filesrank\+Index120()}}, \mbox{\hyperlink{notation_8cpp_source_l00017}{move\+To\+String()}}, \mbox{\hyperlink{validate_8cpp_source_l00029}{Sq\+On\+Board()}}, and \mbox{\hyperlink{notation_8cpp_source_l00007}{square\+To\+String()}}.
+
+\Hypertarget{setup_8cpp_a5a8b6a8d2dab6247a33f6b1e65e5750d}\index{setup.cpp@{setup.cpp}!isolatedPawnMask@{isolatedPawnMask}}
+\index{isolatedPawnMask@{isolatedPawnMask}!setup.cpp@{setup.cpp}}
+\doxysubsubsection{\texorpdfstring{isolatedPawnMask}{isolatedPawnMask}}
+{\footnotesize\ttfamily \label{setup_8cpp_a5a8b6a8d2dab6247a33f6b1e65e5750d} 
+\mbox{\hyperlink{defs_8h_a24c386d3758eba951eb7532fdbb45804}{U64}} isolated\+Pawn\+Mask\mbox{[}64\mbox{]}}
+
+
+
+Definition at line \mbox{\hyperlink{setup_8cpp_source_l00034}{34}} of file \mbox{\hyperlink{setup_8cpp_source}{setup.\+cpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{setup_8cpp_source_l00040}{init\+Evaluation\+Masks()}}.
+
+\Hypertarget{setup_8cpp_a19f6935aa8b77a7bdd0b2073a057a2f4}\index{setup.cpp@{setup.cpp}!rankBitMask@{rankBitMask}}
+\index{rankBitMask@{rankBitMask}!setup.cpp@{setup.cpp}}
+\doxysubsubsection{\texorpdfstring{rankBitMask}{rankBitMask}}
+{\footnotesize\ttfamily \label{setup_8cpp_a19f6935aa8b77a7bdd0b2073a057a2f4} 
+\mbox{\hyperlink{defs_8h_a24c386d3758eba951eb7532fdbb45804}{U64}} rank\+Bit\+Mask\mbox{[}8\mbox{]}}
+
+
+
+Definition at line \mbox{\hyperlink{setup_8cpp_source_l00030}{30}} of file \mbox{\hyperlink{setup_8cpp_source}{setup.\+cpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{setup_8cpp_source_l00040}{init\+Evaluation\+Masks()}}.
+
+\Hypertarget{setup_8cpp_a351d5380db77147380f81f8ed430cfad}\index{setup.cpp@{setup.cpp}!rankIndex120@{rankIndex120}}
+\index{rankIndex120@{rankIndex120}!setup.cpp@{setup.cpp}}
+\doxysubsubsection{\texorpdfstring{rankIndex120}{rankIndex120}}
+{\footnotesize\ttfamily \label{setup_8cpp_a351d5380db77147380f81f8ed430cfad} 
+int rank\+Index120\mbox{[}\mbox{\hyperlink{defs_8h_a92bbcebd1f24130a0c0e62a08083aa61}{BRD\+\_\+\+SQ\+\_\+\+NUM}}\mbox{]}}
+
+
+
+Definition at line \mbox{\hyperlink{setup_8cpp_source_l00027}{27}} of file \mbox{\hyperlink{setup_8cpp_source}{setup.\+cpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{move__generator_8cpp_source_l00109}{Add\+Black\+Pawn\+Cap\+Move()}}, \mbox{\hyperlink{move__generator_8cpp_source_l00125}{Add\+Black\+Pawn\+Move()}}, \mbox{\hyperlink{move__generator_8cpp_source_l00065}{Add\+En\+Passant\+Move()}}, \mbox{\hyperlink{move__generator_8cpp_source_l00078}{Add\+White\+Pawn\+Cap\+Move()}}, \mbox{\hyperlink{move__generator_8cpp_source_l00094}{Add\+White\+Pawn\+Move()}}, \mbox{\hyperlink{move__generator_8cpp_source_l00165}{generate\+All\+Moves()}}, \mbox{\hyperlink{hash__keys_8cpp_source_l00005}{generate\+Position\+Keys()}}, \mbox{\hyperlink{setup_8cpp_source_l00098}{Init\+Filesrank\+Index120()}}, \mbox{\hyperlink{board_8cpp_source_l00028}{is\+Board\+State\+Valid()}}, \mbox{\hyperlink{make__move_8cpp_source_l00142}{make\+Move()}}, \mbox{\hyperlink{notation_8cpp_source_l00017}{move\+To\+String()}}, and \mbox{\hyperlink{notation_8cpp_source_l00007}{square\+To\+String()}}.
+
+\Hypertarget{setup_8cpp_aa81d1c05ec2beb8011b9ba2eb76f0992}\index{setup.cpp@{setup.cpp}!setBitMask@{setBitMask}}
+\index{setBitMask@{setBitMask}!setup.cpp@{setup.cpp}}
+\doxysubsubsection{\texorpdfstring{setBitMask}{setBitMask}}
+{\footnotesize\ttfamily \label{setup_8cpp_aa81d1c05ec2beb8011b9ba2eb76f0992} 
+\mbox{\hyperlink{defs_8h_a24c386d3758eba951eb7532fdbb45804}{U64}} set\+Bit\+Mask\mbox{[}64\mbox{]}}
+
+
+
+Bit masks for setting and clearing individual bits on a bitboard. 
+
+
+
+Definition at line \mbox{\hyperlink{setup_8cpp_source_l00019}{19}} of file \mbox{\hyperlink{setup_8cpp_source}{setup.\+cpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{setup_8cpp_source_l00128}{init\+Bit\+Masks()}}.
+
+\Hypertarget{setup_8cpp_a30fed945da5ef940c80bb13c42844aa3}\index{setup.cpp@{setup.cpp}!square120To64@{square120To64}}
+\index{square120To64@{square120To64}!setup.cpp@{setup.cpp}}
+\doxysubsubsection{\texorpdfstring{square120To64}{square120To64}}
+{\footnotesize\ttfamily \label{setup_8cpp_a30fed945da5ef940c80bb13c42844aa3} 
+int square120\+To64\mbox{[}\mbox{\hyperlink{defs_8h_a92bbcebd1f24130a0c0e62a08083aa61}{BRD\+\_\+\+SQ\+\_\+\+NUM}}\mbox{]}}
+
+
+
+Lookup table to convert 120-\/based board index to 64-\/based. 
+
+
+
+Definition at line \mbox{\hyperlink{setup_8cpp_source_l00016}{16}} of file \mbox{\hyperlink{setup_8cpp_source}{setup.\+cpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{setup_8cpp_source_l00139}{init\+Square\+Index\+Maps()}}.
+
+\Hypertarget{setup_8cpp_a673c1f27fd629e1b9c761bf23c7a1d96}\index{setup.cpp@{setup.cpp}!square64To120@{square64To120}}
+\index{square64To120@{square64To120}!setup.cpp@{setup.cpp}}
+\doxysubsubsection{\texorpdfstring{square64To120}{square64To120}}
+{\footnotesize\ttfamily \label{setup_8cpp_a673c1f27fd629e1b9c761bf23c7a1d96} 
+int square64\+To120\mbox{[}64\mbox{]}}
+
+
+
+Lookup table to convert 64-\/based board index to 120-\/based. 
+
+
+
+Definition at line \mbox{\hyperlink{setup_8cpp_source_l00017}{17}} of file \mbox{\hyperlink{setup_8cpp_source}{setup.\+cpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{setup_8cpp_source_l00139}{init\+Square\+Index\+Maps()}}.
+
+\Hypertarget{setup_8cpp_afd51de4bf6fad81e35f803524edafa95}\index{setup.cpp@{setup.cpp}!whitePassedPawnMask@{whitePassedPawnMask}}
+\index{whitePassedPawnMask@{whitePassedPawnMask}!setup.cpp@{setup.cpp}}
+\doxysubsubsection{\texorpdfstring{whitePassedPawnMask}{whitePassedPawnMask}}
+{\footnotesize\ttfamily \label{setup_8cpp_afd51de4bf6fad81e35f803524edafa95} 
+\mbox{\hyperlink{defs_8h_a24c386d3758eba951eb7532fdbb45804}{U64}} white\+Passed\+Pawn\+Mask\mbox{[}64\mbox{]}}
+
+
+
+Definition at line \mbox{\hyperlink{setup_8cpp_source_l00033}{33}} of file \mbox{\hyperlink{setup_8cpp_source}{setup.\+cpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{setup_8cpp_source_l00040}{init\+Evaluation\+Masks()}}.
+
+\Hypertarget{setup_8cpp_ab75e80e70548b92c8b5e8c85b7948216}\index{setup.cpp@{setup.cpp}!zobristCastleKeys@{zobristCastleKeys}}
+\index{zobristCastleKeys@{zobristCastleKeys}!setup.cpp@{setup.cpp}}
+\doxysubsubsection{\texorpdfstring{zobristCastleKeys}{zobristCastleKeys}}
+{\footnotesize\ttfamily \label{setup_8cpp_ab75e80e70548b92c8b5e8c85b7948216} 
+\mbox{\hyperlink{defs_8h_a24c386d3758eba951eb7532fdbb45804}{U64}} zobrist\+Castle\+Keys\mbox{[}16\mbox{]}}
+
+
+
+Zobrist hashing keys for castling rights. 
+
+
+
+Definition at line \mbox{\hyperlink{setup_8cpp_source_l00024}{24}} of file \mbox{\hyperlink{setup_8cpp_source}{setup.\+cpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{hash__keys_8cpp_source_l00005}{generate\+Position\+Keys()}}, and \mbox{\hyperlink{setup_8cpp_source_l00115}{init\+Zobrist\+Keys()}}.
+
+\Hypertarget{setup_8cpp_af6f97ba5fc7d0981aceb622886d307d9}\index{setup.cpp@{setup.cpp}!zobristPieceKeys@{zobristPieceKeys}}
+\index{zobristPieceKeys@{zobristPieceKeys}!setup.cpp@{setup.cpp}}
+\doxysubsubsection{\texorpdfstring{zobristPieceKeys}{zobristPieceKeys}}
+{\footnotesize\ttfamily \label{setup_8cpp_af6f97ba5fc7d0981aceb622886d307d9} 
+\mbox{\hyperlink{defs_8h_a24c386d3758eba951eb7532fdbb45804}{U64}} zobrist\+Piece\+Keys\mbox{[}13\mbox{]}\mbox{[}120\mbox{]}}
+
+
+
+Zobrist hashing keys for each piece on each square. 
+
+
+
+Definition at line \mbox{\hyperlink{setup_8cpp_source_l00022}{22}} of file \mbox{\hyperlink{setup_8cpp_source}{setup.\+cpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{hash__keys_8cpp_source_l00005}{generate\+Position\+Keys()}}, and \mbox{\hyperlink{setup_8cpp_source_l00115}{init\+Zobrist\+Keys()}}.
+
+\Hypertarget{setup_8cpp_a142ee334dbad153d09463917182e801c}\index{setup.cpp@{setup.cpp}!zobristSideKey@{zobristSideKey}}
+\index{zobristSideKey@{zobristSideKey}!setup.cpp@{setup.cpp}}
+\doxysubsubsection{\texorpdfstring{zobristSideKey}{zobristSideKey}}
+{\footnotesize\ttfamily \label{setup_8cpp_a142ee334dbad153d09463917182e801c} 
+\mbox{\hyperlink{defs_8h_a24c386d3758eba951eb7532fdbb45804}{U64}} zobrist\+Side\+Key}
+
+
+
+Zobrist hashing key for side to move. 
+
+
+
+Definition at line \mbox{\hyperlink{setup_8cpp_source_l00023}{23}} of file \mbox{\hyperlink{setup_8cpp_source}{setup.\+cpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{hash__keys_8cpp_source_l00005}{generate\+Position\+Keys()}}, and \mbox{\hyperlink{setup_8cpp_source_l00115}{init\+Zobrist\+Keys()}}.
+

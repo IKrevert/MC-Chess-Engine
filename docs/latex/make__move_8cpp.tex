@@ -1,0 +1,312 @@
+\doxysection{make\+\_\+move.\+cpp File Reference}
+\hypertarget{make__move_8cpp}{}\label{make__move_8cpp}\index{make\_move.cpp@{make\_move.cpp}}
+{\ttfamily \#include "{}defs.\+h"{}}\newline
+{\ttfamily \#include $<$cstdio$>$}\newline
+{\ttfamily \#include "{}make\+\_\+move.\+h"{}}\newline
+{\ttfamily \#include "{}../util/attack.\+h"{}}\newline
+{\ttfamily \#include "{}../util/setup.\+h"{}}\newline
+Include dependency graph for make\+\_\+move.\+cpp\+:
+% FIG 0
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{make__move_8cpp_aa526c99ca3c1bb79449681ceda03c961}{HASH\+\_\+\+PCE}}(pce,  sq)
+\item 
+\#define \mbox{\hyperlink{make__move_8cpp_aa91601393e3452a456a1e0f56d7c9e37}{HASH\+\_\+\+CA}}~(board-\/$>$pos\+Key \texorpdfstring{$^\wedge$}{\string^}= (\mbox{\hyperlink{setup_8cpp_ab75e80e70548b92c8b5e8c85b7948216}{zobrist\+Castle\+Keys}}\mbox{[}(board-\/$>$castle\+Perm)\mbox{]}))
+\item 
+\#define \mbox{\hyperlink{make__move_8cpp_aa57ffe7698ca37bc9fca03e65b0278b2}{HASH\+\_\+\+SIDE}}~(board-\/$>$pos\+Key \texorpdfstring{$^\wedge$}{\string^}= (\mbox{\hyperlink{setup_8cpp_a142ee334dbad153d09463917182e801c}{zobrist\+Side\+Key}}))
+\item 
+\#define \mbox{\hyperlink{make__move_8cpp_a2cc442b6e004cce3e06071a89d134e19}{HASH\+\_\+\+EP}}~(board-\/$>$pos\+Key \texorpdfstring{$^\wedge$}{\string^}= (\mbox{\hyperlink{setup_8cpp_af6f97ba5fc7d0981aceb622886d307d9}{zobrist\+Piece\+Keys}}\mbox{[}\mbox{\hyperlink{defs_8h_a267d3f46496a12e12c986aa7796ca2e0a2f0d18fc0d0fa4a6cd92dc328501874d}{EMPTY}}\mbox{]}\mbox{[}(board-\/$>$en\+Pas)\mbox{]}))
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{make__move_8cpp_a7638b740f3b9301ec3ef126abaeef83e}{Clear\+Piece}} (const int sq, \mbox{\hyperlink{struct_s___b_o_a_r_d}{S\+\_\+\+BOARD}} \texorpdfstring{$\ast$}{*}board)
+\item 
+static void \mbox{\hyperlink{make__move_8cpp_a6ac5b01b46acf941303b6ff4505889b4}{Add\+Piece}} (const int sq, \mbox{\hyperlink{struct_s___b_o_a_r_d}{S\+\_\+\+BOARD}} \texorpdfstring{$\ast$}{*}board, const int piece)
+\item 
+static void \mbox{\hyperlink{make__move_8cpp_ad096f1812d822251b98ffbc3894bc1d5}{Move\+Piece}} (const int from, const int to, \mbox{\hyperlink{struct_s___b_o_a_r_d}{S\+\_\+\+BOARD}} \texorpdfstring{$\ast$}{*}board)
+\item 
+int \mbox{\hyperlink{make__move_8cpp_a1b56f6dd56425f5fcc2c84f44025d4f5}{make\+Move}} (\mbox{\hyperlink{struct_s___b_o_a_r_d}{S\+\_\+\+BOARD}} \texorpdfstring{$\ast$}{*}board, int move)
+\begin{DoxyCompactList}\small\item\em Make a move; returns non-\/zero if legal (king not left in check). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{make__move_8cpp_aa9576282fc64517514da4a21518ae4d7}{take\+Move}} (\mbox{\hyperlink{struct_s___b_o_a_r_d}{S\+\_\+\+BOARD}} \texorpdfstring{$\ast$}{*}board)
+\begin{DoxyCompactList}\small\item\em Undo the last made move. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{make__move_8cpp_a9c21455a32eaf2bdea582755aa32aa4d}{make\+Null\+Move}} (\mbox{\hyperlink{struct_s___b_o_a_r_d}{S\+\_\+\+BOARD}} \texorpdfstring{$\ast$}{*}board)
+\begin{DoxyCompactList}\small\item\em Make a null move (side to move toggles, no pieces moved). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{make__move_8cpp_a15152cddb56a865bf5796792f35b4d50}{take\+Null\+Move}} (\mbox{\hyperlink{struct_s___b_o_a_r_d}{S\+\_\+\+BOARD}} \texorpdfstring{$\ast$}{*}board)
+\begin{DoxyCompactList}\small\item\em Undo the last null move. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const int \mbox{\hyperlink{make__move_8cpp_a39da5875f12590c1733a0b0d61727197}{Castle\+Perm}} \mbox{[}120\mbox{]}
+\begin{DoxyCompactList}\small\item\em Castling permission mask by board square (mailbox 120). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{doc-define-members}
+\Hypertarget{make__move_8cpp_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{make__move_8cpp_aa91601393e3452a456a1e0f56d7c9e37}\index{make\_move.cpp@{make\_move.cpp}!HASH\_CA@{HASH\_CA}}
+\index{HASH\_CA@{HASH\_CA}!make\_move.cpp@{make\_move.cpp}}
+\doxysubsubsection{\texorpdfstring{HASH\_CA}{HASH\_CA}}
+{\footnotesize\ttfamily \label{make__move_8cpp_aa91601393e3452a456a1e0f56d7c9e37} 
+\#define HASH\+\_\+\+CA~(board-\/$>$pos\+Key \texorpdfstring{$^\wedge$}{\string^}= (\mbox{\hyperlink{setup_8cpp_ab75e80e70548b92c8b5e8c85b7948216}{zobrist\+Castle\+Keys}}\mbox{[}(board-\/$>$castle\+Perm)\mbox{]}))}
+
+
+
+Definition at line \mbox{\hyperlink{make__move_8cpp_source_l00010}{10}} of file \mbox{\hyperlink{make__move_8cpp_source}{make\+\_\+move.\+cpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{make__move_8cpp_source_l00142}{make\+Move()}}, and \mbox{\hyperlink{make__move_8cpp_source_l00240}{take\+Move()}}.
+
+\Hypertarget{make__move_8cpp_a2cc442b6e004cce3e06071a89d134e19}\index{make\_move.cpp@{make\_move.cpp}!HASH\_EP@{HASH\_EP}}
+\index{HASH\_EP@{HASH\_EP}!make\_move.cpp@{make\_move.cpp}}
+\doxysubsubsection{\texorpdfstring{HASH\_EP}{HASH\_EP}}
+{\footnotesize\ttfamily \label{make__move_8cpp_a2cc442b6e004cce3e06071a89d134e19} 
+\#define HASH\+\_\+\+EP~(board-\/$>$pos\+Key \texorpdfstring{$^\wedge$}{\string^}= (\mbox{\hyperlink{setup_8cpp_af6f97ba5fc7d0981aceb622886d307d9}{zobrist\+Piece\+Keys}}\mbox{[}\mbox{\hyperlink{defs_8h_a267d3f46496a12e12c986aa7796ca2e0a2f0d18fc0d0fa4a6cd92dc328501874d}{EMPTY}}\mbox{]}\mbox{[}(board-\/$>$en\+Pas)\mbox{]}))}
+
+
+
+Definition at line \mbox{\hyperlink{make__move_8cpp_source_l00012}{12}} of file \mbox{\hyperlink{make__move_8cpp_source}{make\+\_\+move.\+cpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{make__move_8cpp_source_l00142}{make\+Move()}}, \mbox{\hyperlink{make__move_8cpp_source_l00303}{make\+Null\+Move()}}, \mbox{\hyperlink{make__move_8cpp_source_l00240}{take\+Move()}}, and \mbox{\hyperlink{make__move_8cpp_source_l00327}{take\+Null\+Move()}}.
+
+\Hypertarget{make__move_8cpp_aa526c99ca3c1bb79449681ceda03c961}\index{make\_move.cpp@{make\_move.cpp}!HASH\_PCE@{HASH\_PCE}}
+\index{HASH\_PCE@{HASH\_PCE}!make\_move.cpp@{make\_move.cpp}}
+\doxysubsubsection{\texorpdfstring{HASH\_PCE}{HASH\_PCE}}
+{\footnotesize\ttfamily \label{make__move_8cpp_aa526c99ca3c1bb79449681ceda03c961} 
+\#define HASH\+\_\+\+PCE(\begin{DoxyParamCaption}\item[{}]{pce}{, }\item[{}]{sq}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(board-\/>posKey\ \string^=\ (\mbox{\hyperlink{setup_8cpp_af6f97ba5fc7d0981aceb622886d307d9}{zobristPieceKeys}}[(pce)][(sq)]))}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{make__move_8cpp_source_l00009}{9}} of file \mbox{\hyperlink{make__move_8cpp_source}{make\+\_\+move.\+cpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{make__move_8cpp_source_l00072}{Add\+Piece()}}, \mbox{\hyperlink{make__move_8cpp_source_l00030}{Clear\+Piece()}}, and \mbox{\hyperlink{make__move_8cpp_source_l00099}{Move\+Piece()}}.
+
+\Hypertarget{make__move_8cpp_aa57ffe7698ca37bc9fca03e65b0278b2}\index{make\_move.cpp@{make\_move.cpp}!HASH\_SIDE@{HASH\_SIDE}}
+\index{HASH\_SIDE@{HASH\_SIDE}!make\_move.cpp@{make\_move.cpp}}
+\doxysubsubsection{\texorpdfstring{HASH\_SIDE}{HASH\_SIDE}}
+{\footnotesize\ttfamily \label{make__move_8cpp_aa57ffe7698ca37bc9fca03e65b0278b2} 
+\#define HASH\+\_\+\+SIDE~(board-\/$>$pos\+Key \texorpdfstring{$^\wedge$}{\string^}= (\mbox{\hyperlink{setup_8cpp_a142ee334dbad153d09463917182e801c}{zobrist\+Side\+Key}}))}
+
+
+
+Definition at line \mbox{\hyperlink{make__move_8cpp_source_l00011}{11}} of file \mbox{\hyperlink{make__move_8cpp_source}{make\+\_\+move.\+cpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{make__move_8cpp_source_l00142}{make\+Move()}}, \mbox{\hyperlink{make__move_8cpp_source_l00303}{make\+Null\+Move()}}, \mbox{\hyperlink{make__move_8cpp_source_l00240}{take\+Move()}}, and \mbox{\hyperlink{make__move_8cpp_source_l00327}{take\+Null\+Move()}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{make__move_8cpp_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{make__move_8cpp_a6ac5b01b46acf941303b6ff4505889b4}\index{make\_move.cpp@{make\_move.cpp}!AddPiece@{AddPiece}}
+\index{AddPiece@{AddPiece}!make\_move.cpp@{make\_move.cpp}}
+\doxysubsubsection{\texorpdfstring{AddPiece()}{AddPiece()}}
+{\footnotesize\ttfamily \label{make__move_8cpp_a6ac5b01b46acf941303b6ff4505889b4} 
+void Add\+Piece (\begin{DoxyParamCaption}\item[{const int}]{sq}{, }\item[{\mbox{\hyperlink{struct_s___b_o_a_r_d}{S\+\_\+\+BOARD}} \texorpdfstring{$\ast$}{*}}]{board}{, }\item[{const int}]{piece}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{make__move_8cpp_source_l00072}{72}} of file \mbox{\hyperlink{make__move_8cpp_source}{make\+\_\+move.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{defs_8h_source_l00014}{ASSERT}}, \mbox{\hyperlink{defs_8h_source_l00119}{S\+\_\+\+BOARD\+::big\+Pce}}, \mbox{\hyperlink{defs_8h_source_l00044}{BOTH}}, \mbox{\hyperlink{make__move_8cpp_source_l00009}{HASH\+\_\+\+PCE}}, \mbox{\hyperlink{board__data_8cpp_source_l00008}{is\+Big\+Piece}}, \mbox{\hyperlink{board__data_8cpp_source_l00009}{is\+Major\+Piece}}, \mbox{\hyperlink{defs_8h_source_l00120}{S\+\_\+\+BOARD\+::maj\+Pce}}, \mbox{\hyperlink{defs_8h_source_l00122}{S\+\_\+\+BOARD\+::material}}, \mbox{\hyperlink{defs_8h_source_l00121}{S\+\_\+\+BOARD\+::min\+Pce}}, \mbox{\hyperlink{defs_8h_source_l00103}{S\+\_\+\+BOARD\+::pawns}}, \mbox{\hyperlink{defs_8h_source_l00118}{S\+\_\+\+BOARD\+::pce\+Num}}, \mbox{\hyperlink{board__data_8cpp_source_l00013}{piece\+Color}}, \mbox{\hyperlink{defs_8h_source_l00102}{S\+\_\+\+BOARD\+::pieces}}, \mbox{\hyperlink{board__data_8cpp_source_l00012}{piece\+Value}}, \mbox{\hyperlink{validate_8cpp_source_l00046}{piece\+Valueid()}}, \mbox{\hyperlink{defs_8h_source_l00127}{S\+\_\+\+BOARD\+::p\+List}}, \mbox{\hyperlink{defs_8h_source_l00185}{SETBIT}}, \mbox{\hyperlink{validate_8cpp_source_l00034}{Side\+Valid()}}, \mbox{\hyperlink{defs_8h_source_l00182}{SQ64}}, and \mbox{\hyperlink{validate_8cpp_source_l00029}{Sq\+On\+Board()}}.
+
+
+
+Referenced by \mbox{\hyperlink{make__move_8cpp_source_l00142}{make\+Move()}}, and \mbox{\hyperlink{make__move_8cpp_source_l00240}{take\+Move()}}.
+
+Here is the call graph for this function\+:
+% FIG 1
+Here is the caller graph for this function\+:
+% FIG 2
+\Hypertarget{make__move_8cpp_a7638b740f3b9301ec3ef126abaeef83e}\index{make\_move.cpp@{make\_move.cpp}!ClearPiece@{ClearPiece}}
+\index{ClearPiece@{ClearPiece}!make\_move.cpp@{make\_move.cpp}}
+\doxysubsubsection{\texorpdfstring{ClearPiece()}{ClearPiece()}}
+{\footnotesize\ttfamily \label{make__move_8cpp_a7638b740f3b9301ec3ef126abaeef83e} 
+void Clear\+Piece (\begin{DoxyParamCaption}\item[{const int}]{sq}{, }\item[{\mbox{\hyperlink{struct_s___b_o_a_r_d}{S\+\_\+\+BOARD}} \texorpdfstring{$\ast$}{*}}]{board}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{make__move_8cpp_source_l00030}{30}} of file \mbox{\hyperlink{make__move_8cpp_source}{make\+\_\+move.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{defs_8h_source_l00014}{ASSERT}}, \mbox{\hyperlink{defs_8h_source_l00119}{S\+\_\+\+BOARD\+::big\+Pce}}, \mbox{\hyperlink{defs_8h_source_l00044}{BOTH}}, \mbox{\hyperlink{defs_8h_source_l00184}{CLRBIT}}, \mbox{\hyperlink{defs_8h_source_l00040}{EMPTY}}, \mbox{\hyperlink{make__move_8cpp_source_l00009}{HASH\+\_\+\+PCE}}, \mbox{\hyperlink{board__data_8cpp_source_l00008}{is\+Big\+Piece}}, \mbox{\hyperlink{board_8cpp_source_l00028}{is\+Board\+State\+Valid()}}, \mbox{\hyperlink{board__data_8cpp_source_l00009}{is\+Major\+Piece}}, \mbox{\hyperlink{defs_8h_source_l00120}{S\+\_\+\+BOARD\+::maj\+Pce}}, \mbox{\hyperlink{defs_8h_source_l00122}{S\+\_\+\+BOARD\+::material}}, \mbox{\hyperlink{defs_8h_source_l00121}{S\+\_\+\+BOARD\+::min\+Pce}}, \mbox{\hyperlink{defs_8h_source_l00103}{S\+\_\+\+BOARD\+::pawns}}, \mbox{\hyperlink{defs_8h_source_l00118}{S\+\_\+\+BOARD\+::pce\+Num}}, \mbox{\hyperlink{board__data_8cpp_source_l00013}{piece\+Color}}, \mbox{\hyperlink{defs_8h_source_l00102}{S\+\_\+\+BOARD\+::pieces}}, \mbox{\hyperlink{board__data_8cpp_source_l00012}{piece\+Value}}, \mbox{\hyperlink{validate_8cpp_source_l00046}{piece\+Valueid()}}, \mbox{\hyperlink{defs_8h_source_l00127}{S\+\_\+\+BOARD\+::p\+List}}, \mbox{\hyperlink{validate_8cpp_source_l00034}{Side\+Valid()}}, \mbox{\hyperlink{defs_8h_source_l00182}{SQ64}}, and \mbox{\hyperlink{validate_8cpp_source_l00029}{Sq\+On\+Board()}}.
+
+
+
+Referenced by \mbox{\hyperlink{make__move_8cpp_source_l00142}{make\+Move()}}, and \mbox{\hyperlink{make__move_8cpp_source_l00240}{take\+Move()}}.
+
+Here is the call graph for this function\+:
+% FIG 3
+Here is the caller graph for this function\+:
+% FIG 4
+\Hypertarget{make__move_8cpp_a1b56f6dd56425f5fcc2c84f44025d4f5}\index{make\_move.cpp@{make\_move.cpp}!makeMove@{makeMove}}
+\index{makeMove@{makeMove}!make\_move.cpp@{make\_move.cpp}}
+\doxysubsubsection{\texorpdfstring{makeMove()}{makeMove()}}
+{\footnotesize\ttfamily \label{make__move_8cpp_a1b56f6dd56425f5fcc2c84f44025d4f5} 
+int make\+Move (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s___b_o_a_r_d}{S\+\_\+\+BOARD}} \texorpdfstring{$\ast$}{*}}]{board}{, }\item[{int}]{move}{}\end{DoxyParamCaption})}
+
+
+
+Make a move; returns non-\/zero if legal (king not left in check). 
+
+
+
+Definition at line \mbox{\hyperlink{make__move_8cpp_source_l00142}{142}} of file \mbox{\hyperlink{make__move_8cpp_source}{make\+\_\+move.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{defs_8h_source_l00047}{A1}}, \mbox{\hyperlink{defs_8h_source_l00054}{A8}}, \mbox{\hyperlink{make__move_8cpp_source_l00072}{Add\+Piece()}}, \mbox{\hyperlink{defs_8h_source_l00014}{ASSERT}}, \mbox{\hyperlink{defs_8h_source_l00047}{C1}}, \mbox{\hyperlink{defs_8h_source_l00054}{C8}}, \mbox{\hyperlink{defs_8h_source_l00166}{CAPTURED}}, \mbox{\hyperlink{make__move_8cpp_source_l00014}{Castle\+Perm}}, \mbox{\hyperlink{defs_8h_source_l00114}{S\+\_\+\+BOARD\+::castle\+Perm}}, \mbox{\hyperlink{defs_8h_source_l00093}{S\+\_\+\+UNDO\+::castle\+Perm}}, \mbox{\hyperlink{make__move_8cpp_source_l00030}{Clear\+Piece()}}, \mbox{\hyperlink{defs_8h_source_l00047}{D1}}, \mbox{\hyperlink{defs_8h_source_l00054}{D8}}, \mbox{\hyperlink{defs_8h_source_l00040}{EMPTY}}, \mbox{\hyperlink{defs_8h_source_l00108}{S\+\_\+\+BOARD\+::en\+Pas}}, \mbox{\hyperlink{defs_8h_source_l00094}{S\+\_\+\+UNDO\+::en\+Pas}}, \mbox{\hyperlink{defs_8h_source_l00047}{F1}}, \mbox{\hyperlink{defs_8h_source_l00054}{F8}}, \mbox{\hyperlink{defs_8h_source_l00057}{FALSE}}, \mbox{\hyperlink{defs_8h_source_l00109}{S\+\_\+\+BOARD\+::fifty\+Move}}, \mbox{\hyperlink{defs_8h_source_l00095}{S\+\_\+\+UNDO\+::fifty\+Move}}, \mbox{\hyperlink{defs_8h_source_l00164}{FROMSQ}}, \mbox{\hyperlink{defs_8h_source_l00047}{G1}}, \mbox{\hyperlink{defs_8h_source_l00054}{G8}}, \mbox{\hyperlink{defs_8h_source_l00047}{H1}}, \mbox{\hyperlink{defs_8h_source_l00054}{H8}}, \mbox{\hyperlink{make__move_8cpp_source_l00010}{HASH\+\_\+\+CA}}, \mbox{\hyperlink{make__move_8cpp_source_l00012}{HASH\+\_\+\+EP}}, \mbox{\hyperlink{make__move_8cpp_source_l00011}{HASH\+\_\+\+SIDE}}, \mbox{\hyperlink{defs_8h_source_l00112}{S\+\_\+\+BOARD\+::his\+Ply}}, \mbox{\hyperlink{defs_8h_source_l00124}{S\+\_\+\+BOARD\+::history}}, \mbox{\hyperlink{board_8cpp_source_l00028}{is\+Board\+State\+Valid()}}, \mbox{\hyperlink{board__data_8cpp_source_l00018}{is\+King}}, \mbox{\hyperlink{board__data_8cpp_source_l00016}{is\+Pawn}}, \mbox{\hyperlink{attack_8cpp_source_l00009}{is\+Square\+Attacked()}}, \mbox{\hyperlink{defs_8h_source_l00105}{S\+\_\+\+BOARD\+::\+King\+Sq}}, \mbox{\hyperlink{defs_8h_source_l00033}{MAXDEPTH}}, \mbox{\hyperlink{defs_8h_source_l00031}{MAXGAMEMOVES}}, \mbox{\hyperlink{defs_8h_source_l00171}{MFLAGCA}}, \mbox{\hyperlink{defs_8h_source_l00169}{MFLAGEP}}, \mbox{\hyperlink{defs_8h_source_l00170}{MFLAGPS}}, \mbox{\hyperlink{defs_8h_source_l00092}{S\+\_\+\+UNDO\+::move}}, \mbox{\hyperlink{make__move_8cpp_source_l00099}{Move\+Piece()}}, \mbox{\hyperlink{defs_8h_source_l00054}{NO\+\_\+\+SQ}}, \mbox{\hyperlink{defs_8h_source_l00102}{S\+\_\+\+BOARD\+::pieces}}, \mbox{\hyperlink{validate_8cpp_source_l00046}{piece\+Valueid()}}, \mbox{\hyperlink{defs_8h_source_l00111}{S\+\_\+\+BOARD\+::ply}}, \mbox{\hyperlink{defs_8h_source_l00116}{S\+\_\+\+BOARD\+::pos\+Key}}, \mbox{\hyperlink{defs_8h_source_l00096}{S\+\_\+\+UNDO\+::pos\+Key}}, \mbox{\hyperlink{defs_8h_source_l00167}{PROMOTED}}, \mbox{\hyperlink{defs_8h_source_l00042}{RANK\+\_\+3}}, \mbox{\hyperlink{defs_8h_source_l00042}{RANK\+\_\+6}}, \mbox{\hyperlink{setup_8cpp_source_l00027}{rank\+Index120}}, \mbox{\hyperlink{defs_8h_source_l00107}{S\+\_\+\+BOARD\+::side}}, \mbox{\hyperlink{validate_8cpp_source_l00034}{Side\+Valid()}}, \mbox{\hyperlink{validate_8cpp_source_l00029}{Sq\+On\+Board()}}, \mbox{\hyperlink{make__move_8cpp_source_l00240}{take\+Move()}}, \mbox{\hyperlink{defs_8h_source_l00165}{TOSQ}}, \mbox{\hyperlink{defs_8h_source_l00057}{TRUE}}, and \mbox{\hyperlink{defs_8h_source_l00044}{WHITE}}.
+
+
+
+Referenced by \mbox{\hyperlink{interactive__helpers_8cpp_source_l00031}{Legal\+Moves\+From()}}, \mbox{\hyperlink{move__generator_8cpp_source_l00149}{move\+Exists()}}, \mbox{\hyperlink{perft_8cpp_source_l00011}{Perft()}}, and \mbox{\hyperlink{perft_8cpp_source_l00032}{Perft\+Test()}}.
+
+Here is the call graph for this function\+:
+% FIG 5
+Here is the caller graph for this function\+:
+% FIG 6
+\Hypertarget{make__move_8cpp_a9c21455a32eaf2bdea582755aa32aa4d}\index{make\_move.cpp@{make\_move.cpp}!makeNullMove@{makeNullMove}}
+\index{makeNullMove@{makeNullMove}!make\_move.cpp@{make\_move.cpp}}
+\doxysubsubsection{\texorpdfstring{makeNullMove()}{makeNullMove()}}
+{\footnotesize\ttfamily \label{make__move_8cpp_a9c21455a32eaf2bdea582755aa32aa4d} 
+void make\+Null\+Move (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s___b_o_a_r_d}{S\+\_\+\+BOARD}} \texorpdfstring{$\ast$}{*}}]{board}{}\end{DoxyParamCaption})}
+
+
+
+Make a null move (side to move toggles, no pieces moved). 
+
+
+
+Definition at line \mbox{\hyperlink{make__move_8cpp_source_l00303}{303}} of file \mbox{\hyperlink{make__move_8cpp_source}{make\+\_\+move.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{defs_8h_source_l00014}{ASSERT}}, \mbox{\hyperlink{defs_8h_source_l00114}{S\+\_\+\+BOARD\+::castle\+Perm}}, \mbox{\hyperlink{defs_8h_source_l00093}{S\+\_\+\+UNDO\+::castle\+Perm}}, \mbox{\hyperlink{defs_8h_source_l00108}{S\+\_\+\+BOARD\+::en\+Pas}}, \mbox{\hyperlink{defs_8h_source_l00094}{S\+\_\+\+UNDO\+::en\+Pas}}, \mbox{\hyperlink{defs_8h_source_l00109}{S\+\_\+\+BOARD\+::fifty\+Move}}, \mbox{\hyperlink{defs_8h_source_l00095}{S\+\_\+\+UNDO\+::fifty\+Move}}, \mbox{\hyperlink{make__move_8cpp_source_l00012}{HASH\+\_\+\+EP}}, \mbox{\hyperlink{make__move_8cpp_source_l00011}{HASH\+\_\+\+SIDE}}, \mbox{\hyperlink{defs_8h_source_l00112}{S\+\_\+\+BOARD\+::his\+Ply}}, \mbox{\hyperlink{defs_8h_source_l00124}{S\+\_\+\+BOARD\+::history}}, \mbox{\hyperlink{board_8cpp_source_l00028}{is\+Board\+State\+Valid()}}, \mbox{\hyperlink{attack_8cpp_source_l00009}{is\+Square\+Attacked()}}, \mbox{\hyperlink{defs_8h_source_l00105}{S\+\_\+\+BOARD\+::\+King\+Sq}}, \mbox{\hyperlink{defs_8h_source_l00033}{MAXDEPTH}}, \mbox{\hyperlink{defs_8h_source_l00031}{MAXGAMEMOVES}}, \mbox{\hyperlink{defs_8h_source_l00092}{S\+\_\+\+UNDO\+::move}}, \mbox{\hyperlink{defs_8h_source_l00054}{NO\+\_\+\+SQ}}, \mbox{\hyperlink{defs_8h_source_l00176}{NOMOVE}}, \mbox{\hyperlink{defs_8h_source_l00111}{S\+\_\+\+BOARD\+::ply}}, \mbox{\hyperlink{defs_8h_source_l00116}{S\+\_\+\+BOARD\+::pos\+Key}}, \mbox{\hyperlink{defs_8h_source_l00096}{S\+\_\+\+UNDO\+::pos\+Key}}, and \mbox{\hyperlink{defs_8h_source_l00107}{S\+\_\+\+BOARD\+::side}}.
+
+Here is the call graph for this function\+:
+% FIG 7
+\Hypertarget{make__move_8cpp_ad096f1812d822251b98ffbc3894bc1d5}\index{make\_move.cpp@{make\_move.cpp}!MovePiece@{MovePiece}}
+\index{MovePiece@{MovePiece}!make\_move.cpp@{make\_move.cpp}}
+\doxysubsubsection{\texorpdfstring{MovePiece()}{MovePiece()}}
+{\footnotesize\ttfamily \label{make__move_8cpp_ad096f1812d822251b98ffbc3894bc1d5} 
+void Move\+Piece (\begin{DoxyParamCaption}\item[{const int}]{from}{, }\item[{const int}]{to}{, }\item[{\mbox{\hyperlink{struct_s___b_o_a_r_d}{S\+\_\+\+BOARD}} \texorpdfstring{$\ast$}{*}}]{board}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{make__move_8cpp_source_l00099}{99}} of file \mbox{\hyperlink{make__move_8cpp_source}{make\+\_\+move.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{defs_8h_source_l00014}{ASSERT}}, \mbox{\hyperlink{defs_8h_source_l00044}{BOTH}}, \mbox{\hyperlink{defs_8h_source_l00184}{CLRBIT}}, \mbox{\hyperlink{defs_8h_source_l00040}{EMPTY}}, \mbox{\hyperlink{make__move_8cpp_source_l00009}{HASH\+\_\+\+PCE}}, \mbox{\hyperlink{board__data_8cpp_source_l00008}{is\+Big\+Piece}}, \mbox{\hyperlink{defs_8h_source_l00103}{S\+\_\+\+BOARD\+::pawns}}, \mbox{\hyperlink{defs_8h_source_l00118}{S\+\_\+\+BOARD\+::pce\+Num}}, \mbox{\hyperlink{board__data_8cpp_source_l00013}{piece\+Color}}, \mbox{\hyperlink{defs_8h_source_l00102}{S\+\_\+\+BOARD\+::pieces}}, \mbox{\hyperlink{validate_8cpp_source_l00046}{piece\+Valueid()}}, \mbox{\hyperlink{defs_8h_source_l00127}{S\+\_\+\+BOARD\+::p\+List}}, \mbox{\hyperlink{defs_8h_source_l00185}{SETBIT}}, \mbox{\hyperlink{validate_8cpp_source_l00034}{Side\+Valid()}}, \mbox{\hyperlink{defs_8h_source_l00182}{SQ64}}, and \mbox{\hyperlink{validate_8cpp_source_l00029}{Sq\+On\+Board()}}.
+
+
+
+Referenced by \mbox{\hyperlink{make__move_8cpp_source_l00142}{make\+Move()}}, and \mbox{\hyperlink{make__move_8cpp_source_l00240}{take\+Move()}}.
+
+Here is the call graph for this function\+:
+% FIG 8
+Here is the caller graph for this function\+:
+% FIG 9
+\Hypertarget{make__move_8cpp_aa9576282fc64517514da4a21518ae4d7}\index{make\_move.cpp@{make\_move.cpp}!takeMove@{takeMove}}
+\index{takeMove@{takeMove}!make\_move.cpp@{make\_move.cpp}}
+\doxysubsubsection{\texorpdfstring{takeMove()}{takeMove()}}
+{\footnotesize\ttfamily \label{make__move_8cpp_aa9576282fc64517514da4a21518ae4d7} 
+void take\+Move (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s___b_o_a_r_d}{S\+\_\+\+BOARD}} \texorpdfstring{$\ast$}{*}}]{board}{}\end{DoxyParamCaption})}
+
+
+
+Undo the last made move. 
+
+
+
+Definition at line \mbox{\hyperlink{make__move_8cpp_source_l00240}{240}} of file \mbox{\hyperlink{make__move_8cpp_source}{make\+\_\+move.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{defs_8h_source_l00047}{A1}}, \mbox{\hyperlink{defs_8h_source_l00054}{A8}}, \mbox{\hyperlink{make__move_8cpp_source_l00072}{Add\+Piece()}}, \mbox{\hyperlink{defs_8h_source_l00014}{ASSERT}}, \mbox{\hyperlink{defs_8h_source_l00040}{bP}}, \mbox{\hyperlink{defs_8h_source_l00047}{C1}}, \mbox{\hyperlink{defs_8h_source_l00054}{C8}}, \mbox{\hyperlink{defs_8h_source_l00166}{CAPTURED}}, \mbox{\hyperlink{defs_8h_source_l00114}{S\+\_\+\+BOARD\+::castle\+Perm}}, \mbox{\hyperlink{defs_8h_source_l00093}{S\+\_\+\+UNDO\+::castle\+Perm}}, \mbox{\hyperlink{make__move_8cpp_source_l00030}{Clear\+Piece()}}, \mbox{\hyperlink{defs_8h_source_l00047}{D1}}, \mbox{\hyperlink{defs_8h_source_l00054}{D8}}, \mbox{\hyperlink{defs_8h_source_l00040}{EMPTY}}, \mbox{\hyperlink{defs_8h_source_l00108}{S\+\_\+\+BOARD\+::en\+Pas}}, \mbox{\hyperlink{defs_8h_source_l00094}{S\+\_\+\+UNDO\+::en\+Pas}}, \mbox{\hyperlink{defs_8h_source_l00047}{F1}}, \mbox{\hyperlink{defs_8h_source_l00054}{F8}}, \mbox{\hyperlink{defs_8h_source_l00057}{FALSE}}, \mbox{\hyperlink{defs_8h_source_l00109}{S\+\_\+\+BOARD\+::fifty\+Move}}, \mbox{\hyperlink{defs_8h_source_l00095}{S\+\_\+\+UNDO\+::fifty\+Move}}, \mbox{\hyperlink{defs_8h_source_l00164}{FROMSQ}}, \mbox{\hyperlink{defs_8h_source_l00047}{G1}}, \mbox{\hyperlink{defs_8h_source_l00054}{G8}}, \mbox{\hyperlink{defs_8h_source_l00047}{H1}}, \mbox{\hyperlink{defs_8h_source_l00054}{H8}}, \mbox{\hyperlink{make__move_8cpp_source_l00010}{HASH\+\_\+\+CA}}, \mbox{\hyperlink{make__move_8cpp_source_l00012}{HASH\+\_\+\+EP}}, \mbox{\hyperlink{make__move_8cpp_source_l00011}{HASH\+\_\+\+SIDE}}, \mbox{\hyperlink{defs_8h_source_l00112}{S\+\_\+\+BOARD\+::his\+Ply}}, \mbox{\hyperlink{defs_8h_source_l00124}{S\+\_\+\+BOARD\+::history}}, \mbox{\hyperlink{board_8cpp_source_l00028}{is\+Board\+State\+Valid()}}, \mbox{\hyperlink{board__data_8cpp_source_l00018}{is\+King}}, \mbox{\hyperlink{board__data_8cpp_source_l00016}{is\+Pawn}}, \mbox{\hyperlink{defs_8h_source_l00105}{S\+\_\+\+BOARD\+::\+King\+Sq}}, \mbox{\hyperlink{defs_8h_source_l00033}{MAXDEPTH}}, \mbox{\hyperlink{defs_8h_source_l00031}{MAXGAMEMOVES}}, \mbox{\hyperlink{defs_8h_source_l00171}{MFLAGCA}}, \mbox{\hyperlink{defs_8h_source_l00169}{MFLAGEP}}, \mbox{\hyperlink{defs_8h_source_l00092}{S\+\_\+\+UNDO\+::move}}, \mbox{\hyperlink{make__move_8cpp_source_l00099}{Move\+Piece()}}, \mbox{\hyperlink{defs_8h_source_l00054}{NO\+\_\+\+SQ}}, \mbox{\hyperlink{board__data_8cpp_source_l00013}{piece\+Color}}, \mbox{\hyperlink{defs_8h_source_l00102}{S\+\_\+\+BOARD\+::pieces}}, \mbox{\hyperlink{validate_8cpp_source_l00046}{piece\+Valueid()}}, \mbox{\hyperlink{defs_8h_source_l00111}{S\+\_\+\+BOARD\+::ply}}, \mbox{\hyperlink{defs_8h_source_l00167}{PROMOTED}}, \mbox{\hyperlink{defs_8h_source_l00107}{S\+\_\+\+BOARD\+::side}}, \mbox{\hyperlink{validate_8cpp_source_l00029}{Sq\+On\+Board()}}, \mbox{\hyperlink{defs_8h_source_l00165}{TOSQ}}, \mbox{\hyperlink{defs_8h_source_l00044}{WHITE}}, and \mbox{\hyperlink{defs_8h_source_l00040}{wP}}.
+
+
+
+Referenced by \mbox{\hyperlink{interactive__helpers_8cpp_source_l00031}{Legal\+Moves\+From()}}, \mbox{\hyperlink{make__move_8cpp_source_l00142}{make\+Move()}}, \mbox{\hyperlink{move__generator_8cpp_source_l00149}{move\+Exists()}}, \mbox{\hyperlink{perft_8cpp_source_l00011}{Perft()}}, and \mbox{\hyperlink{perft_8cpp_source_l00032}{Perft\+Test()}}.
+
+Here is the call graph for this function\+:
+% FIG 10
+Here is the caller graph for this function\+:
+% FIG 11
+\Hypertarget{make__move_8cpp_a15152cddb56a865bf5796792f35b4d50}\index{make\_move.cpp@{make\_move.cpp}!takeNullMove@{takeNullMove}}
+\index{takeNullMove@{takeNullMove}!make\_move.cpp@{make\_move.cpp}}
+\doxysubsubsection{\texorpdfstring{takeNullMove()}{takeNullMove()}}
+{\footnotesize\ttfamily \label{make__move_8cpp_a15152cddb56a865bf5796792f35b4d50} 
+void take\+Null\+Move (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s___b_o_a_r_d}{S\+\_\+\+BOARD}} \texorpdfstring{$\ast$}{*}}]{board}{}\end{DoxyParamCaption})}
+
+
+
+Undo the last null move. 
+
+
+
+Definition at line \mbox{\hyperlink{make__move_8cpp_source_l00327}{327}} of file \mbox{\hyperlink{make__move_8cpp_source}{make\+\_\+move.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{defs_8h_source_l00014}{ASSERT}}, \mbox{\hyperlink{defs_8h_source_l00114}{S\+\_\+\+BOARD\+::castle\+Perm}}, \mbox{\hyperlink{defs_8h_source_l00093}{S\+\_\+\+UNDO\+::castle\+Perm}}, \mbox{\hyperlink{defs_8h_source_l00108}{S\+\_\+\+BOARD\+::en\+Pas}}, \mbox{\hyperlink{defs_8h_source_l00094}{S\+\_\+\+UNDO\+::en\+Pas}}, \mbox{\hyperlink{defs_8h_source_l00109}{S\+\_\+\+BOARD\+::fifty\+Move}}, \mbox{\hyperlink{defs_8h_source_l00095}{S\+\_\+\+UNDO\+::fifty\+Move}}, \mbox{\hyperlink{make__move_8cpp_source_l00012}{HASH\+\_\+\+EP}}, \mbox{\hyperlink{make__move_8cpp_source_l00011}{HASH\+\_\+\+SIDE}}, \mbox{\hyperlink{defs_8h_source_l00112}{S\+\_\+\+BOARD\+::his\+Ply}}, \mbox{\hyperlink{defs_8h_source_l00124}{S\+\_\+\+BOARD\+::history}}, \mbox{\hyperlink{board_8cpp_source_l00028}{is\+Board\+State\+Valid()}}, \mbox{\hyperlink{defs_8h_source_l00033}{MAXDEPTH}}, \mbox{\hyperlink{defs_8h_source_l00031}{MAXGAMEMOVES}}, \mbox{\hyperlink{defs_8h_source_l00054}{NO\+\_\+\+SQ}}, \mbox{\hyperlink{defs_8h_source_l00111}{S\+\_\+\+BOARD\+::ply}}, and \mbox{\hyperlink{defs_8h_source_l00107}{S\+\_\+\+BOARD\+::side}}.
+
+Here is the call graph for this function\+:
+% FIG 12
+
+
+\label{doc-var-members}
+\Hypertarget{make__move_8cpp_doc-var-members}
+\doxysubsection{Variable Documentation}
+\Hypertarget{make__move_8cpp_a39da5875f12590c1733a0b0d61727197}\index{make\_move.cpp@{make\_move.cpp}!CastlePerm@{CastlePerm}}
+\index{CastlePerm@{CastlePerm}!make\_move.cpp@{make\_move.cpp}}
+\doxysubsubsection{\texorpdfstring{CastlePerm}{CastlePerm}}
+{\footnotesize\ttfamily \label{make__move_8cpp_a39da5875f12590c1733a0b0d61727197} 
+const int Castle\+Perm\mbox{[}120\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ \ \ 15,\ 15,\ 15,\ 15,\ 15,\ 15,\ 15,\ 15,\ 15,\ 15,}
+\DoxyCodeLine{\ \ \ \ 15,\ 15,\ 15,\ 15,\ 15,\ 15,\ 15,\ 15,\ 15,\ 15,}
+\DoxyCodeLine{\ \ \ \ 15,\ 13,\ 15,\ 15,\ 15,\ 12,\ 15,\ 15,\ 14,\ 15,}
+\DoxyCodeLine{\ \ \ \ 15,\ 15,\ 15,\ 15,\ 15,\ 15,\ 15,\ 15,\ 15,\ 15,}
+\DoxyCodeLine{\ \ \ \ 15,\ 15,\ 15,\ 15,\ 15,\ 15,\ 15,\ 15,\ 15,\ 15,}
+\DoxyCodeLine{\ \ \ \ 15,\ 15,\ 15,\ 15,\ 15,\ 15,\ 15,\ 15,\ 15,\ 15,}
+\DoxyCodeLine{\ \ \ \ 15,\ 15,\ 15,\ 15,\ 15,\ 15,\ 15,\ 15,\ 15,\ 15,}
+\DoxyCodeLine{\ \ \ \ 15,\ 15,\ 15,\ 15,\ 15,\ 15,\ 15,\ 15,\ 15,\ 15,}
+\DoxyCodeLine{\ \ \ \ 15,\ 15,\ 15,\ 15,\ 15,\ 15,\ 15,\ 15,\ 15,\ 15,}
+\DoxyCodeLine{\ \ \ \ 15,\ \ 7,\ 15,\ 15,\ 15,\ \ 3,\ 15,\ 15,\ 11,\ 15,}
+\DoxyCodeLine{\ \ \ \ 15,\ 15,\ 15,\ 15,\ 15,\ 15,\ 15,\ 15,\ 15,\ 15,}
+\DoxyCodeLine{\ \ \ \ 15,\ 15,\ 15,\ 15,\ 15,\ 15,\ 15,\ 15,\ 15,\ 15}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Castling permission mask by board square (mailbox 120). 
+
+
+
+Definition at line \mbox{\hyperlink{make__move_8cpp_source_l00014}{14}} of file \mbox{\hyperlink{make__move_8cpp_source}{make\+\_\+move.\+cpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{make__move_8cpp_source_l00142}{make\+Move()}}.
+

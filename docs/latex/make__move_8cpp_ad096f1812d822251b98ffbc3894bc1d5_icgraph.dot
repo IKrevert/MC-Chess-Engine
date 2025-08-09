@@ -1,0 +1,31 @@
+digraph "MovePiece"
+{
+ // INTERACTIVE_SVG=YES
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="RL";
+  Node1 [id="Node000001",label="MovePiece",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [id="edge15_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="makeMove",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$make__move_8cpp.html#a1b56f6dd56425f5fcc2c84f44025d4f5",tooltip="Make a move; returns non-zero if legal (king not left in check)."];
+  Node2 -> Node3 [id="edge16_Node000002_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="LegalMovesFrom",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$interactive__helpers_8cpp.html#a37716374c6b9557c96dfddf75ab56e72",tooltip="Build list of legal moves that originate from from."];
+  Node2 -> Node4 [id="edge17_Node000002_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="moveExists",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$move__generator_8cpp.html#a4edc18741a17d00498b72b349879e30d",tooltip="Check if a given move exists in the current position."];
+  Node2 -> Node5 [id="edge18_Node000002_Node000005",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node5 [id="Node000005",label="Perft",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$perft_8cpp.html#a84c7e465b44101a59f96b9c21ed0224b",tooltip="Runs a perft search from a given board state."];
+  Node5 -> Node5 [id="edge19_Node000005_Node000005",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node5 -> Node6 [id="edge20_Node000005_Node000006",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node6 [id="Node000006",label="PerftTest",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$perft_8cpp.html#a1b6b13d186dab20a18cec1a6b041220b",tooltip="Executes a perft test and prints move breakdown and timing."];
+  Node6 -> Node7 [id="edge21_Node000006_Node000007",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node7 [id="Node000007",label="main",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4",tooltip=" "];
+  Node2 -> Node6 [id="edge22_Node000002_Node000006",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node8 [id="edge23_Node000001_Node000008",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node8 [id="Node000008",label="takeMove",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$make__move_8cpp.html#aa9576282fc64517514da4a21518ae4d7",tooltip="Undo the last made move."];
+  Node8 -> Node3 [id="edge24_Node000008_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node8 -> Node2 [id="edge25_Node000008_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node8 -> Node4 [id="edge26_Node000008_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node8 -> Node5 [id="edge27_Node000008_Node000005",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node8 -> Node6 [id="edge28_Node000008_Node000006",dir="back",color="steelblue1",style="solid",tooltip=" "];
+}

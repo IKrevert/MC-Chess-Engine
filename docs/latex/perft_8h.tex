@@ -1,0 +1,114 @@
+\doxysection{perft.\+h File Reference}
+\hypertarget{perft_8h}{}\label{perft_8h}\index{perft.h@{perft.h}}
+{\ttfamily \#include "{}../defs.\+h"{}}\newline
+{\ttfamily \#include "{}../board/board.\+h"{}}\newline
+Include dependency graph for perft.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{perft_8h_a84c7e465b44101a59f96b9c21ed0224b}{Perft}} (int depth, \mbox{\hyperlink{struct_s___b_o_a_r_d}{S\+\_\+\+BOARD}} \texorpdfstring{$\ast$}{*}pos)
+\begin{DoxyCompactList}\small\item\em Runs a perft search from a given board state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{perft_8h_a1b6b13d186dab20a18cec1a6b041220b}{Perft\+Test}} (int depth, \mbox{\hyperlink{struct_s___b_o_a_r_d}{S\+\_\+\+BOARD}} \texorpdfstring{$\ast$}{*}pos)
+\begin{DoxyCompactList}\small\item\em Executes a perft test and prints move breakdown and timing. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+long \mbox{\hyperlink{perft_8h_ad24c58317cf924b00d49ef408dbc5825}{leaf\+Nodes}}
+\begin{DoxyCompactList}\small\item\em Global counter for leaf nodes visited during perft. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{perft_8h_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{perft_8h_a84c7e465b44101a59f96b9c21ed0224b}\index{perft.h@{perft.h}!Perft@{Perft}}
+\index{Perft@{Perft}!perft.h@{perft.h}}
+\doxysubsubsection{\texorpdfstring{Perft()}{Perft()}}
+{\footnotesize\ttfamily \label{perft_8h_a84c7e465b44101a59f96b9c21ed0224b} 
+void Perft (\begin{DoxyParamCaption}\item[{int}]{depth}{, }\item[{\mbox{\hyperlink{struct_s___b_o_a_r_d}{S\+\_\+\+BOARD}} \texorpdfstring{$\ast$}{*}}]{pos}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Runs a perft search from a given board state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em depth} & The depth to search. \\
+\hline
+{\em pos} & Pointer to the board state. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{perft_8cpp_source_l00011}{11}} of file \mbox{\hyperlink{perft_8cpp_source}{perft.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{defs_8h_source_l00014}{ASSERT}}, \mbox{\hyperlink{defs_8h_source_l00068}{S\+\_\+\+MOVELIST\+::count}}, \mbox{\hyperlink{move__generator_8cpp_source_l00165}{generate\+All\+Moves()}}, \mbox{\hyperlink{board_8cpp_source_l00028}{is\+Board\+State\+Valid()}}, \mbox{\hyperlink{perft_8cpp_source_l00009}{leaf\+Nodes}}, \mbox{\hyperlink{make__move_8cpp_source_l00142}{make\+Move()}}, \mbox{\hyperlink{defs_8h_source_l00062}{S\+\_\+\+MOVE\+::move}}, \mbox{\hyperlink{defs_8h_source_l00067}{S\+\_\+\+MOVELIST\+::moves}}, \mbox{\hyperlink{perft_8cpp_source_l00011}{Perft()}}, and \mbox{\hyperlink{make__move_8cpp_source_l00240}{take\+Move()}}.
+
+
+
+Referenced by \mbox{\hyperlink{perft_8cpp_source_l00011}{Perft()}}, and \mbox{\hyperlink{perft_8cpp_source_l00032}{Perft\+Test()}}.
+
+Here is the call graph for this function\+:
+% FIG 2
+Here is the caller graph for this function\+:
+% FIG 3
+\Hypertarget{perft_8h_a1b6b13d186dab20a18cec1a6b041220b}\index{perft.h@{perft.h}!PerftTest@{PerftTest}}
+\index{PerftTest@{PerftTest}!perft.h@{perft.h}}
+\doxysubsubsection{\texorpdfstring{PerftTest()}{PerftTest()}}
+{\footnotesize\ttfamily \label{perft_8h_a1b6b13d186dab20a18cec1a6b041220b} 
+void Perft\+Test (\begin{DoxyParamCaption}\item[{int}]{depth}{, }\item[{\mbox{\hyperlink{struct_s___b_o_a_r_d}{S\+\_\+\+BOARD}} \texorpdfstring{$\ast$}{*}}]{pos}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Executes a perft test and prints move breakdown and timing. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em depth} & The depth to search. \\
+\hline
+{\em pos} & Pointer to the board state. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{perft_8cpp_source_l00032}{32}} of file \mbox{\hyperlink{perft_8cpp_source}{perft.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{defs_8h_source_l00014}{ASSERT}}, \mbox{\hyperlink{defs_8h_source_l00068}{S\+\_\+\+MOVELIST\+::count}}, \mbox{\hyperlink{move__generator_8cpp_source_l00165}{generate\+All\+Moves()}}, \mbox{\hyperlink{misc_8cpp_source_l00017}{Get\+Time\+Ms()}}, \mbox{\hyperlink{board_8cpp_source_l00028}{is\+Board\+State\+Valid()}}, \mbox{\hyperlink{perft_8cpp_source_l00009}{leaf\+Nodes}}, \mbox{\hyperlink{make__move_8cpp_source_l00142}{make\+Move()}}, \mbox{\hyperlink{defs_8h_source_l00062}{S\+\_\+\+MOVE\+::move}}, \mbox{\hyperlink{defs_8h_source_l00067}{S\+\_\+\+MOVELIST\+::moves}}, \mbox{\hyperlink{notation_8cpp_source_l00017}{move\+To\+String()}}, \mbox{\hyperlink{perft_8cpp_source_l00011}{Perft()}}, \mbox{\hyperlink{board_8cpp_source_l00272}{print\+Board\+State()}}, and \mbox{\hyperlink{make__move_8cpp_source_l00240}{take\+Move()}}.
+
+
+
+Referenced by \mbox{\hyperlink{main_8cpp_source_l00026}{main()}}.
+
+Here is the call graph for this function\+:
+% FIG 4
+Here is the caller graph for this function\+:
+% FIG 5
+
+
+\label{doc-var-members}
+\Hypertarget{perft_8h_doc-var-members}
+\doxysubsection{Variable Documentation}
+\Hypertarget{perft_8h_ad24c58317cf924b00d49ef408dbc5825}\index{perft.h@{perft.h}!leafNodes@{leafNodes}}
+\index{leafNodes@{leafNodes}!perft.h@{perft.h}}
+\doxysubsubsection{\texorpdfstring{leafNodes}{leafNodes}}
+{\footnotesize\ttfamily \label{perft_8h_ad24c58317cf924b00d49ef408dbc5825} 
+long leaf\+Nodes\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Global counter for leaf nodes visited during perft. 
+
+
+
+Definition at line \mbox{\hyperlink{perft_8cpp_source_l00009}{9}} of file \mbox{\hyperlink{perft_8cpp_source}{perft.\+cpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{perft_8cpp_source_l00011}{Perft()}}, and \mbox{\hyperlink{perft_8cpp_source_l00032}{Perft\+Test()}}.
+

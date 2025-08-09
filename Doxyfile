@@ -1,0 +1,49 @@
+
+PROJECT_NAME           = "Chess Engine"
+PROJECT_BRIEF          = "C++ chess engine with movegen, bitboards, and Arduino-friendly docs"
+OUTPUT_DIRECTORY       = docs
+GENERATE_HTML          = YES
+GENERATE_LATEX         = YES
+FULL_PATH_NAMES        = NO
+STRIP_FROM_PATH        = .
+
+
+INPUT                  = src include lib .
+FILE_PATTERNS          = *.h *.hpp *.hh *.hxx *.c *.cpp *.cc *.cxx *.ino *.md
+RECURSIVE              = YES
+EXCLUDE_PATTERNS       = */build/* */.git/* */.vs/* */.vscode/*
+
+USE_MDFILE_AS_MAINPAGE = README.md
+
+
+EXTRACT_ALL            = YES
+EXTRACT_PRIVATE        = NO
+EXTRACT_STATIC         = YES
+EXTRACT_LOCAL_CLASSES  = YES
+EXTRACT_ANON_NSPACES   = YES
+HIDE_UNDOC_MEMBERS     = NO
+HIDE_UNDOC_CLASSES     = NO
+
+
+SOURCE_BROWSER         = YES
+INLINE_SOURCES         = NO
+REFERENCED_BY_RELATION = YES
+REFERENCES_RELATION    = YES
+VERBATIM_HEADERS       = YES
+
+
+WARN_IF_UNDOCUMENTED   = NO
+WARN_AS_ERROR          = NO
+
+HAVE_DOT               = YES
+CLASS_GRAPH            = YES
+COLLABORATION_GRAPH    = YES
+CALL_GRAPH             = YES
+CALLER_GRAPH           = YES
+DOT_IMAGE_FORMAT       = svg
+INTERACTIVE_SVG        = YES
+UML_LOOK               = YES
+DOT_MULTI_TARGETS      = YES
+
+GENERATE_TREEVIEW      = YES
+HTML_DYNAMIC_MENUS     = YES

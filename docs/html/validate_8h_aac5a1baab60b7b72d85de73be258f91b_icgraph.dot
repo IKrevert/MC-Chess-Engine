@@ -1,0 +1,43 @@
+digraph "PceValidEmptyOffbrd"
+{
+ // INTERACTIVE_SVG=YES
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="RL";
+  Node1 [id="Node000001",label="PceValidEmptyOffbrd",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Checks if the given piece code is empty, valid, or OFFBOARD."];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="isSquareAttacked",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$attack_8cpp.html#a36ea46ff61e0738a61f70dcf90b5178b",tooltip="Determines if a given square is attacked by a given side."];
+  Node2 -> Node3 [id="edge2_Node000002_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="generateAllMoves",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$move__generator_8cpp.html#a4d7178784dec62b5c55f61f52c432fdf",tooltip="Generate all pseudo-legal moves for the side to move."];
+  Node3 -> Node4 [id="edge3_Node000003_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="LegalMovesFrom",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$interactive__helpers_8cpp.html#a37716374c6b9557c96dfddf75ab56e72",tooltip="Build list of legal moves that originate from from."];
+  Node3 -> Node5 [id="edge4_Node000003_Node000005",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node5 [id="Node000005",label="moveExists",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$move__generator_8cpp.html#a4edc18741a17d00498b72b349879e30d",tooltip="Check if a given move exists in the current position."];
+  Node3 -> Node6 [id="edge5_Node000003_Node000006",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node6 [id="Node000006",label="parseMoveString",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$notation_8cpp.html#a62cf95674b846c7a13035e3c92ab1bcd",tooltip="Parse a move from coordinate notation."];
+  Node3 -> Node7 [id="edge6_Node000003_Node000007",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node7 [id="Node000007",label="Perft",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$perft_8cpp.html#a84c7e465b44101a59f96b9c21ed0224b",tooltip="Runs a perft search from a given board state."];
+  Node7 -> Node7 [id="edge7_Node000007_Node000007",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node7 -> Node8 [id="edge8_Node000007_Node000008",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node8 [id="Node000008",label="PerftTest",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$perft_8cpp.html#a1b6b13d186dab20a18cec1a6b041220b",tooltip="Executes a perft test and prints move breakdown and timing."];
+  Node8 -> Node9 [id="edge9_Node000008_Node000009",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node9 [id="Node000009",label="main",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4",tooltip=" "];
+  Node3 -> Node8 [id="edge10_Node000003_Node000008",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node2 -> Node10 [id="edge11_Node000002_Node000010",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node10 [id="Node000010",label="makeMove",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$make__move_8cpp.html#a1b56f6dd56425f5fcc2c84f44025d4f5",tooltip="Make a move; returns non-zero if legal (king not left in check)."];
+  Node10 -> Node4 [id="edge12_Node000010_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node10 -> Node5 [id="edge13_Node000010_Node000005",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node10 -> Node7 [id="edge14_Node000010_Node000007",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node10 -> Node8 [id="edge15_Node000010_Node000008",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node2 -> Node11 [id="edge16_Node000002_Node000011",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node11 [id="Node000011",label="makeNullMove",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$make__move_8cpp.html#a9c21455a32eaf2bdea582755aa32aa4d",tooltip="Make a null move (side to move toggles, no pieces moved)."];
+  Node1 -> Node12 [id="edge17_Node000001_Node000012",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node12 [id="Node000012",label="updateListsMaterial",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$board_8cpp.html#ac392f2ff8c0f063425f09403c43d4cc5",tooltip="Update piece lists, material counts, and pawn bitboards from scratch."];
+  Node12 -> Node13 [id="edge18_Node000012_Node000013",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node13 [id="Node000013",label="loadFEN",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$board_8cpp.html#aad9cde553dadb6876eb29b43c8f66b08",tooltip="Parse a FEN string into the given board state."];
+  Node13 -> Node9 [id="edge19_Node000013_Node000009",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node12 -> Node14 [id="edge20_Node000012_Node000014",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node14 [id="Node000014",label="mirrorBoardPosition",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$board_8cpp.html#aa79d9c29f4add58463f9a03d17085132",tooltip="Flip the board vertically, swapping colors and positions."];
+}

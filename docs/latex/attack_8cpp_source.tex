@@ -1,0 +1,91 @@
+\doxysection{attack.\+cpp}
+\hypertarget{attack_8cpp_source}{}\label{attack_8cpp_source}\index{attack.cpp@{attack.cpp}}
+\mbox{\hyperlink{attack_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{attack_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ <cstdio>}}
+\DoxyCodeLine{\Hypertarget{attack_8cpp_source_l00002}00002\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{defs_8h}{defs.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{attack_8cpp_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{attack_8cpp_source_l00004}\mbox{\hyperlink{attack_8cpp_a05f1089ec96d8534e671ce07181c6f86}{00004}}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{attack_8cpp_a05f1089ec96d8534e671ce07181c6f86}{knightDirection}}[8]\ =\ \{\ -\/8,\ -\/19,\ -\/21,\ -\/12,\ 8,\ 19,\ 21,\ 12\ \};}
+\DoxyCodeLine{\Hypertarget{attack_8cpp_source_l00005}\mbox{\hyperlink{attack_8cpp_a63758569427276282b64f796be44064f}{00005}}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{attack_8cpp_a63758569427276282b64f796be44064f}{rookDirection}}[4]\ \ \ =\ \{\ -\/1,\ -\/10,\ 1,\ 10\ \};}
+\DoxyCodeLine{\Hypertarget{attack_8cpp_source_l00006}\mbox{\hyperlink{attack_8cpp_a19003113e09295a55fe3fc6a61e8b5b9}{00006}}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{attack_8cpp_a19003113e09295a55fe3fc6a61e8b5b9}{bishopDirection}}[4]\ =\ \{\ -\/9,\ -\/11,\ 11,\ 9\ \};}
+\DoxyCodeLine{\Hypertarget{attack_8cpp_source_l00007}\mbox{\hyperlink{attack_8cpp_a8b18957f6f100c2d8ea4ffd4aa0f5c58}{00007}}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{attack_8cpp_a8b18957f6f100c2d8ea4ffd4aa0f5c58}{kingDirection}}[8]\ \ \ =\ \{\ -\/1,\ -\/10,\ 1,\ 10,\ -\/9,\ -\/11,\ 11,\ 9\ \};}
+\DoxyCodeLine{\Hypertarget{attack_8cpp_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{attack_8cpp_source_l00009}\mbox{\hyperlink{attack_8cpp_a36ea46ff61e0738a61f70dcf90b5178b}{00009}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{attack_8cpp_a36ea46ff61e0738a61f70dcf90b5178b}{isSquareAttacked}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ square,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ side,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_s___b_o_a_r_d}{S\_BOARD}}*\ pos)\ \{}
+\DoxyCodeLine{\Hypertarget{attack_8cpp_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{attack_8cpp_source_l00011}00011\ \ \ \ \ \mbox{\hyperlink{defs_8h_ab07ffffd69593ea84909411235cb73af}{ASSERT}}(\mbox{\hyperlink{validate_8cpp_ad5a569564ef016ed02a4fef23d89d9c4}{SqOnBoard}}(square));}
+\DoxyCodeLine{\Hypertarget{attack_8cpp_source_l00012}00012\ \ \ \ \ \mbox{\hyperlink{defs_8h_ab07ffffd69593ea84909411235cb73af}{ASSERT}}(\mbox{\hyperlink{validate_8cpp_ad7a2e012bffa6db3df97e7742c9d731d}{SideValid}}(side));}
+\DoxyCodeLine{\Hypertarget{attack_8cpp_source_l00013}00013\ \ \ \ \ \mbox{\hyperlink{defs_8h_ab07ffffd69593ea84909411235cb73af}{ASSERT}}(\mbox{\hyperlink{board_8cpp_a27f071824f45c724e8ddd02c72b39871}{isBoardStateValid}}(pos));}
+\DoxyCodeLine{\Hypertarget{attack_8cpp_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{attack_8cpp_source_l00015}00015\ \ \ \ \ \textcolor{comment}{//\ pawns}}
+\DoxyCodeLine{\Hypertarget{attack_8cpp_source_l00016}00016\ \ \ \ \ \textcolor{keywordflow}{if}\ (side\ ==\ \mbox{\hyperlink{defs_8h_a3d042815b8c6c8d5d724d7d79506b5efa283fc479650da98250635b9c3c0e7e50}{WHITE}})\ \{}
+\DoxyCodeLine{\Hypertarget{attack_8cpp_source_l00017}00017\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (pos-\/>\mbox{\hyperlink{struct_s___b_o_a_r_d_a10af844d96e5843dea94034af0d7fa23}{pieces}}[square\ -\/\ 11]\ ==\ \mbox{\hyperlink{defs_8h_a267d3f46496a12e12c986aa7796ca2e0ae70407497e79a6eee83ec6cb12f62dc6}{wP}}\ ||\ pos-\/>\mbox{\hyperlink{struct_s___b_o_a_r_d_a10af844d96e5843dea94034af0d7fa23}{pieces}}[square\ -\/\ 9]\ ==\ \mbox{\hyperlink{defs_8h_a267d3f46496a12e12c986aa7796ca2e0ae70407497e79a6eee83ec6cb12f62dc6}{wP}})\ \{}
+\DoxyCodeLine{\Hypertarget{attack_8cpp_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{attack_8cpp_source_l00019}00019\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{attack_8cpp_source_l00020}00020\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{attack_8cpp_source_l00021}00021\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (pos-\/>\mbox{\hyperlink{struct_s___b_o_a_r_d_a10af844d96e5843dea94034af0d7fa23}{pieces}}[square\ +\ 11]\ ==\ \mbox{\hyperlink{defs_8h_a267d3f46496a12e12c986aa7796ca2e0a79c461c3a23d04c94cc7718d38b938cb}{bP}}\ ||\ pos-\/>\mbox{\hyperlink{struct_s___b_o_a_r_d_a10af844d96e5843dea94034af0d7fa23}{pieces}}[square\ +\ 9]\ ==\ \mbox{\hyperlink{defs_8h_a267d3f46496a12e12c986aa7796ca2e0a79c461c3a23d04c94cc7718d38b938cb}{bP}})\ \{}
+\DoxyCodeLine{\Hypertarget{attack_8cpp_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{attack_8cpp_source_l00023}00023\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{attack_8cpp_source_l00024}00024\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{attack_8cpp_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{attack_8cpp_source_l00026}00026\ \ \ \ \ \textcolor{comment}{//\ knights}}
+\DoxyCodeLine{\Hypertarget{attack_8cpp_source_l00027}00027\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 8;\ ++i)\ \{}
+\DoxyCodeLine{\Hypertarget{attack_8cpp_source_l00028}00028\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ piece\ =\ pos-\/>\mbox{\hyperlink{struct_s___b_o_a_r_d_a10af844d96e5843dea94034af0d7fa23}{pieces}}[square\ +\ \mbox{\hyperlink{attack_8cpp_a05f1089ec96d8534e671ce07181c6f86}{knightDirection}}[i]];}
+\DoxyCodeLine{\Hypertarget{attack_8cpp_source_l00029}00029\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{defs_8h_ab07ffffd69593ea84909411235cb73af}{ASSERT}}(\mbox{\hyperlink{validate_8cpp_aac5a1baab60b7b72d85de73be258f91b}{PceValidEmptyOffbrd}}(piece));}
+\DoxyCodeLine{\Hypertarget{attack_8cpp_source_l00030}00030\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (piece\ !=\ \mbox{\hyperlink{defs_8h_adda332c73209392ebc9828148fff0d0ca9ee110df4934a8bb74b999c6a9eaf98b}{OFFBOARD}}\ \&\&\ \mbox{\hyperlink{defs_8h_a11c5b1aa7f36ce1a2e5bc0a4f7d297f5}{IsKn}}(piece)\ \&\&\ \mbox{\hyperlink{board__data_8cpp_a4f776144dd266862ec0d7a590715f180}{pieceColor}}[piece]\ ==\ side)\ \{}
+\DoxyCodeLine{\Hypertarget{attack_8cpp_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{attack_8cpp_source_l00032}00032\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{attack_8cpp_source_l00033}00033\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{attack_8cpp_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{attack_8cpp_source_l00035}00035\ \ \ \ \ \textcolor{comment}{//\ rooks,\ queens}}
+\DoxyCodeLine{\Hypertarget{attack_8cpp_source_l00036}00036\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 4;\ ++i)\ \{}
+\DoxyCodeLine{\Hypertarget{attack_8cpp_source_l00037}00037\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ dir\ =\ \mbox{\hyperlink{attack_8cpp_a63758569427276282b64f796be44064f}{rookDirection}}[i];}
+\DoxyCodeLine{\Hypertarget{attack_8cpp_source_l00038}00038\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ targetSq\ =\ square\ +\ dir;}
+\DoxyCodeLine{\Hypertarget{attack_8cpp_source_l00039}00039\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{defs_8h_ab07ffffd69593ea84909411235cb73af}{ASSERT}}(\mbox{\hyperlink{validate_8cpp_a48b5f0e20cf731ceeeb659fbc27b972c}{SqIs120}}(targetSq));}
+\DoxyCodeLine{\Hypertarget{attack_8cpp_source_l00040}00040\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ piece\ =\ pos-\/>\mbox{\hyperlink{struct_s___b_o_a_r_d_a10af844d96e5843dea94034af0d7fa23}{pieces}}[targetSq];}
+\DoxyCodeLine{\Hypertarget{attack_8cpp_source_l00041}00041\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{defs_8h_ab07ffffd69593ea84909411235cb73af}{ASSERT}}(\mbox{\hyperlink{validate_8cpp_aac5a1baab60b7b72d85de73be258f91b}{PceValidEmptyOffbrd}}(piece));}
+\DoxyCodeLine{\Hypertarget{attack_8cpp_source_l00042}00042\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (piece\ !=\ \mbox{\hyperlink{defs_8h_adda332c73209392ebc9828148fff0d0ca9ee110df4934a8bb74b999c6a9eaf98b}{OFFBOARD}})\ \{}
+\DoxyCodeLine{\Hypertarget{attack_8cpp_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (piece\ !=\ \mbox{\hyperlink{defs_8h_a267d3f46496a12e12c986aa7796ca2e0a2f0d18fc0d0fa4a6cd92dc328501874d}{EMPTY}})\ \{}
+\DoxyCodeLine{\Hypertarget{attack_8cpp_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{defs_8h_abb60aeb63c691df1ccc4b765c38a1c52}{IsRQ}}(piece)\ \&\&\ \mbox{\hyperlink{board__data_8cpp_a4f776144dd266862ec0d7a590715f180}{pieceColor}}[piece]\ ==\ side)\ \{}
+\DoxyCodeLine{\Hypertarget{attack_8cpp_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{attack_8cpp_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{attack_8cpp_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{attack_8cpp_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{attack_8cpp_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ targetSq\ +=\ dir;}
+\DoxyCodeLine{\Hypertarget{attack_8cpp_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{defs_8h_ab07ffffd69593ea84909411235cb73af}{ASSERT}}(\mbox{\hyperlink{validate_8cpp_a48b5f0e20cf731ceeeb659fbc27b972c}{SqIs120}}(targetSq));}
+\DoxyCodeLine{\Hypertarget{attack_8cpp_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ piece\ =\ pos-\/>\mbox{\hyperlink{struct_s___b_o_a_r_d_a10af844d96e5843dea94034af0d7fa23}{pieces}}[targetSq];}
+\DoxyCodeLine{\Hypertarget{attack_8cpp_source_l00052}00052\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{attack_8cpp_source_l00053}00053\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{attack_8cpp_source_l00054}00054\ }
+\DoxyCodeLine{\Hypertarget{attack_8cpp_source_l00055}00055\ \ \ \ \ \textcolor{comment}{//\ bishops,\ queens}}
+\DoxyCodeLine{\Hypertarget{attack_8cpp_source_l00056}00056\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 4;\ ++i)\ \{}
+\DoxyCodeLine{\Hypertarget{attack_8cpp_source_l00057}00057\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ dir\ =\ \mbox{\hyperlink{attack_8cpp_a19003113e09295a55fe3fc6a61e8b5b9}{bishopDirection}}[i];}
+\DoxyCodeLine{\Hypertarget{attack_8cpp_source_l00058}00058\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ targetSq\ =\ square\ +\ dir;}
+\DoxyCodeLine{\Hypertarget{attack_8cpp_source_l00059}00059\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{defs_8h_ab07ffffd69593ea84909411235cb73af}{ASSERT}}(\mbox{\hyperlink{validate_8cpp_a48b5f0e20cf731ceeeb659fbc27b972c}{SqIs120}}(targetSq));}
+\DoxyCodeLine{\Hypertarget{attack_8cpp_source_l00060}00060\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ piece\ =\ pos-\/>\mbox{\hyperlink{struct_s___b_o_a_r_d_a10af844d96e5843dea94034af0d7fa23}{pieces}}[targetSq];}
+\DoxyCodeLine{\Hypertarget{attack_8cpp_source_l00061}00061\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{defs_8h_ab07ffffd69593ea84909411235cb73af}{ASSERT}}(\mbox{\hyperlink{validate_8cpp_aac5a1baab60b7b72d85de73be258f91b}{PceValidEmptyOffbrd}}(piece));}
+\DoxyCodeLine{\Hypertarget{attack_8cpp_source_l00062}00062\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (piece\ !=\ \mbox{\hyperlink{defs_8h_adda332c73209392ebc9828148fff0d0ca9ee110df4934a8bb74b999c6a9eaf98b}{OFFBOARD}})\ \{}
+\DoxyCodeLine{\Hypertarget{attack_8cpp_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (piece\ !=\ \mbox{\hyperlink{defs_8h_a267d3f46496a12e12c986aa7796ca2e0a2f0d18fc0d0fa4a6cd92dc328501874d}{EMPTY}})\ \{}
+\DoxyCodeLine{\Hypertarget{attack_8cpp_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{defs_8h_a26a71187416f1b3e0e0f83163b0fa9f8}{IsBQ}}(piece)\ \&\&\ \mbox{\hyperlink{board__data_8cpp_a4f776144dd266862ec0d7a590715f180}{pieceColor}}[piece]\ ==\ side)\ \{}
+\DoxyCodeLine{\Hypertarget{attack_8cpp_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{attack_8cpp_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{attack_8cpp_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{attack_8cpp_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{attack_8cpp_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ targetSq\ +=\ dir;}
+\DoxyCodeLine{\Hypertarget{attack_8cpp_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{defs_8h_ab07ffffd69593ea84909411235cb73af}{ASSERT}}(\mbox{\hyperlink{validate_8cpp_a48b5f0e20cf731ceeeb659fbc27b972c}{SqIs120}}(targetSq));}
+\DoxyCodeLine{\Hypertarget{attack_8cpp_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ piece\ =\ pos-\/>\mbox{\hyperlink{struct_s___b_o_a_r_d_a10af844d96e5843dea94034af0d7fa23}{pieces}}[targetSq];}
+\DoxyCodeLine{\Hypertarget{attack_8cpp_source_l00072}00072\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{attack_8cpp_source_l00073}00073\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{attack_8cpp_source_l00074}00074\ }
+\DoxyCodeLine{\Hypertarget{attack_8cpp_source_l00075}00075\ \ \ \ \ \textcolor{comment}{//\ kings}}
+\DoxyCodeLine{\Hypertarget{attack_8cpp_source_l00076}00076\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 8;\ ++i)\ \{}
+\DoxyCodeLine{\Hypertarget{attack_8cpp_source_l00077}00077\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ piece\ =\ pos-\/>\mbox{\hyperlink{struct_s___b_o_a_r_d_a10af844d96e5843dea94034af0d7fa23}{pieces}}[square\ +\ \mbox{\hyperlink{attack_8cpp_a8b18957f6f100c2d8ea4ffd4aa0f5c58}{kingDirection}}[i]];}
+\DoxyCodeLine{\Hypertarget{attack_8cpp_source_l00078}00078\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{defs_8h_ab07ffffd69593ea84909411235cb73af}{ASSERT}}(\mbox{\hyperlink{validate_8cpp_aac5a1baab60b7b72d85de73be258f91b}{PceValidEmptyOffbrd}}(piece));}
+\DoxyCodeLine{\Hypertarget{attack_8cpp_source_l00079}00079\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (piece\ !=\ \mbox{\hyperlink{defs_8h_adda332c73209392ebc9828148fff0d0ca9ee110df4934a8bb74b999c6a9eaf98b}{OFFBOARD}}\ \&\&\ \mbox{\hyperlink{defs_8h_af82510c92fa4858abe56d5e3650a51f0}{IsKi}}(piece)\ \&\&\ \mbox{\hyperlink{board__data_8cpp_a4f776144dd266862ec0d7a590715f180}{pieceColor}}[piece]\ ==\ side)\ \{}
+\DoxyCodeLine{\Hypertarget{attack_8cpp_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{attack_8cpp_source_l00081}00081\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{attack_8cpp_source_l00082}00082\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{attack_8cpp_source_l00083}00083\ }
+\DoxyCodeLine{\Hypertarget{attack_8cpp_source_l00084}00084\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{attack_8cpp_source_l00085}00085\ \}}
+
+\end{DoxyCode}

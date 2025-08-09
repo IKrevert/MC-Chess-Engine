@@ -1,0 +1,148 @@
+\doxysection{notation.\+h File Reference}
+\hypertarget{notation_8h}{}\label{notation_8h}\index{notation.h@{notation.h}}
+{\ttfamily \#include "{}../defs.\+h"{}}\newline
+Include dependency graph for notation.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{notation_8h_a6108dbc327f987f4078f00c1d5a281c4}{square\+To\+String}} (int sq)
+\begin{DoxyCompactList}\small\item\em Convert a board square index to algebraic notation. \end{DoxyCompactList}\item 
+char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{notation_8h_a620e8d719e2bbb1bd4990fb8746f1e90}{move\+To\+String}} (int move)
+\begin{DoxyCompactList}\small\item\em Convert an encoded move to coordinate notation. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{notation_8h_a4e798dfc0c2c161725e37fabe2ab3029}{parse\+Move\+String}} (char \texorpdfstring{$\ast$}{*}ptr\+Char, \mbox{\hyperlink{struct_s___b_o_a_r_d}{S\+\_\+\+BOARD}} \texorpdfstring{$\ast$}{*}pos)
+\begin{DoxyCompactList}\small\item\em Parse a move from coordinate notation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{notation_8h_aaafa269ff6f9914e9ebddc9b9f46dce7}{print\+Move\+List}} (const \mbox{\hyperlink{struct_s___m_o_v_e_l_i_s_t}{S\+\_\+\+MOVELIST}} \texorpdfstring{$\ast$}{*}list)
+\begin{DoxyCompactList}\small\item\em Print all moves in a move list to stdout. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{notation_8h_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{notation_8h_a620e8d719e2bbb1bd4990fb8746f1e90}\index{notation.h@{notation.h}!moveToString@{moveToString}}
+\index{moveToString@{moveToString}!notation.h@{notation.h}}
+\doxysubsubsection{\texorpdfstring{moveToString()}{moveToString()}}
+{\footnotesize\ttfamily \label{notation_8h_a620e8d719e2bbb1bd4990fb8746f1e90} 
+char \texorpdfstring{$\ast$}{*} move\+To\+String (\begin{DoxyParamCaption}\item[{int}]{move}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Convert an encoded move to coordinate notation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em move} & Encoded move integer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to a static string containing the move (e.\+g., "{}e2e4"{}, "{}e7e8q"{}). 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+This uses a static buffer and is not thread-\/safe. 
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{notation_8cpp_source_l00017}{17}} of file \mbox{\hyperlink{notation_8cpp_source}{notation.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{setup_8cpp_source_l00026}{file\+Index120}}, \mbox{\hyperlink{defs_8h_source_l00164}{FROMSQ}}, \mbox{\hyperlink{defs_8h_source_l00187}{Is\+BQ}}, \mbox{\hyperlink{defs_8h_source_l00189}{Is\+Kn}}, \mbox{\hyperlink{defs_8h_source_l00188}{Is\+RQ}}, \mbox{\hyperlink{defs_8h_source_l00167}{PROMOTED}}, \mbox{\hyperlink{setup_8cpp_source_l00027}{rank\+Index120}}, and \mbox{\hyperlink{defs_8h_source_l00165}{TOSQ}}.
+
+
+
+Referenced by \mbox{\hyperlink{perft_8cpp_source_l00032}{Perft\+Test()}}, and \mbox{\hyperlink{notation_8cpp_source_l00083}{print\+Move\+List()}}.
+
+Here is the caller graph for this function\+:
+% FIG 2
+\Hypertarget{notation_8h_a4e798dfc0c2c161725e37fabe2ab3029}\index{notation.h@{notation.h}!parseMoveString@{parseMoveString}}
+\index{parseMoveString@{parseMoveString}!notation.h@{notation.h}}
+\doxysubsubsection{\texorpdfstring{parseMoveString()}{parseMoveString()}}
+{\footnotesize\ttfamily \label{notation_8h_a4e798dfc0c2c161725e37fabe2ab3029} 
+int parse\+Move\+String (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{ptr\+Char}{, }\item[{\mbox{\hyperlink{struct_s___b_o_a_r_d}{S\+\_\+\+BOARD}} \texorpdfstring{$\ast$}{*}}]{pos}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Parse a move from coordinate notation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ptr\+Char} & Pointer to a string containing the move (e.\+g., "{}e2e4"{}, "{}e7e8q"{}). \\
+\hline
+{\em pos} & Pointer to the current board state. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Encoded move integer, or NOMOVE if invalid. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{notation_8cpp_source_l00048}{48}} of file \mbox{\hyperlink{notation_8cpp_source}{notation.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{defs_8h_source_l00014}{ASSERT}}, \mbox{\hyperlink{defs_8h_source_l00068}{S\+\_\+\+MOVELIST\+::count}}, \mbox{\hyperlink{defs_8h_source_l00040}{EMPTY}}, \mbox{\hyperlink{defs_8h_source_l00181}{FR2\+SQ}}, \mbox{\hyperlink{defs_8h_source_l00164}{FROMSQ}}, \mbox{\hyperlink{move__generator_8cpp_source_l00165}{generate\+All\+Moves()}}, \mbox{\hyperlink{board_8cpp_source_l00028}{is\+Board\+State\+Valid()}}, \mbox{\hyperlink{defs_8h_source_l00187}{Is\+BQ}}, \mbox{\hyperlink{defs_8h_source_l00189}{Is\+Kn}}, \mbox{\hyperlink{defs_8h_source_l00188}{Is\+RQ}}, \mbox{\hyperlink{defs_8h_source_l00062}{S\+\_\+\+MOVE\+::move}}, \mbox{\hyperlink{defs_8h_source_l00067}{S\+\_\+\+MOVELIST\+::moves}}, \mbox{\hyperlink{defs_8h_source_l00176}{NOMOVE}}, \mbox{\hyperlink{defs_8h_source_l00167}{PROMOTED}}, \mbox{\hyperlink{validate_8cpp_source_l00029}{Sq\+On\+Board()}}, and \mbox{\hyperlink{defs_8h_source_l00165}{TOSQ}}.
+
+Here is the call graph for this function\+:
+% FIG 3
+\Hypertarget{notation_8h_aaafa269ff6f9914e9ebddc9b9f46dce7}\index{notation.h@{notation.h}!printMoveList@{printMoveList}}
+\index{printMoveList@{printMoveList}!notation.h@{notation.h}}
+\doxysubsubsection{\texorpdfstring{printMoveList()}{printMoveList()}}
+{\footnotesize\ttfamily \label{notation_8h_aaafa269ff6f9914e9ebddc9b9f46dce7} 
+void print\+Move\+List (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_s___m_o_v_e_l_i_s_t}{S\+\_\+\+MOVELIST}} \texorpdfstring{$\ast$}{*}}]{list}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Print all moves in a move list to stdout. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & Pointer to the move list to print. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{notation_8cpp_source_l00083}{83}} of file \mbox{\hyperlink{notation_8cpp_source}{notation.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{defs_8h_source_l00068}{S\+\_\+\+MOVELIST\+::count}}, \mbox{\hyperlink{defs_8h_source_l00062}{S\+\_\+\+MOVE\+::move}}, \mbox{\hyperlink{defs_8h_source_l00067}{S\+\_\+\+MOVELIST\+::moves}}, \mbox{\hyperlink{notation_8cpp_source_l00017}{move\+To\+String()}}, and \mbox{\hyperlink{defs_8h_source_l00063}{S\+\_\+\+MOVE\+::score}}.
+
+Here is the call graph for this function\+:
+% FIG 4
+\Hypertarget{notation_8h_a6108dbc327f987f4078f00c1d5a281c4}\index{notation.h@{notation.h}!squareToString@{squareToString}}
+\index{squareToString@{squareToString}!notation.h@{notation.h}}
+\doxysubsubsection{\texorpdfstring{squareToString()}{squareToString()}}
+{\footnotesize\ttfamily \label{notation_8h_a6108dbc327f987f4078f00c1d5a281c4} 
+char \texorpdfstring{$\ast$}{*} square\+To\+String (\begin{DoxyParamCaption}\item[{int}]{sq}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Convert a board square index to algebraic notation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sq} & Board square index (0–119 in mailbox 120 format). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to a static string containing the square (e.\+g., "{}e4"{}). 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+This uses a static buffer and is not thread-\/safe. 
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{notation_8cpp_source_l00007}{7}} of file \mbox{\hyperlink{notation_8cpp_source}{notation.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{setup_8cpp_source_l00026}{file\+Index120}}, and \mbox{\hyperlink{setup_8cpp_source_l00027}{rank\+Index120}}.
+
+
+
+Referenced by \mbox{\hyperlink{interactive__helpers_8cpp_source_l00031}{Legal\+Moves\+From()}}.
+
+Here is the caller graph for this function\+:
+% FIG 5

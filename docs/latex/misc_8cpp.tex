@@ -1,0 +1,73 @@
+\doxysection{misc.\+cpp File Reference}
+\hypertarget{misc_8cpp}{}\label{misc_8cpp}\index{misc.cpp@{misc.cpp}}
+{\ttfamily \#include "{}misc.\+h"{}}\newline
+{\ttfamily \#include $<$chrono$>$}\newline
+{\ttfamily \#include $<$cstdio$>$}\newline
+{\ttfamily \#include $<$cstring$>$}\newline
+{\ttfamily \#include $<$sys/select.\+h$>$}\newline
+{\ttfamily \#include $<$sys/time.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+Include dependency graph for misc.\+cpp\+:
+% FIG 0
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{misc_8cpp_a87fed9d5570ea84a3df0c8e208a73098}{Get\+Time\+Ms}} ()
+\item 
+int \mbox{\hyperlink{misc_8cpp_ad4b24a6726f1f0bf071fec1015534fc0}{Input\+Waiting}} ()
+\item 
+void \mbox{\hyperlink{misc_8cpp_ac35ec650650ae344bdc0985cd4ece431}{Read\+Input}} (\mbox{\hyperlink{struct_s___s_e_a_r_c_h_i_n_f_o}{S\+\_\+\+SEARCHINFO}} \texorpdfstring{$\ast$}{*}info)
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{misc_8cpp_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{misc_8cpp_a87fed9d5570ea84a3df0c8e208a73098}\index{misc.cpp@{misc.cpp}!GetTimeMs@{GetTimeMs}}
+\index{GetTimeMs@{GetTimeMs}!misc.cpp@{misc.cpp}}
+\doxysubsubsection{\texorpdfstring{GetTimeMs()}{GetTimeMs()}}
+{\footnotesize\ttfamily \label{misc_8cpp_a87fed9d5570ea84a3df0c8e208a73098} 
+int Get\+Time\+Ms (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{misc_8cpp_source_l00017}{17}} of file \mbox{\hyperlink{misc_8cpp_source}{misc.\+cpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{perft_8cpp_source_l00032}{Perft\+Test()}}.
+
+Here is the caller graph for this function\+:
+% FIG 1
+\Hypertarget{misc_8cpp_ad4b24a6726f1f0bf071fec1015534fc0}\index{misc.cpp@{misc.cpp}!InputWaiting@{InputWaiting}}
+\index{InputWaiting@{InputWaiting}!misc.cpp@{misc.cpp}}
+\doxysubsubsection{\texorpdfstring{InputWaiting()}{InputWaiting()}}
+{\footnotesize\ttfamily \label{misc_8cpp_ad4b24a6726f1f0bf071fec1015534fc0} 
+int Input\+Waiting (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{misc_8cpp_source_l00026}{26}} of file \mbox{\hyperlink{misc_8cpp_source}{misc.\+cpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{misc_8cpp_source_l00077}{Read\+Input()}}.
+
+Here is the caller graph for this function\+:
+% FIG 2
+\Hypertarget{misc_8cpp_ac35ec650650ae344bdc0985cd4ece431}\index{misc.cpp@{misc.cpp}!ReadInput@{ReadInput}}
+\index{ReadInput@{ReadInput}!misc.cpp@{misc.cpp}}
+\doxysubsubsection{\texorpdfstring{ReadInput()}{ReadInput()}}
+{\footnotesize\ttfamily \label{misc_8cpp_ac35ec650650ae344bdc0985cd4ece431} 
+void Read\+Input (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s___s_e_a_r_c_h_i_n_f_o}{S\+\_\+\+SEARCHINFO}} \texorpdfstring{$\ast$}{*}}]{info}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{misc_8cpp_source_l00077}{77}} of file \mbox{\hyperlink{misc_8cpp_source}{misc.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{misc_8cpp_source_l00026}{Input\+Waiting()}}, \mbox{\hyperlink{defs_8h_source_l00147}{S\+\_\+\+SEARCHINFO\+::quit}}, \mbox{\hyperlink{defs_8h_source_l00148}{S\+\_\+\+SEARCHINFO\+::stopped}}, and \mbox{\hyperlink{defs_8h_source_l00057}{TRUE}}.
+
+Here is the call graph for this function\+:
+% FIG 3

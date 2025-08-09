@@ -1,0 +1,132 @@
+\doxysection{bitboards.\+cpp File Reference}
+\hypertarget{bitboards_8cpp}{}\label{bitboards_8cpp}\index{bitboards.cpp@{bitboards.cpp}}
+{\ttfamily \#include "{}stdio.\+h"{}}\newline
+{\ttfamily \#include "{}defs.\+h"{}}\newline
+{\ttfamily \#include "{}setup.\+h"{}}\newline
+Include dependency graph for bitboards.\+cpp\+:
+% FIG 0
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{bitboards_8cpp_aa7dce4add317c871ff004dffd12499db}{pop\+LSB}} (\mbox{\hyperlink{defs_8h_a24c386d3758eba951eb7532fdbb45804}{U64}} \texorpdfstring{$\ast$}{*}bb)
+\begin{DoxyCompactList}\small\item\em Pops the least significant 1-\/bit from a bitboard and returns its index (0–63). \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{bitboards_8cpp_ab6180538f75e2ec09ed322ef2d62bdc8}{count\+Set\+Bits}} (\mbox{\hyperlink{defs_8h_a24c386d3758eba951eb7532fdbb45804}{U64}} b)
+\begin{DoxyCompactList}\small\item\em Counts the number of 1-\/bits in a bitboard. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{bitboards_8cpp_a01d79941aa979e14d00a440f078dd2a1}{print\+Bit\+Board}} (\mbox{\hyperlink{defs_8h_a24c386d3758eba951eb7532fdbb45804}{U64}} bb)
+\begin{DoxyCompactList}\small\item\em Prints a visual representation of a bitboard to stdout. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const int \mbox{\hyperlink{bitboards_8cpp_a136c347db6838656a2a32ffdaed6066b}{Bit\+Table}} \mbox{[}64\mbox{]}
+\begin{DoxyCompactList}\small\item\em Lookup table for bit index extraction. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{bitboards_8cpp_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{bitboards_8cpp_ab6180538f75e2ec09ed322ef2d62bdc8}\index{bitboards.cpp@{bitboards.cpp}!countSetBits@{countSetBits}}
+\index{countSetBits@{countSetBits}!bitboards.cpp@{bitboards.cpp}}
+\doxysubsubsection{\texorpdfstring{countSetBits()}{countSetBits()}}
+{\footnotesize\ttfamily \label{bitboards_8cpp_ab6180538f75e2ec09ed322ef2d62bdc8} 
+int count\+Set\+Bits (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{defs_8h_a24c386d3758eba951eb7532fdbb45804}{U64}}}]{b}{}\end{DoxyParamCaption})}
+
+
+
+Counts the number of 1-\/bits in a bitboard. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em b} & Bitboard value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Number of set bits. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{bitboards_8cpp_source_l00021}{21}} of file \mbox{\hyperlink{bitboards_8cpp_source}{bitboards.\+cpp}}.
+
+\Hypertarget{bitboards_8cpp_aa7dce4add317c871ff004dffd12499db}\index{bitboards.cpp@{bitboards.cpp}!popLSB@{popLSB}}
+\index{popLSB@{popLSB}!bitboards.cpp@{bitboards.cpp}}
+\doxysubsubsection{\texorpdfstring{popLSB()}{popLSB()}}
+{\footnotesize\ttfamily \label{bitboards_8cpp_aa7dce4add317c871ff004dffd12499db} 
+int pop\+LSB (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{defs_8h_a24c386d3758eba951eb7532fdbb45804}{U64}} \texorpdfstring{$\ast$}{*}}]{bb}{}\end{DoxyParamCaption})}
+
+
+
+Pops the least significant 1-\/bit from a bitboard and returns its index (0–63). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bb} & Pointer to the bitboard to modify. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Index (0–63) of the popped bit. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{bitboards_8cpp_source_l00014}{14}} of file \mbox{\hyperlink{bitboards_8cpp_source}{bitboards.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{bitboards_8cpp_source_l00007}{Bit\+Table}}.
+
+\Hypertarget{bitboards_8cpp_a01d79941aa979e14d00a440f078dd2a1}\index{bitboards.cpp@{bitboards.cpp}!printBitBoard@{printBitBoard}}
+\index{printBitBoard@{printBitBoard}!bitboards.cpp@{bitboards.cpp}}
+\doxysubsubsection{\texorpdfstring{printBitBoard()}{printBitBoard()}}
+{\footnotesize\ttfamily \label{bitboards_8cpp_a01d79941aa979e14d00a440f078dd2a1} 
+void print\+Bit\+Board (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{defs_8h_a24c386d3758eba951eb7532fdbb45804}{U64}}}]{bb}{}\end{DoxyParamCaption})}
+
+
+
+Prints a visual representation of a bitboard to stdout. 
+
+\textquotesingle{}X\textquotesingle{} marks set bits, \textquotesingle{}-\/\textquotesingle{} marks unset bits.
+
+
+\begin{DoxyParams}{Parameters}
+{\em bb} & Bitboard to print. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{bitboards_8cpp_source_l00027}{27}} of file \mbox{\hyperlink{bitboards_8cpp_source}{bitboards.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{defs_8h_source_l00041}{FILE\+\_\+A}}, \mbox{\hyperlink{defs_8h_source_l00041}{FILE\+\_\+H}}, \mbox{\hyperlink{defs_8h_source_l00181}{FR2\+SQ}}, \mbox{\hyperlink{defs_8h_source_l00042}{RANK\+\_\+1}}, \mbox{\hyperlink{defs_8h_source_l00042}{RANK\+\_\+8}}, and \mbox{\hyperlink{defs_8h_source_l00182}{SQ64}}.
+
+
+
+\label{doc-var-members}
+\Hypertarget{bitboards_8cpp_doc-var-members}
+\doxysubsection{Variable Documentation}
+\Hypertarget{bitboards_8cpp_a136c347db6838656a2a32ffdaed6066b}\index{bitboards.cpp@{bitboards.cpp}!BitTable@{BitTable}}
+\index{BitTable@{BitTable}!bitboards.cpp@{bitboards.cpp}}
+\doxysubsubsection{\texorpdfstring{BitTable}{BitTable}}
+{\footnotesize\ttfamily \label{bitboards_8cpp_a136c347db6838656a2a32ffdaed6066b} 
+const int Bit\+Table\mbox{[}64\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ 63,\ 30,\ 3,\ 32,\ 25,\ 41,\ 22,\ 33,\ 15,\ 50,\ 42,\ 13,\ 11,\ 53,\ 19,\ 34,\ 61,\ 29,\ 2,}
+\DoxyCodeLine{\ \ 51,\ 21,\ 43,\ 45,\ 10,\ 18,\ 47,\ 1,\ 54,\ 9,\ 57,\ 0,\ 35,\ 62,\ 31,\ 40,\ 4,\ 49,\ 5,\ 52,}
+\DoxyCodeLine{\ \ 26,\ 60,\ 6,\ 23,\ 44,\ 46,\ 27,\ 56,\ 16,\ 7,\ 39,\ 48,\ 24,\ 59,\ 14,\ 12,\ 55,\ 38,\ 28,}
+\DoxyCodeLine{\ \ 58,\ 20,\ 37,\ 17,\ 36,\ 8}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Lookup table for bit index extraction. 
+
+
+
+Definition at line \mbox{\hyperlink{bitboards_8cpp_source_l00007}{7}} of file \mbox{\hyperlink{bitboards_8cpp_source}{bitboards.\+cpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{bitboards_8cpp_source_l00014}{pop\+LSB()}}.
+

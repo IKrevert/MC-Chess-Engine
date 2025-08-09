@@ -1,0 +1,248 @@
+\doxysection{board.\+h File Reference}
+\hypertarget{board_8h}{}\label{board_8h}\index{board.h@{board.h}}
+{\ttfamily \#include "{}../defs.\+h"{}}\newline
+{\ttfamily \#include "{}../test./validate.\+h"{}}\newline
+Include dependency graph for board.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{board_8h_addbaf4fbab51f8032e0e7aabbffeab96}{is\+Piece\+List\+Valid}} (const \mbox{\hyperlink{struct_s___b_o_a_r_d}{S\+\_\+\+BOARD}} \texorpdfstring{$\ast$}{*}pos)
+\begin{DoxyCompactList}\small\item\em Validate that piece list array is consistent with board state. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{board_8h_a27f071824f45c724e8ddd02c72b39871}{is\+Board\+State\+Valid}} (const \mbox{\hyperlink{struct_s___b_o_a_r_d}{S\+\_\+\+BOARD}} \texorpdfstring{$\ast$}{*}pos)
+\begin{DoxyCompactList}\small\item\em Performs a full internal consistency check of the board state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{board_8h_ac392f2ff8c0f063425f09403c43d4cc5}{update\+Lists\+Material}} (\mbox{\hyperlink{struct_s___b_o_a_r_d}{S\+\_\+\+BOARD}} \texorpdfstring{$\ast$}{*}pos)
+\begin{DoxyCompactList}\small\item\em Update piece lists, material counts, and pawn bitboards from scratch. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{board_8h_aad9cde553dadb6876eb29b43c8f66b08}{load\+FEN}} (char \texorpdfstring{$\ast$}{*}fen, \mbox{\hyperlink{struct_s___b_o_a_r_d}{S\+\_\+\+BOARD}} \texorpdfstring{$\ast$}{*}pos)
+\begin{DoxyCompactList}\small\item\em Parse a FEN string into the given board state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{board_8h_a450b9988728615700e2d0677aa92d871}{reset\+Board\+State}} (\mbox{\hyperlink{struct_s___b_o_a_r_d}{S\+\_\+\+BOARD}} \texorpdfstring{$\ast$}{*}pos)
+\begin{DoxyCompactList}\small\item\em Reset board to empty state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{board_8h_ae6514fecbc8e1ef2e0ef649296ad8163}{print\+Board\+State}} (const \mbox{\hyperlink{struct_s___b_o_a_r_d}{S\+\_\+\+BOARD}} \texorpdfstring{$\ast$}{*}pos)
+\begin{DoxyCompactList}\small\item\em Print the board to stdout in a human-\/readable format. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{board_8h_aa79d9c29f4add58463f9a03d17085132}{mirror\+Board\+Position}} (\mbox{\hyperlink{struct_s___b_o_a_r_d}{S\+\_\+\+BOARD}} \texorpdfstring{$\ast$}{*}pos)
+\begin{DoxyCompactList}\small\item\em Flip the board vertically, swapping colors and positions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{board_8h_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{board_8h_a27f071824f45c724e8ddd02c72b39871}\index{board.h@{board.h}!isBoardStateValid@{isBoardStateValid}}
+\index{isBoardStateValid@{isBoardStateValid}!board.h@{board.h}}
+\doxysubsubsection{\texorpdfstring{isBoardStateValid()}{isBoardStateValid()}}
+{\footnotesize\ttfamily \label{board_8h_a27f071824f45c724e8ddd02c72b39871} 
+bool is\+Board\+State\+Valid (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_s___b_o_a_r_d}{S\+\_\+\+BOARD}} \texorpdfstring{$\ast$}{*}}]{pos}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Performs a full internal consistency check of the board state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & Pointer to board state. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+TRUE if board is valid, FALSE otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{board_8cpp_source_l00028}{28}} of file \mbox{\hyperlink{board_8cpp_source}{board.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{defs_8h_source_l00014}{ASSERT}}, \mbox{\hyperlink{defs_8h_source_l00119}{S\+\_\+\+BOARD\+::big\+Pce}}, \mbox{\hyperlink{defs_8h_source_l00040}{bK}}, \mbox{\hyperlink{defs_8h_source_l00044}{BLACK}}, \mbox{\hyperlink{defs_8h_source_l00044}{BOTH}}, \mbox{\hyperlink{defs_8h_source_l00040}{bP}}, \mbox{\hyperlink{defs_8h_source_l00114}{S\+\_\+\+BOARD\+::castle\+Perm}}, \mbox{\hyperlink{bitboard_8h_source_l00006}{CNT}}, \mbox{\hyperlink{defs_8h_source_l00108}{S\+\_\+\+BOARD\+::en\+Pas}}, \mbox{\hyperlink{hash__keys_8cpp_source_l00005}{generate\+Position\+Keys()}}, \mbox{\hyperlink{board__data_8cpp_source_l00008}{is\+Big\+Piece}}, \mbox{\hyperlink{board__data_8cpp_source_l00009}{is\+Major\+Piece}}, \mbox{\hyperlink{board__data_8cpp_source_l00010}{is\+Minor\+Piece}}, \mbox{\hyperlink{board_8cpp_source_l00012}{is\+Piece\+List\+Valid()}}, \mbox{\hyperlink{defs_8h_source_l00105}{S\+\_\+\+BOARD\+::\+King\+Sq}}, \mbox{\hyperlink{defs_8h_source_l00120}{S\+\_\+\+BOARD\+::maj\+Pce}}, \mbox{\hyperlink{defs_8h_source_l00122}{S\+\_\+\+BOARD\+::material}}, \mbox{\hyperlink{defs_8h_source_l00121}{S\+\_\+\+BOARD\+::min\+Pce}}, \mbox{\hyperlink{defs_8h_source_l00054}{NO\+\_\+\+SQ}}, \mbox{\hyperlink{defs_8h_source_l00103}{S\+\_\+\+BOARD\+::pawns}}, \mbox{\hyperlink{defs_8h_source_l00118}{S\+\_\+\+BOARD\+::pce\+Num}}, \mbox{\hyperlink{board__data_8cpp_source_l00013}{piece\+Color}}, \mbox{\hyperlink{defs_8h_source_l00102}{S\+\_\+\+BOARD\+::pieces}}, \mbox{\hyperlink{board__data_8cpp_source_l00012}{piece\+Value}}, \mbox{\hyperlink{defs_8h_source_l00127}{S\+\_\+\+BOARD\+::p\+List}}, \mbox{\hyperlink{bitboard_8h_source_l00005}{POP}}, \mbox{\hyperlink{defs_8h_source_l00116}{S\+\_\+\+BOARD\+::pos\+Key}}, \mbox{\hyperlink{defs_8h_source_l00042}{RANK\+\_\+3}}, \mbox{\hyperlink{defs_8h_source_l00042}{RANK\+\_\+6}}, \mbox{\hyperlink{setup_8cpp_source_l00027}{rank\+Index120}}, \mbox{\hyperlink{defs_8h_source_l00107}{S\+\_\+\+BOARD\+::side}}, \mbox{\hyperlink{defs_8h_source_l00183}{SQ120}}, \mbox{\hyperlink{defs_8h_source_l00057}{TRUE}}, \mbox{\hyperlink{defs_8h_source_l00044}{WHITE}}, \mbox{\hyperlink{defs_8h_source_l00040}{wK}}, and \mbox{\hyperlink{defs_8h_source_l00040}{wP}}.
+
+
+
+Referenced by \mbox{\hyperlink{move__generator_8cpp_source_l00109}{Add\+Black\+Pawn\+Cap\+Move()}}, \mbox{\hyperlink{move__generator_8cpp_source_l00125}{Add\+Black\+Pawn\+Move()}}, \mbox{\hyperlink{move__generator_8cpp_source_l00053}{Add\+Capture\+Move()}}, \mbox{\hyperlink{move__generator_8cpp_source_l00065}{Add\+En\+Passant\+Move()}}, \mbox{\hyperlink{move__generator_8cpp_source_l00034}{Add\+Quiet\+Move()}}, \mbox{\hyperlink{move__generator_8cpp_source_l00078}{Add\+White\+Pawn\+Cap\+Move()}}, \mbox{\hyperlink{move__generator_8cpp_source_l00094}{Add\+White\+Pawn\+Move()}}, \mbox{\hyperlink{make__move_8cpp_source_l00030}{Clear\+Piece()}}, \mbox{\hyperlink{move__generator_8cpp_source_l00299}{generate\+All\+Captures()}}, \mbox{\hyperlink{move__generator_8cpp_source_l00165}{generate\+All\+Moves()}}, \mbox{\hyperlink{attack_8cpp_source_l00009}{is\+Square\+Attacked()}}, \mbox{\hyperlink{make__move_8cpp_source_l00142}{make\+Move()}}, \mbox{\hyperlink{make__move_8cpp_source_l00303}{make\+Null\+Move()}}, \mbox{\hyperlink{board_8cpp_source_l00301}{mirror\+Board\+Position()}}, \mbox{\hyperlink{notation_8cpp_source_l00048}{parse\+Move\+String()}}, \mbox{\hyperlink{perft_8cpp_source_l00011}{Perft()}}, \mbox{\hyperlink{perft_8cpp_source_l00032}{Perft\+Test()}}, \mbox{\hyperlink{make__move_8cpp_source_l00240}{take\+Move()}}, and \mbox{\hyperlink{make__move_8cpp_source_l00327}{take\+Null\+Move()}}.
+
+Here is the call graph for this function\+:
+% FIG 2
+Here is the caller graph for this function\+:
+% FIG 3
+\Hypertarget{board_8h_addbaf4fbab51f8032e0e7aabbffeab96}\index{board.h@{board.h}!isPieceListValid@{isPieceListValid}}
+\index{isPieceListValid@{isPieceListValid}!board.h@{board.h}}
+\doxysubsubsection{\texorpdfstring{isPieceListValid()}{isPieceListValid()}}
+{\footnotesize\ttfamily \label{board_8h_addbaf4fbab51f8032e0e7aabbffeab96} 
+bool is\+Piece\+List\+Valid (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_s___b_o_a_r_d}{S\+\_\+\+BOARD}} \texorpdfstring{$\ast$}{*}}]{pos}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Validate that piece list array is consistent with board state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & Pointer to board state. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+TRUE if list is valid, FALSE otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{board_8cpp_source_l00012}{12}} of file \mbox{\hyperlink{board_8cpp_source}{board.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{defs_8h_source_l00040}{bK}}, \mbox{\hyperlink{defs_8h_source_l00057}{FALSE}}, \mbox{\hyperlink{defs_8h_source_l00118}{S\+\_\+\+BOARD\+::pce\+Num}}, \mbox{\hyperlink{defs_8h_source_l00127}{S\+\_\+\+BOARD\+::p\+List}}, \mbox{\hyperlink{validate_8cpp_source_l00029}{Sq\+On\+Board()}}, \mbox{\hyperlink{defs_8h_source_l00040}{wK}}, and \mbox{\hyperlink{defs_8h_source_l00040}{wP}}.
+
+
+
+Referenced by \mbox{\hyperlink{board_8cpp_source_l00028}{is\+Board\+State\+Valid()}}.
+
+Here is the call graph for this function\+:
+% FIG 4
+Here is the caller graph for this function\+:
+% FIG 5
+\Hypertarget{board_8h_aad9cde553dadb6876eb29b43c8f66b08}\index{board.h@{board.h}!loadFEN@{loadFEN}}
+\index{loadFEN@{loadFEN}!board.h@{board.h}}
+\doxysubsubsection{\texorpdfstring{loadFEN()}{loadFEN()}}
+{\footnotesize\ttfamily \label{board_8h_aad9cde553dadb6876eb29b43c8f66b08} 
+int load\+FEN (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{fen}{, }\item[{\mbox{\hyperlink{struct_s___b_o_a_r_d}{S\+\_\+\+BOARD}} \texorpdfstring{$\ast$}{*}}]{pos}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Parse a FEN string into the given board state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fen} & FEN string. \\
+\hline
+{\em pos} & Pointer to board state. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, -\/1 on failure. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{board_8cpp_source_l00146}{146}} of file \mbox{\hyperlink{board_8cpp_source}{board.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{defs_8h_source_l00014}{ASSERT}}, \mbox{\hyperlink{defs_8h_source_l00040}{bB}}, \mbox{\hyperlink{defs_8h_source_l00040}{bK}}, \mbox{\hyperlink{defs_8h_source_l00059}{BKCA}}, \mbox{\hyperlink{defs_8h_source_l00044}{BLACK}}, \mbox{\hyperlink{defs_8h_source_l00040}{bN}}, \mbox{\hyperlink{defs_8h_source_l00040}{bP}}, \mbox{\hyperlink{defs_8h_source_l00040}{bQ}}, \mbox{\hyperlink{defs_8h_source_l00059}{BQCA}}, \mbox{\hyperlink{defs_8h_source_l00040}{bR}}, \mbox{\hyperlink{defs_8h_source_l00114}{S\+\_\+\+BOARD\+::castle\+Perm}}, \mbox{\hyperlink{defs_8h_source_l00040}{EMPTY}}, \mbox{\hyperlink{defs_8h_source_l00108}{S\+\_\+\+BOARD\+::en\+Pas}}, \mbox{\hyperlink{defs_8h_source_l00041}{FILE\+\_\+A}}, \mbox{\hyperlink{defs_8h_source_l00041}{FILE\+\_\+H}}, \mbox{\hyperlink{defs_8h_source_l00181}{FR2\+SQ}}, \mbox{\hyperlink{hash__keys_8cpp_source_l00005}{generate\+Position\+Keys()}}, \mbox{\hyperlink{defs_8h_source_l00102}{S\+\_\+\+BOARD\+::pieces}}, \mbox{\hyperlink{defs_8h_source_l00116}{S\+\_\+\+BOARD\+::pos\+Key}}, \mbox{\hyperlink{defs_8h_source_l00042}{RANK\+\_\+1}}, \mbox{\hyperlink{defs_8h_source_l00042}{RANK\+\_\+8}}, \mbox{\hyperlink{board_8cpp_source_l00236}{reset\+Board\+State()}}, \mbox{\hyperlink{defs_8h_source_l00107}{S\+\_\+\+BOARD\+::side}}, \mbox{\hyperlink{defs_8h_source_l00183}{SQ120}}, \mbox{\hyperlink{board_8cpp_source_l00112}{update\+Lists\+Material()}}, \mbox{\hyperlink{defs_8h_source_l00040}{wB}}, \mbox{\hyperlink{defs_8h_source_l00044}{WHITE}}, \mbox{\hyperlink{defs_8h_source_l00040}{wK}}, \mbox{\hyperlink{defs_8h_source_l00059}{WKCA}}, \mbox{\hyperlink{defs_8h_source_l00040}{wN}}, \mbox{\hyperlink{defs_8h_source_l00040}{wP}}, \mbox{\hyperlink{defs_8h_source_l00040}{wQ}}, \mbox{\hyperlink{defs_8h_source_l00059}{WQCA}}, and \mbox{\hyperlink{defs_8h_source_l00040}{wR}}.
+
+
+
+Referenced by \mbox{\hyperlink{main_8cpp_source_l00026}{main()}}.
+
+Here is the call graph for this function\+:
+% FIG 6
+Here is the caller graph for this function\+:
+% FIG 7
+\Hypertarget{board_8h_aa79d9c29f4add58463f9a03d17085132}\index{board.h@{board.h}!mirrorBoardPosition@{mirrorBoardPosition}}
+\index{mirrorBoardPosition@{mirrorBoardPosition}!board.h@{board.h}}
+\doxysubsubsection{\texorpdfstring{mirrorBoardPosition()}{mirrorBoardPosition()}}
+{\footnotesize\ttfamily \label{board_8h_aa79d9c29f4add58463f9a03d17085132} 
+void mirror\+Board\+Position (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s___b_o_a_r_d}{S\+\_\+\+BOARD}} \texorpdfstring{$\ast$}{*}}]{pos}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Flip the board vertically, swapping colors and positions. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & Pointer to board state. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{board_8cpp_source_l00301}{301}} of file \mbox{\hyperlink{board_8cpp_source}{board.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{defs_8h_source_l00014}{ASSERT}}, \mbox{\hyperlink{defs_8h_source_l00040}{bB}}, \mbox{\hyperlink{defs_8h_source_l00040}{bK}}, \mbox{\hyperlink{defs_8h_source_l00059}{BKCA}}, \mbox{\hyperlink{defs_8h_source_l00040}{bN}}, \mbox{\hyperlink{defs_8h_source_l00040}{bP}}, \mbox{\hyperlink{defs_8h_source_l00040}{bQ}}, \mbox{\hyperlink{defs_8h_source_l00059}{BQCA}}, \mbox{\hyperlink{defs_8h_source_l00040}{bR}}, \mbox{\hyperlink{defs_8h_source_l00114}{S\+\_\+\+BOARD\+::castle\+Perm}}, \mbox{\hyperlink{defs_8h_source_l00040}{EMPTY}}, \mbox{\hyperlink{defs_8h_source_l00108}{S\+\_\+\+BOARD\+::en\+Pas}}, \mbox{\hyperlink{hash__keys_8cpp_source_l00005}{generate\+Position\+Keys()}}, \mbox{\hyperlink{board_8cpp_source_l00028}{is\+Board\+State\+Valid()}}, \mbox{\hyperlink{board__data_8cpp_source_l00023}{Mirror64}}, \mbox{\hyperlink{defs_8h_source_l00054}{NO\+\_\+\+SQ}}, \mbox{\hyperlink{defs_8h_source_l00102}{S\+\_\+\+BOARD\+::pieces}}, \mbox{\hyperlink{defs_8h_source_l00116}{S\+\_\+\+BOARD\+::pos\+Key}}, \mbox{\hyperlink{board_8cpp_source_l00236}{reset\+Board\+State()}}, \mbox{\hyperlink{defs_8h_source_l00107}{S\+\_\+\+BOARD\+::side}}, \mbox{\hyperlink{defs_8h_source_l00183}{SQ120}}, \mbox{\hyperlink{defs_8h_source_l00182}{SQ64}}, \mbox{\hyperlink{board_8cpp_source_l00112}{update\+Lists\+Material()}}, \mbox{\hyperlink{defs_8h_source_l00040}{wB}}, \mbox{\hyperlink{defs_8h_source_l00040}{wK}}, \mbox{\hyperlink{defs_8h_source_l00059}{WKCA}}, \mbox{\hyperlink{defs_8h_source_l00040}{wN}}, \mbox{\hyperlink{defs_8h_source_l00040}{wP}}, \mbox{\hyperlink{defs_8h_source_l00040}{wQ}}, \mbox{\hyperlink{defs_8h_source_l00059}{WQCA}}, and \mbox{\hyperlink{defs_8h_source_l00040}{wR}}.
+
+Here is the call graph for this function\+:
+% FIG 8
+\Hypertarget{board_8h_ae6514fecbc8e1ef2e0ef649296ad8163}\index{board.h@{board.h}!printBoardState@{printBoardState}}
+\index{printBoardState@{printBoardState}!board.h@{board.h}}
+\doxysubsubsection{\texorpdfstring{printBoardState()}{printBoardState()}}
+{\footnotesize\ttfamily \label{board_8h_ae6514fecbc8e1ef2e0ef649296ad8163} 
+void print\+Board\+State (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_s___b_o_a_r_d}{S\+\_\+\+BOARD}} \texorpdfstring{$\ast$}{*}}]{pos}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Print the board to stdout in a human-\/readable format. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & Pointer to board state. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{board_8cpp_source_l00272}{272}} of file \mbox{\hyperlink{board_8cpp_source}{board.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{defs_8h_source_l00059}{BKCA}}, \mbox{\hyperlink{defs_8h_source_l00059}{BQCA}}, \mbox{\hyperlink{defs_8h_source_l00114}{S\+\_\+\+BOARD\+::castle\+Perm}}, \mbox{\hyperlink{defs_8h_source_l00108}{S\+\_\+\+BOARD\+::en\+Pas}}, \mbox{\hyperlink{defs_8h_source_l00041}{FILE\+\_\+A}}, \mbox{\hyperlink{defs_8h_source_l00041}{FILE\+\_\+H}}, \mbox{\hyperlink{defs_8h_source_l00181}{FR2\+SQ}}, \mbox{\hyperlink{defs_8h_source_l00102}{S\+\_\+\+BOARD\+::pieces}}, \mbox{\hyperlink{board__data_8cpp_source_l00003}{piece\+To\+Character}}, \mbox{\hyperlink{defs_8h_source_l00116}{S\+\_\+\+BOARD\+::pos\+Key}}, \mbox{\hyperlink{defs_8h_source_l00042}{RANK\+\_\+1}}, \mbox{\hyperlink{defs_8h_source_l00042}{RANK\+\_\+8}}, \mbox{\hyperlink{defs_8h_source_l00107}{S\+\_\+\+BOARD\+::side}}, \mbox{\hyperlink{board__data_8cpp_source_l00004}{Side\+Char}}, \mbox{\hyperlink{defs_8h_source_l00059}{WKCA}}, and \mbox{\hyperlink{defs_8h_source_l00059}{WQCA}}.
+
+
+
+Referenced by \mbox{\hyperlink{main_8cpp_source_l00026}{main()}}, and \mbox{\hyperlink{perft_8cpp_source_l00032}{Perft\+Test()}}.
+
+Here is the caller graph for this function\+:
+% FIG 9
+\Hypertarget{board_8h_a450b9988728615700e2d0677aa92d871}\index{board.h@{board.h}!resetBoardState@{resetBoardState}}
+\index{resetBoardState@{resetBoardState}!board.h@{board.h}}
+\doxysubsubsection{\texorpdfstring{resetBoardState()}{resetBoardState()}}
+{\footnotesize\ttfamily \label{board_8h_a450b9988728615700e2d0677aa92d871} 
+void reset\+Board\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s___b_o_a_r_d}{S\+\_\+\+BOARD}} \texorpdfstring{$\ast$}{*}}]{pos}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Reset board to empty state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & Pointer to board state. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{board_8cpp_source_l00236}{236}} of file \mbox{\hyperlink{board_8cpp_source}{board.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{defs_8h_source_l00119}{S\+\_\+\+BOARD\+::big\+Pce}}, \mbox{\hyperlink{defs_8h_source_l00044}{BLACK}}, \mbox{\hyperlink{defs_8h_source_l00044}{BOTH}}, \mbox{\hyperlink{defs_8h_source_l00029}{BRD\+\_\+\+SQ\+\_\+\+NUM}}, \mbox{\hyperlink{defs_8h_source_l00114}{S\+\_\+\+BOARD\+::castle\+Perm}}, \mbox{\hyperlink{defs_8h_source_l00040}{EMPTY}}, \mbox{\hyperlink{defs_8h_source_l00108}{S\+\_\+\+BOARD\+::en\+Pas}}, \mbox{\hyperlink{defs_8h_source_l00109}{S\+\_\+\+BOARD\+::fifty\+Move}}, \mbox{\hyperlink{defs_8h_source_l00112}{S\+\_\+\+BOARD\+::his\+Ply}}, \mbox{\hyperlink{defs_8h_source_l00105}{S\+\_\+\+BOARD\+::\+King\+Sq}}, \mbox{\hyperlink{defs_8h_source_l00120}{S\+\_\+\+BOARD\+::maj\+Pce}}, \mbox{\hyperlink{defs_8h_source_l00122}{S\+\_\+\+BOARD\+::material}}, \mbox{\hyperlink{defs_8h_source_l00121}{S\+\_\+\+BOARD\+::min\+Pce}}, \mbox{\hyperlink{defs_8h_source_l00054}{NO\+\_\+\+SQ}}, \mbox{\hyperlink{defs_8h_source_l00054}{OFFBOARD}}, \mbox{\hyperlink{defs_8h_source_l00103}{S\+\_\+\+BOARD\+::pawns}}, \mbox{\hyperlink{defs_8h_source_l00118}{S\+\_\+\+BOARD\+::pce\+Num}}, \mbox{\hyperlink{defs_8h_source_l00102}{S\+\_\+\+BOARD\+::pieces}}, \mbox{\hyperlink{defs_8h_source_l00111}{S\+\_\+\+BOARD\+::ply}}, \mbox{\hyperlink{defs_8h_source_l00116}{S\+\_\+\+BOARD\+::pos\+Key}}, \mbox{\hyperlink{defs_8h_source_l00107}{S\+\_\+\+BOARD\+::side}}, \mbox{\hyperlink{defs_8h_source_l00183}{SQ120}}, and \mbox{\hyperlink{defs_8h_source_l00044}{WHITE}}.
+
+
+
+Referenced by \mbox{\hyperlink{board_8cpp_source_l00146}{load\+FEN()}}, and \mbox{\hyperlink{board_8cpp_source_l00301}{mirror\+Board\+Position()}}.
+
+Here is the caller graph for this function\+:
+% FIG 10
+\Hypertarget{board_8h_ac392f2ff8c0f063425f09403c43d4cc5}\index{board.h@{board.h}!updateListsMaterial@{updateListsMaterial}}
+\index{updateListsMaterial@{updateListsMaterial}!board.h@{board.h}}
+\doxysubsubsection{\texorpdfstring{updateListsMaterial()}{updateListsMaterial()}}
+{\footnotesize\ttfamily \label{board_8h_ac392f2ff8c0f063425f09403c43d4cc5} 
+void update\+Lists\+Material (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s___b_o_a_r_d}{S\+\_\+\+BOARD}} \texorpdfstring{$\ast$}{*}}]{pos}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Update piece lists, material counts, and pawn bitboards from scratch. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & Pointer to board state. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{board_8cpp_source_l00112}{112}} of file \mbox{\hyperlink{board_8cpp_source}{board.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{defs_8h_source_l00014}{ASSERT}}, \mbox{\hyperlink{defs_8h_source_l00119}{S\+\_\+\+BOARD\+::big\+Pce}}, \mbox{\hyperlink{defs_8h_source_l00040}{bK}}, \mbox{\hyperlink{defs_8h_source_l00044}{BLACK}}, \mbox{\hyperlink{defs_8h_source_l00044}{BOTH}}, \mbox{\hyperlink{defs_8h_source_l00040}{bP}}, \mbox{\hyperlink{defs_8h_source_l00029}{BRD\+\_\+\+SQ\+\_\+\+NUM}}, \mbox{\hyperlink{defs_8h_source_l00040}{EMPTY}}, \mbox{\hyperlink{board__data_8cpp_source_l00008}{is\+Big\+Piece}}, \mbox{\hyperlink{board__data_8cpp_source_l00009}{is\+Major\+Piece}}, \mbox{\hyperlink{board__data_8cpp_source_l00010}{is\+Minor\+Piece}}, \mbox{\hyperlink{defs_8h_source_l00105}{S\+\_\+\+BOARD\+::\+King\+Sq}}, \mbox{\hyperlink{defs_8h_source_l00120}{S\+\_\+\+BOARD\+::maj\+Pce}}, \mbox{\hyperlink{defs_8h_source_l00122}{S\+\_\+\+BOARD\+::material}}, \mbox{\hyperlink{defs_8h_source_l00121}{S\+\_\+\+BOARD\+::min\+Pce}}, \mbox{\hyperlink{defs_8h_source_l00054}{OFFBOARD}}, \mbox{\hyperlink{defs_8h_source_l00103}{S\+\_\+\+BOARD\+::pawns}}, \mbox{\hyperlink{defs_8h_source_l00118}{S\+\_\+\+BOARD\+::pce\+Num}}, \mbox{\hyperlink{validate_8cpp_source_l00025}{Pce\+Valid\+Empty\+Offbrd()}}, \mbox{\hyperlink{board__data_8cpp_source_l00013}{piece\+Color}}, \mbox{\hyperlink{defs_8h_source_l00102}{S\+\_\+\+BOARD\+::pieces}}, \mbox{\hyperlink{board__data_8cpp_source_l00012}{piece\+Value}}, \mbox{\hyperlink{defs_8h_source_l00127}{S\+\_\+\+BOARD\+::p\+List}}, \mbox{\hyperlink{defs_8h_source_l00185}{SETBIT}}, \mbox{\hyperlink{validate_8cpp_source_l00034}{Side\+Valid()}}, \mbox{\hyperlink{defs_8h_source_l00182}{SQ64}}, \mbox{\hyperlink{defs_8h_source_l00057}{TRUE}}, \mbox{\hyperlink{defs_8h_source_l00044}{WHITE}}, \mbox{\hyperlink{defs_8h_source_l00040}{wK}}, and \mbox{\hyperlink{defs_8h_source_l00040}{wP}}.
+
+
+
+Referenced by \mbox{\hyperlink{board_8cpp_source_l00146}{load\+FEN()}}, and \mbox{\hyperlink{board_8cpp_source_l00301}{mirror\+Board\+Position()}}.
+
+Here is the call graph for this function\+:
+% FIG 11
+Here is the caller graph for this function\+:
+% FIG 12

@@ -1,0 +1,3 @@
+C:/Users/isaac/OneDrive/Desktop/MC-Chess-Engine/build-vs2019/CMakeFiles/main.dir
+C:/Users/isaac/OneDrive/Desktop/MC-Chess-Engine/build-vs2019/CMakeFiles/ALL_BUILD.dir
+C:/Users/isaac/OneDrive/Desktop/MC-Chess-Engine/build-vs2019/CMakeFiles/ZERO_CHECK.dir

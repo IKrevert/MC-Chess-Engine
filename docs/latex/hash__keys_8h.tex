@@ -1,0 +1,60 @@
+\doxysection{hash\+\_\+keys.\+h File Reference}
+\hypertarget{hash__keys_8h}{}\label{hash__keys_8h}\index{hash\_keys.h@{hash\_keys.h}}
+{\ttfamily \#include "{}../defs.\+h"{}}\newline
+{\ttfamily \#include "{}setup.\+h"{}}\newline
+Include dependency graph for hash\+\_\+keys.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{defs_8h_a24c386d3758eba951eb7532fdbb45804}{U64}} \mbox{\hyperlink{hash__keys_8h_a51235b5dbe2ee64d38873eb08447cc4f}{generate\+Position\+Keys}} (const \mbox{\hyperlink{struct_s___b_o_a_r_d}{S\+\_\+\+BOARD}} \texorpdfstring{$\ast$}{*}pos)
+\begin{DoxyCompactList}\small\item\em Generates a Zobrist hash key for the given board position. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{hash__keys_8h_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{hash__keys_8h_a51235b5dbe2ee64d38873eb08447cc4f}\index{hash\_keys.h@{hash\_keys.h}!generatePositionKeys@{generatePositionKeys}}
+\index{generatePositionKeys@{generatePositionKeys}!hash\_keys.h@{hash\_keys.h}}
+\doxysubsubsection{\texorpdfstring{generatePositionKeys()}{generatePositionKeys()}}
+{\footnotesize\ttfamily \label{hash__keys_8h_a51235b5dbe2ee64d38873eb08447cc4f} 
+\mbox{\hyperlink{defs_8h_a24c386d3758eba951eb7532fdbb45804}{U64}} generate\+Position\+Keys (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_s___b_o_a_r_d}{S\+\_\+\+BOARD}} \texorpdfstring{$\ast$}{*}}]{pos}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Generates a Zobrist hash key for the given board position. 
+
+The key uniquely (with very high probability) represents\+:
+\begin{DoxyItemize}
+\item Pieces on all squares
+\item Side to move
+\item Castling rights
+\item En passant square (if any)
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & Pointer to the current board state. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+64-\/bit Zobrist position key. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{hash__keys_8cpp_source_l00005}{5}} of file \mbox{\hyperlink{hash__keys_8cpp_source}{hash\+\_\+keys.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{defs_8h_source_l00014}{ASSERT}}, \mbox{\hyperlink{defs_8h_source_l00040}{bK}}, \mbox{\hyperlink{defs_8h_source_l00029}{BRD\+\_\+\+SQ\+\_\+\+NUM}}, \mbox{\hyperlink{defs_8h_source_l00114}{S\+\_\+\+BOARD\+::castle\+Perm}}, \mbox{\hyperlink{defs_8h_source_l00040}{EMPTY}}, \mbox{\hyperlink{defs_8h_source_l00108}{S\+\_\+\+BOARD\+::en\+Pas}}, \mbox{\hyperlink{defs_8h_source_l00054}{NO\+\_\+\+SQ}}, \mbox{\hyperlink{defs_8h_source_l00054}{OFFBOARD}}, \mbox{\hyperlink{defs_8h_source_l00102}{S\+\_\+\+BOARD\+::pieces}}, \mbox{\hyperlink{defs_8h_source_l00042}{RANK\+\_\+3}}, \mbox{\hyperlink{defs_8h_source_l00042}{RANK\+\_\+6}}, \mbox{\hyperlink{setup_8cpp_source_l00027}{rank\+Index120}}, \mbox{\hyperlink{defs_8h_source_l00107}{S\+\_\+\+BOARD\+::side}}, \mbox{\hyperlink{validate_8cpp_source_l00029}{Sq\+On\+Board()}}, \mbox{\hyperlink{defs_8h_source_l00044}{WHITE}}, \mbox{\hyperlink{defs_8h_source_l00040}{wP}}, \mbox{\hyperlink{setup_8cpp_source_l00024}{zobrist\+Castle\+Keys}}, \mbox{\hyperlink{setup_8cpp_source_l00022}{zobrist\+Piece\+Keys}}, and \mbox{\hyperlink{setup_8cpp_source_l00023}{zobrist\+Side\+Key}}.
+
+
+
+Referenced by \mbox{\hyperlink{board_8cpp_source_l00028}{is\+Board\+State\+Valid()}}, \mbox{\hyperlink{board_8cpp_source_l00146}{load\+FEN()}}, and \mbox{\hyperlink{board_8cpp_source_l00301}{mirror\+Board\+Position()}}.
+
+Here is the call graph for this function\+:
+% FIG 2
+Here is the caller graph for this function\+:
+% FIG 3

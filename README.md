@@ -1,29 +1,61 @@
-# ESP32 Microncontroller Chess Engine
+# MC-Chess-Engine
 
-<img width="1024" height="1024" alt="ChatGPT Image Jul 29, 2025, 05_29_12 PM" src="https://github.com/user-attachments/assets/ed814772-209a-4e93-b8ab-5a82de4713ee" />
+## Overview
+MC-Chess-Engine is a C++ chess engine designed to interface directly with hardware-based inputs. In its primary use case, the engine runs alongside a microcontroller connected to an **8×8 matrix of Hall effect sensors**, allowing for a physical chessboard to serve as the user interface.
 
+The microcontroller’s job is to scan the sensor matrix, detect changes in piece positions, and send those moves to the engine for processing. The engine then validates, applies, and tracks the moves according to the rules of chess.
 
+Although tailored for a physical chessboard, the engine is flexible and can be adapted to graphical or terminal-based interfaces for testing or alternative applications.
 
-\
-DESCRIPTION
-_____________________________________________
+---
 
-The purpose of this engine is to receive move inputs from an 8x8 matrix of Hall effect sensors to generate possible moves based on user selection on a board. While the primary purpose of this engine is to support hardware interfaces, the engine can be easily adapted to support other UI frameworks.
+## How It Works
 
+1. **Sensor Input (Microcontroller)**  
+   Each square on the board has a Hall effect sensor that detects magnetic fields from embedded magnets in the chess pieces.  
+   - The microcontroller reads all 64 sensors in real-time.  
+   - State changes (piece lifted or placed) are detected and recorded.
 
+2. **Move Detection**  
+   From the change in sensor readings, the microcontroller determines the origin and destination squares of the move.
 
-\
-FEATURES
-____________________________________________
+3. **Move Validation**  
+   The engine receives the move, generates all legal moves for the current position, and checks if the input matches a legal move.
 
-The engine features full functionality of a chess engine. Features include:
+4. **Game State Update**  
+   Valid moves are applied to the internal board representation, including updates to castling rights, en passant possibilities, and position hash keys.
 
-   ->   Available Move Generation
-  
-   ->   Check / Checkmate / Stalemate Validation
-  
-   ->   Fully Functional Castling Mechanics
-  
-   ->   En Passant Support
+5. **Output**  
+   The validated move can be:  
+   - Displayed on a connected device  
+   - Sent to a GUI over serial or network connection  
+   - Logged for analysis
 
+---
 
+## Features
+- Full legal move generation with bitboards
+- Detection of check, checkmate, stalemate, and draws
+- Support for castling and en passant
+- Position hashing via Zobrist keys
+- Hardware-friendly design with minimal dependencies
+- Easily portable to other embedded systems or desktop environments
+
+---
+
+## Potential Uses
+- Physical chessboards with digital tracking
+- Training boards for chess education
+- Remote-play enabled boards
+- Embedded chess AI projects
+
+---
+
+## Documentation
+Full API and code documentation is generated with **Doxygen**.  
+You can browse the HTML version here:  
+**Live Docs:** [View on GitHub Pages](https://your-username.github.io/your-repo/)  
+
+If you cloned the repo, documentation can be found in:
+
+docs/html/index.html 

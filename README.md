@@ -54,7 +54,7 @@ Although tailored for a physical chessboard, the engine is flexible and can be a
 ## Documentation
 Full API and code documentation is generated with **Doxygen**.  
 You can browse the HTML version here:  
-**Live Docs:** [View on GitHub Pages](https://your-username.github.io/your-repo/)  
+**Live Docs:** [View on GitHub Pages](https://ikrevert.github.io/Microcontroller_Chess_Engine/)  
 
 If you cloned the repo, documentation can be found in:
 

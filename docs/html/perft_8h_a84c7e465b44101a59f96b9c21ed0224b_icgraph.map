@@ -1,8 +1,0 @@
-<map id="Perft" name="Perft">
-<area shape="rect" id="Node000001" title="Runs a perft search from a given board state." alt="" coords="225,29,274,56"/>
-<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="267,16,261,10,250,8,239,10,233,14,232,20,235,28,230,30,226,20,229,11,237,5,250,3,263,5,271,12"/>
-<area shape="rect" id="Node000002" href="$perft_8cpp.html#a1b6b13d186dab20a18cec1a6b041220b" title="Executes a perft test and prints move breakdown and timing." alt="" coords="103,29,177,56"/>
-<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="210,45,178,45,178,40,210,40"/>
-<area shape="rect" id="Node000003" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,29,55,56"/>
-<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="87,45,55,45,55,40,87,40"/>
-</map>

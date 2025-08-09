@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Chess Engine: ESP32 Microncontroller Chess Engine</title>
+<title>Chess Engine: MC-Chess-Engine</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -89,19 +89,73 @@ $(function(){initNavTree('index.html','',''); });
 </div>
 
 <div><div class="header">
-  <div class="headertitle"><div class="title">ESP32 Microncontroller Chess Engine </div></div>
+  <div class="headertitle"><div class="title">MC-Chess-Engine </div></div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p><a class="anchor" id="md__r_e_a_d_m_e"></a></p>
-<p><img src="https://github.com/user-attachments/assets/ed814772-209a-4e93-b8ab-5a82de4713ee" alt="ChatGPT Image Jul 29, 2025, 05_29_12 PM" width="1024" height="1024" class="inline"/></p>
-<p>\ DESCRIPTION </p><hr  />
-<p>The purpose of this engine is to receive move inputs from an 8x8 matrix of Hall effect sensors to generate possible moves based on user selection on a board. While the primary purpose of this engine is to support hardware interfaces, the engine can be easily adapted to support other UI frameworks.</p>
-<p>\ FEATURES </p><hr  />
-<p>The engine features full functionality of a chess engine. Features include:</p>
-<p>-&gt; Available Move Generation</p>
-<p>-&gt; Check / Checkmate / Stalemate Validation</p>
-<p>-&gt; Fully Functional Castling Mechanics</p>
-<p>-&gt; En Passant Support </p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1"></a>
+Overview</h1>
+<p>MC-Chess-Engine is a C++ chess engine designed to interface directly with hardware-based inputs. In its primary use case, the engine runs alongside a microcontroller (ESP32) connected to an <b>8×8 matrix of Hall effect sensors</b>, allowing for a physical chessboard to serve as the user interface.</p>
+<p>The microcontroller’s job is to scan the sensor matrix, detect changes in piece positions, and send those moves to the engine for processing. The engine then validates, applies, and tracks the moves according to the rules of chess.</p>
+<p>Although tailored for a physical chessboard, the engine is flexible and can be adapted to graphical or terminal-based interfaces for testing or alternative applications.</p>
+<hr  />
+<h1 class="doxsection"><a class="anchor" id="autotoc_md3"></a>
+How It Works</h1>
+<ol type="1">
+<li><b>Sensor Input (Microcontroller)</b> <br  />
+ Each square on the board has a Hall effect sensor that detects magnetic fields from embedded magnets in the chess pieces. <br  />
+<ul>
+<li>The microcontroller reads all 64 sensors in real-time. <br  />
+</li>
+<li>State changes (piece lifted or placed) are detected and recorded.</li>
+</ul>
+</li>
+<li><b>Move Detection</b> <br  />
+ From the change in sensor readings, the microcontroller determines the origin and destination squares of the move.</li>
+<li><b>Move Validation</b> <br  />
+ The engine receives the move, generates all legal moves for the current position, and checks if the input matches a legal move.</li>
+<li><b>Game State Update</b> <br  />
+ Valid moves are applied to the internal board representation, including updates to castling rights, en passant possibilities, and position hash keys.</li>
+<li><b>Output</b> <br  />
+ The validated move can be: <br  />
+<ul>
+<li>Displayed on a connected device <br  />
+</li>
+<li>Sent to a GUI over serial or network connection <br  />
+</li>
+<li>Logged for analysis</li>
+</ul>
+</li>
+</ol>
+<hr  />
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5"></a>
+Features</h1>
+<ul>
+<li>Full legal move generation with bitboards</li>
+<li>Detection of check, checkmate, stalemate, and draws</li>
+<li>Support for castling and en passant</li>
+<li>Position hashing via Zobrist keys</li>
+<li>Hardware-friendly design with minimal dependencies</li>
+<li>Easily portable to other embedded systems or desktop environments</li>
+</ul>
+<hr  />
+<h1 class="doxsection"><a class="anchor" id="autotoc_md7"></a>
+Potential Uses</h1>
+<ul>
+<li>Physical chessboards with digital tracking</li>
+<li>Training boards for chess education</li>
+<li>Remote-play enabled boards</li>
+<li>Embedded chess AI projects</li>
+</ul>
+<hr  />
+<h1 class="doxsection"><a class="anchor" id="autotoc_md9"></a>
+Documentation</h1>
+<p>Full API and code documentation is generated with <b>Doxygen</b>. <br  />
+ You can browse the HTML version here: <br  />
+ <b>Live Docs:</b> <a href="https://ikrevert.github.io/Microcontroller_Chess_Engine/">View on GitHub Pages</a> <br  />
+</p>
+<p>If you cloned the repo, documentation can be found in:</p>
+<p>docs/html/index.html </p>
 </div></div><!-- PageDoc -->
 <a href="doxygen_crawl.html"></a>
 </div><!-- contents -->

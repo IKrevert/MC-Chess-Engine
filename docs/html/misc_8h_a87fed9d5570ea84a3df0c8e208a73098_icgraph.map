@@ -1,7 +1,0 @@
-<map id="GetTimeMs" name="GetTimeMs">
-<area shape="rect" id="Node000001" title=" " alt="" coords="225,5,314,32"/>
-<area shape="rect" id="Node000002" href="$perft_8cpp.html#a1b6b13d186dab20a18cec1a6b041220b" title="Executes a perft test and prints move breakdown and timing." alt="" coords="103,5,177,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="209,21,177,21,177,16,209,16"/>
-<area shape="rect" id="Node000003" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,55,32"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
-</map>

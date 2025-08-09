@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['chess_20engine_0',['ESP32 Microncontroller Chess Engine',['../index.html',1,'']]]
+  ['chess_20engine_0',['MC-Chess-Engine',['../index.html',1,'']]]
 ];

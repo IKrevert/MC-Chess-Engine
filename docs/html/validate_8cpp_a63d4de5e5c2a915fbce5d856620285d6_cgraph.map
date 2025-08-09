@@ -1,7 +1,0 @@
-<map id="MoveListOk" name="MoveListOk">
-<area shape="rect" id="Node000001" title="Validates that a move list is within bounds and references valid moves." alt="" coords="5,31,97,57"/>
-<area shape="rect" id="Node000002" href="$validate_8cpp.html#ac8317193b0ce2ab0c3d8d0f212cdd2b6" title="Checks if the given piece code is either empty or a valid piece." alt="" coords="145,5,277,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="97,34,129,29,130,34,97,39"/>
-<area shape="rect" id="Node000003" href="$validate_8cpp.html#ad5a569564ef016ed02a4fef23d89d9c4" title="Checks if a given square index refers to a valid on&#45;board square." alt="" coords="167,56,255,83"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="97,49,152,57,151,63,97,54"/>
-</map>

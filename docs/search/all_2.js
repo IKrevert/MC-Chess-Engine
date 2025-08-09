@@ -11,7 +11,7 @@ var searchData=
   ['captured_8',['CAPTURED',['../defs_8h.html#a440e1694c62fdb159c9aa035b35696c2',1,'defs.h']]],
   ['castleperm_9',['CastlePerm',['../make__move_8cpp.html#a39da5875f12590c1733a0b0d61727197',1,'CastlePerm:&#160;make_move.cpp'],['../make__move_8h.html#a39da5875f12590c1733a0b0d61727197',1,'CastlePerm:&#160;make_move.cpp']]],
   ['castleperm_10',['castlePerm',['../struct_s___u_n_d_o.html#a1d3f3f28248a912d30cbde433c77e4fc',1,'S_UNDO::castlePerm'],['../struct_s___b_o_a_r_d.html#a2a3f51cb7821bb2a5a60075ae4200ced',1,'S_BOARD::castlePerm']]],
-  ['chess_20engine_11',['ESP32 Microncontroller Chess Engine',['../index.html',1,'']]],
+  ['chess_20engine_11',['MC-Chess-Engine',['../index.html',1,'']]],
   ['clearbitmask_12',['clearBitMask',['../setup_8cpp.html#a1382a8c5793c5ea0457240b525be1f2a',1,'clearBitMask:&#160;setup.cpp'],['../setup_8h.html#a1382a8c5793c5ea0457240b525be1f2a',1,'clearBitMask:&#160;setup.cpp']]],
   ['clearpiece_13',['ClearPiece',['../make__move_8cpp.html#a7638b740f3b9301ec3ef126abaeef83e',1,'make_move.cpp']]],
   ['clrbit_14',['CLRBIT',['../defs_8h.html#a830a4070e4e3f75c23dd580cf56561f8',1,'defs.h']]],

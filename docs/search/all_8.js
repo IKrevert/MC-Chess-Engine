@@ -28,5 +28,6 @@ var searchData=
   ['isrookqueen_25',['isRookQueen',['../board__data_8cpp.html#abec2ad46517568973ad34b71c2f4ea03',1,'isRookQueen:&#160;board_data.cpp'],['../board__data_8h.html#abec2ad46517568973ad34b71c2f4ea03',1,'isRookQueen:&#160;board_data.cpp']]],
   ['isrq_26',['IsRQ',['../defs_8h.html#abb60aeb63c691df1ccc4b765c38a1c52',1,'defs.h']]],
   ['isslingpiece_27',['isSlingPiece',['../board__data_8cpp.html#abb14115977ded022beb69c78e0aefaf5',1,'isSlingPiece:&#160;board_data.cpp'],['../board__data_8h.html#abb14115977ded022beb69c78e0aefaf5',1,'isSlingPiece:&#160;board_data.cpp']]],
-  ['issquareattacked_28',['isSquareAttacked',['../attack_8cpp.html#a36ea46ff61e0738a61f70dcf90b5178b',1,'isSquareAttacked(const int square, const int side, const S_BOARD *pos):&#160;attack.cpp'],['../attack_8h.html#afdbecfb12eca8947bb7288387c9ce534',1,'isSquareAttacked(int sq, int side, const S_BOARD *pos):&#160;attack.cpp']]]
+  ['issquareattacked_28',['isSquareAttacked',['../attack_8cpp.html#a36ea46ff61e0738a61f70dcf90b5178b',1,'isSquareAttacked(const int square, const int side, const S_BOARD *pos):&#160;attack.cpp'],['../attack_8h.html#afdbecfb12eca8947bb7288387c9ce534',1,'isSquareAttacked(int sq, int side, const S_BOARD *pos):&#160;attack.cpp']]],
+  ['it_20works_29',['How It Works',['../index.html#autotoc_md3',1,'']]]
 ];

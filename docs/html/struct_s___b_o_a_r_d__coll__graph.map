@@ -1,9 +1,0 @@
-<map id="S_BOARD" name="S_BOARD">
-<area shape="rect" id="Node000001" title=" " alt="" coords="50,459,152,741"/>
-<area shape="rect" id="Node000002" href="$struct_s___u_n_d_o.html" title=" " alt="" coords="5,232,95,387"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="64,386,71,434,73,441,67,442,66,435,58,387"/>
-<area shape="rect" id="Node000003" href="$struct_s___h_a_s_h_t_a_b_l_e.html" title=" " alt="" coords="119,232,224,387"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="156,387,142,443,137,442,151,386"/>
-<area shape="rect" id="Node000004" href="$struct_s___h_a_s_h_e_n_t_r_y.html" title=" " alt="" coords="117,5,226,160"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="174,160,174,215,169,215,169,160"/>
-</map>

@@ -21,5 +21,6 @@ var searchData=
   ['hfnone_18',['HFNONE',['../defs_8h.html#a4801269f064dbb7dc0f76ef737e5cbaaa0cd8f9207863ed0f8ff7083fe1936132',1,'defs.h']]],
   ['hisply_19',['hisPly',['../struct_s___b_o_a_r_d.html#a89e192e1d3f053129d4205e0655dab50',1,'S_BOARD']]],
   ['history_20',['history',['../struct_s___b_o_a_r_d.html#afc566b47e1f2a3ef8bcf87655ffab195',1,'S_BOARD']]],
-  ['hit_21',['hit',['../struct_s___h_a_s_h_t_a_b_l_e.html#a6bf1290a7f52baec1bea81fa42359c03',1,'S_HASHTABLE']]]
+  ['hit_21',['hit',['../struct_s___h_a_s_h_t_a_b_l_e.html#a6bf1290a7f52baec1bea81fa42359c03',1,'S_HASHTABLE']]],
+  ['how_20it_20works_22',['How It Works',['../index.html#autotoc_md3',1,'']]]
 ];

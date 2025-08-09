@@ -1,5 +1,0 @@
-<map id="ParsePromotionPiece" name="ParsePromotionPiece">
-<area shape="rect" id="Node000001" title="Map promotion char (&#39;q&#39;,&#39;r&#39;,&#39;b&#39;,&#39;n&#39;) to a piece code for the given side. Case&#45;insensitive...." alt="" coords="209,5,356,32"/>
-<area shape="rect" id="Node000002" href="$interactive__helpers_8cpp.html#aef62b9b49d4e8c1494dee58ebd0742a7" title="Resolve a destination string (&quot;e4&quot;, &quot;e8=Q&quot;, &quot;e8q&quot;) to a move." alt="" coords="5,5,161,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="193,21,161,21,161,16,193,16"/>
-</map>

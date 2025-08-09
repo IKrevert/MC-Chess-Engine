@@ -1,5 +1,0 @@
-<map id="squareToString" name="squareToString">
-<area shape="rect" id="Node000001" title="Convert a board square index to algebraic notation." alt="" coords="175,5,283,32"/>
-<area shape="rect" id="Node000002" href="$interactive__helpers_8cpp.html#a37716374c6b9557c96dfddf75ab56e72" title="Build list of legal moves that originate from from." alt="" coords="5,5,127,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="159,21,127,21,127,16,159,16"/>
-</map>

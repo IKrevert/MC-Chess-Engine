@@ -25,6 +25,7 @@
 var NAVTREE =
 [
   [ "Chess Engine", "index.html", [
+    [ "ESP32 Microncontroller Chess Engine", "index.html", null ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],
@@ -50,7 +51,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"notation_8h.html#a4e798dfc0c2c161725e37fabe2ab3029"
+"notation_8h.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

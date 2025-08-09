@@ -1,0 +1,50 @@
+<map id="makeMove" name="makeMove">
+<area shape="rect" id="Node000001" title="Make a move; returns non&#45;zero if legal (king not left in check)." alt="" coords="5,196,91,222"/>
+<area shape="rect" id="Node000002" href="$make__move_8cpp.html#a6ac5b01b46acf941303b6ff4505889b4" title=" " alt="" coords="288,44,366,70"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="52,194,82,137,106,106,137,80,170,65,206,56,273,51,273,56,207,61,172,70,140,85,110,110,86,140,57,196"/>
+<area shape="rect" id="Node000003" href="$validate_8cpp.html#aca205110cd18879d0e0a965dee34b776" title="Checks if the given piece code is a valid piece (non&#45;empty)." alt="" coords="463,94,557,121"/>
+<area shape="poly" id="edge25_Node000001_Node000003" title=" " alt="" coords="50,194,60,163,77,123,102,82,118,64,137,48,170,28,201,14,230,6,258,3,318,10,390,29,442,53,484,82,481,87,439,57,388,34,317,15,258,8,231,11,203,19,173,33,140,53,122,68,106,85,82,126,65,165,55,196"/>
+<area shape="rect" id="Node000004" href="$validate_8cpp.html#ad7a2e012bffa6db3df97e7742c9d731d" title="Checks if the given side identifier is valid." alt="" coords="472,196,548,222"/>
+<area shape="poly" id="edge26_Node000001_Node000004" title=" " alt="" coords="92,214,224,231,307,235,389,232,457,220,458,225,390,237,307,241,224,237,91,220"/>
+<area shape="rect" id="Node000005" href="$validate_8cpp.html#ad5a569564ef016ed02a4fef23d89d9c4" title="Checks if a given square index refers to a valid on&#45;board square." alt="" coords="827,272,915,298"/>
+<area shape="poly" id="edge27_Node000001_Node000005" title=" " alt="" coords="61,221,98,270,158,333,195,362,236,386,280,403,326,409,511,409,589,413,650,417,679,415,708,411,741,400,778,384,801,369,821,350,852,310,856,313,825,354,804,373,780,389,743,405,710,416,679,421,650,422,588,418,511,414,326,414,278,408,233,391,192,366,154,337,93,274,56,225"/>
+<area shape="rect" id="Node000006" href="$make__move_8cpp.html#a7638b740f3b9301ec3ef126abaeef83e" title=" " alt="" coords="284,196,370,222"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="91,206,269,206,269,212,91,212"/>
+<area shape="rect" id="Node000007" href="$board_8cpp.html#a27f071824f45c724e8ddd02c72b39871" title="Performs a full internal consistency check of the board state." alt="" coords="448,322,572,349"/>
+<area shape="poly" id="edge14_Node000001_Node000007" title=" " alt="" coords="75,220,158,262,211,284,266,303,351,320,433,329,432,335,351,325,264,308,209,289,156,267,72,225"/>
+<area shape="rect" id="Node000010" href="$attack_8cpp.html#a36ea46ff61e0738a61f70dcf90b5178b" title="Determines if a given square is attacked by a given side." alt="" coords="265,449,389,476"/>
+<area shape="poly" id="edge15_Node000001_Node000010" title=" " alt="" coords="53,222,59,264,73,320,99,379,118,406,140,428,165,444,192,454,250,463,249,469,191,459,163,449,137,433,114,409,94,382,68,322,54,265,48,223"/>
+<area shape="rect" id="Node000013" href="$make__move_8cpp.html#ad096f1812d822251b98ffbc3894bc1d5" title=" " alt="" coords="284,145,370,172"/>
+<area shape="poly" id="edge21_Node000001_Node000013" title=" " alt="" coords="91,197,138,188,268,165,269,170,139,193,92,203"/>
+<area shape="rect" id="Node000014" href="$make__move_8cpp.html#aa9576282fc64517514da4a21518ae4d7" title="Undo the last made move." alt="" coords="139,94,217,121"/>
+<area shape="poly" id="edge28_Node000001_Node000014" title=" " alt="" coords="65,193,146,129,149,133,68,198"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="367,65,449,88,447,93,366,70"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="346,69,483,184,479,188,343,73"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="366,53,466,57,525,65,584,80,625,97,666,118,741,167,803,217,848,259,844,263,800,222,737,171,663,122,623,102,582,85,524,70,466,62,366,58"/>
+<area shape="poly" id="edge11_Node000006_Node000003" title=" " alt="" coords="364,193,388,181,476,128,479,132,391,186,366,198"/>
+<area shape="poly" id="edge12_Node000006_Node000004" title=" " alt="" coords="370,206,457,206,457,212,370,212"/>
+<area shape="poly" id="edge13_Node000006_Node000005" title=" " alt="" coords="371,217,438,232,643,261,812,278,811,283,643,266,437,237,370,223"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="350,221,478,311,475,316,347,225"/>
+<area shape="rect" id="Node000008" href="$hash__keys_8cpp.html#a8c1832e1dfd853cce944ddd2df57dd53" title="Generates a Zobrist hash key for the given board position." alt="" coords="631,297,779,324"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="572,325,615,319,616,325,573,330"/>
+<area shape="rect" id="Node000009" href="$board_8cpp.html#addbaf4fbab51f8032e0e7aabbffeab96" title="Validate that piece list array is consistent with board state." alt="" coords="648,348,762,374"/>
+<area shape="poly" id="edge9_Node000007_Node000009" title=" " alt="" coords="573,341,634,349,633,354,572,347"/>
+<area shape="poly" id="edge8_Node000008_Node000005" title=" " alt="" coords="779,296,811,291,812,297,780,302"/>
+<area shape="poly" id="edge10_Node000009_Node000005" title=" " alt="" coords="749,345,778,333,833,304,836,309,780,338,751,350"/>
+<area shape="poly" id="edge18_Node000010_Node000004" title=" " alt="" coords="336,447,488,233,492,237,341,450"/>
+<area shape="poly" id="edge20_Node000010_Node000005" title=" " alt="" coords="390,472,472,482,573,483,626,478,679,468,730,452,778,428,807,404,830,373,847,341,859,312,864,314,852,344,834,376,810,408,780,433,732,456,680,473,627,483,573,488,472,487,389,477"/>
+<area shape="poly" id="edge16_Node000010_Node000007" title=" " alt="" coords="347,446,475,356,478,360,350,451"/>
+<area shape="rect" id="Node000011" href="$validate_8cpp.html#aac5a1baab60b7b72d85de73be258f91b" title="Checks if the given piece code is empty, valid, or OFFBOARD." alt="" coords="437,550,583,577"/>
+<area shape="poly" id="edge17_Node000010_Node000011" title=" " alt="" coords="347,474,387,505,439,536,451,542,449,547,436,541,384,509,344,478"/>
+<area shape="rect" id="Node000012" href="$validate_8cpp.html#a48b5f0e20cf731ceeeb659fbc27b972c" title="Checks if a given square index is within the 120&#45;based range." alt="" coords="475,500,545,526"/>
+<area shape="poly" id="edge19_Node000010_Node000012" title=" " alt="" coords="379,474,461,497,460,502,377,479"/>
+<area shape="poly" id="edge22_Node000013_Node000003" title=" " alt="" coords="370,144,447,122,449,127,371,149"/>
+<area shape="poly" id="edge23_Node000013_Node000004" title=" " alt="" coords="371,168,458,192,457,197,370,173"/>
+<area shape="poly" id="edge24_Node000013_Node000005" title=" " alt="" coords="371,157,469,164,583,181,640,195,683,210,780,248,821,263,819,268,778,253,681,215,638,201,582,186,468,169,371,162"/>
+<area shape="poly" id="edge29_Node000014_Node000002" title=" " alt="" coords="216,92,273,73,274,78,218,97"/>
+<area shape="poly" id="edge33_Node000014_Node000003" title=" " alt="" coords="218,105,448,105,448,110,218,110"/>
+<area shape="poly" id="edge34_Node000014_Node000005" title=" " alt="" coords="188,92,219,59,240,42,264,29,293,24,336,24,443,31,583,48,643,62,689,75,732,95,781,131,808,161,831,194,862,256,857,259,827,197,804,164,777,135,730,100,688,80,641,67,582,53,443,36,336,29,294,30,266,34,243,46,222,63,191,96"/>
+<area shape="poly" id="edge30_Node000014_Node000006" title=" " alt="" coords="194,120,225,150,266,182,275,186,272,191,264,186,222,154,190,124"/>
+<area shape="poly" id="edge31_Node000014_Node000007" title=" " alt="" coords="188,120,217,174,240,205,267,232,307,260,351,283,437,315,435,320,349,288,304,265,263,236,235,209,212,177,183,123"/>
+<area shape="poly" id="edge32_Node000014_Node000013" title=" " alt="" coords="218,118,273,137,271,142,216,123"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="isPieceListValid" name="isPieceListValid">
+<area shape="rect" id="Node000001" title="Validate that piece list array is consistent with board state." alt="" coords="5,5,119,32"/>
+<area shape="rect" id="Node000002" href="$validate_8cpp.html#ad5a569564ef016ed02a4fef23d89d9c4" title="Checks if a given square index refers to a valid on&#45;board square." alt="" coords="167,5,255,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="119,16,151,16,151,21,119,21"/>
+</map>

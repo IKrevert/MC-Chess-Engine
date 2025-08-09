@@ -1,0 +1,15 @@
+<map id="AddCaptureMove" name="AddCaptureMove">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,107,128,133"/>
+<area shape="rect" id="Node000002" href="$board_8cpp.html#a27f071824f45c724e8ddd02c72b39871" title="Performs a full internal consistency check of the board state." alt="" coords="176,56,300,83"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="114,103,175,85,177,90,115,109"/>
+<area shape="rect" id="Node000004" href="$validate_8cpp.html#ad5a569564ef016ed02a4fef23d89d9c4" title="Checks if a given square index refers to a valid on&#45;board square." alt="" coords="544,56,633,83"/>
+<area shape="poly" id="edge7_Node000001_Node000004" title=" " alt="" coords="128,118,295,113,395,105,496,92,529,85,531,90,497,97,396,110,295,118,128,123"/>
+<area shape="rect" id="Node000006" href="$validate_8cpp.html#aca205110cd18879d0e0a965dee34b776" title="Checks if the given piece code is a valid piece (non&#45;empty)." alt="" coords="191,157,285,184"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="115,131,177,150,175,155,114,137"/>
+<area shape="rect" id="Node000003" href="$hash__keys_8cpp.html#a8c1832e1dfd853cce944ddd2df57dd53" title="Generates a Zobrist hash key for the given board position." alt="" coords="348,5,496,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="289,53,355,34,357,39,290,58"/>
+<area shape="rect" id="Node000005" href="$board_8cpp.html#addbaf4fbab51f8032e0e7aabbffeab96" title="Validate that piece list array is consistent with board state." alt="" coords="366,56,479,83"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="300,67,350,67,350,72,300,72"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="469,30,531,49,529,54,468,35"/>
+<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="479,67,529,67,529,72,479,72"/>
+</map>

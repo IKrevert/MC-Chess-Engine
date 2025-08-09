@@ -1,0 +1,7 @@
+<map id="MatchDestinationMove" name="MatchDestinationMove">
+<area shape="rect" id="Node000001" title="Resolve a destination string (&quot;e4&quot;, &quot;e8=Q&quot;, &quot;e8q&quot;) to a move." alt="" coords="5,31,161,57"/>
+<area shape="rect" id="Node000002" href="$interactive__helpers_8cpp.html#a71dcd8ed92625c63179d763712e7b18d" title="Map promotion char (&#39;q&#39;,&#39;r&#39;,&#39;b&#39;,&#39;n&#39;) to a piece code for the given side. Case&#45;insensitive...." alt="" coords="209,5,356,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="161,31,193,27,193,33,161,37"/>
+<area shape="rect" id="Node000003" href="$interactive__helpers_8cpp.html#a0fa9f41aeb825f497197b00f0d0d224c" title="Parse &quot;e2&quot; style coordinate into a 120&#45;based square index." alt="" coords="231,56,334,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="161,51,216,58,215,64,161,57"/>
+</map>

@@ -3,7 +3,7 @@ PROJECT_NAME           = "Chess Engine"
 PROJECT_BRIEF          = "C++ chess engine with movegen, bitboards, and Arduino-friendly docs"
 OUTPUT_DIRECTORY       = docs
 GENERATE_HTML          = YES
-GENERATE_LATEX         = YES
+GENERATE_LATEX         = NO
 FULL_PATH_NAMES        = NO
 STRIP_FROM_PATH        = .
 

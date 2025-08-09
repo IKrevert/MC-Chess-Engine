@@ -1,0 +1,29 @@
+<map id="AddCaptureMove" name="AddCaptureMove">
+<area shape="rect" id="Node000001" title=" " alt="" coords="797,81,919,108"/>
+<area shape="rect" id="Node000002" href="$move__generator_8cpp.html#a21d952c048f6586610eafeefcd4a0341" title=" " alt="" coords="582,56,748,83"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="781,87,749,83,749,78,782,82"/>
+<area shape="rect" id="Node000003" href="$move__generator_8cpp.html#ae4238c052984ad1c8581f8d0ea5a54bb" title="Generate all pseudo&#45;legal capture moves (including en passant)." alt="" coords="394,56,534,83"/>
+<area shape="poly" id="edge15_Node000001_Node000003" title=" " alt="" coords="821,76,786,59,748,47,687,39,625,41,566,48,517,58,516,53,565,43,624,35,687,34,750,41,788,54,823,71"/>
+<area shape="rect" id="Node000004" href="$move__generator_8cpp.html#a4d7178784dec62b5c55f61f52c432fdf" title="Generate all pseudo&#45;legal moves for the side to move." alt="" coords="401,107,527,133"/>
+<area shape="poly" id="edge16_Node000001_Node000004" title=" " alt="" coords="823,118,788,135,750,148,687,156,624,154,565,147,516,137,517,131,566,141,625,149,687,150,748,143,786,130,821,114"/>
+<area shape="rect" id="Node000011" href="$move__generator_8cpp.html#aa5050db53ab58a3d01f8db5b0c6681c9" title=" " alt="" coords="582,107,749,133"/>
+<area shape="poly" id="edge12_Node000001_Node000011" title=" " alt="" coords="782,107,750,112,749,106,781,102"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="567,72,534,72,534,67,567,67"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="595,90,521,109,519,103,594,85"/>
+<area shape="rect" id="Node000005" href="$interactive__helpers_8cpp.html#a37716374c6b9557c96dfddf75ab56e72" title="Build list of legal moves that originate from from." alt="" coords="225,5,346,32"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="401,102,393,97,378,84,368,71,359,59,345,46,325,35,327,30,348,42,363,55,372,68,381,80,396,92,404,97"/>
+<area shape="rect" id="Node000006" href="$move__generator_8cpp.html#a4edc18741a17d00498b72b349879e30d" title="Check if a given move exists in the current position." alt="" coords="240,56,331,83"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="399,104,330,85,332,79,400,99"/>
+<area shape="rect" id="Node000007" href="$notation_8cpp.html#a62cf95674b846c7a13035e3c92ab1bcd" title="Parse a move from coordinate notation." alt="" coords="226,107,345,133"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="386,123,345,123,345,117,386,117"/>
+<area shape="rect" id="Node000008" href="$perft_8cpp.html#a84c7e465b44101a59f96b9c21ed0224b" title="Runs a perft search from a given board state." alt="" coords="261,181,310,208"/>
+<area shape="poly" id="edge7_Node000004_Node000008" title=" " alt="" coords="417,142,312,187,310,182,415,137"/>
+<area shape="rect" id="Node000009" href="$perft_8cpp.html#a1b6b13d186dab20a18cec1a6b041220b" title="Executes a perft test and prints move breakdown and timing." alt="" coords="103,207,177,233"/>
+<area shape="poly" id="edge11_Node000004_Node000009" title=" " alt="" coords="445,147,403,188,377,208,347,223,303,234,257,237,177,230,178,225,257,231,302,228,345,217,374,203,400,184,441,143"/>
+<area shape="poly" id="edge8_Node000008_Node000008" title=" " alt="" coords="310,168,302,162,286,160,271,162,263,166,261,172,265,180,260,182,256,173,259,163,269,157,286,155,303,157,313,164"/>
+<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="247,204,178,216,177,211,246,199"/>
+<area shape="rect" id="Node000010" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,207,55,233"/>
+<area shape="poly" id="edge10_Node000009_Node000010" title=" " alt="" coords="87,223,55,223,55,217,87,217"/>
+<area shape="poly" id="edge13_Node000011_Node000003" title=" " alt="" coords="594,105,519,86,521,81,595,100"/>
+<area shape="poly" id="edge14_Node000011_Node000004" title=" " alt="" coords="566,123,527,123,527,117,566,117"/>
+</map>

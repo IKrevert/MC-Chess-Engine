@@ -1,0 +1,9 @@
+<map id="MovePiece" name="MovePiece">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,56,92,83"/>
+<area shape="rect" id="Node000002" href="$validate_8cpp.html#aca205110cd18879d0e0a965dee34b776" title="Checks if the given piece code is a valid piece (non&#45;empty)." alt="" coords="140,5,234,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="86,53,133,35,135,40,88,58"/>
+<area shape="rect" id="Node000003" href="$validate_8cpp.html#ad7a2e012bffa6db3df97e7742c9d731d" title="Checks if the given side identifier is valid." alt="" coords="149,56,224,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="92,67,134,67,134,72,92,72"/>
+<area shape="rect" id="Node000004" href="$validate_8cpp.html#ad5a569564ef016ed02a4fef23d89d9c4" title="Checks if a given square index refers to a valid on&#45;board square." alt="" coords="143,107,231,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="88,81,135,98,133,103,86,86"/>
+</map>

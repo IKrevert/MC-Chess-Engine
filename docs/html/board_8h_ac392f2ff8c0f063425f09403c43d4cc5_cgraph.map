@@ -1,0 +1,7 @@
+<map id="updateListsMaterial" name="updateListsMaterial">
+<area shape="rect" id="Node000001" title="Update piece lists, material counts, and pawn bitboards from scratch." alt="" coords="5,31,140,57"/>
+<area shape="rect" id="Node000002" href="$validate_8cpp.html#aac5a1baab60b7b72d85de73be258f91b" title="Checks if the given piece code is empty, valid, or OFFBOARD." alt="" coords="188,5,333,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="140,32,172,28,173,33,141,38"/>
+<area shape="rect" id="Node000003" href="$validate_8cpp.html#ad7a2e012bffa6db3df97e7742c9d731d" title="Checks if the given side identifier is valid." alt="" coords="223,56,298,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="141,50,207,60,207,65,140,56"/>
+</map>
